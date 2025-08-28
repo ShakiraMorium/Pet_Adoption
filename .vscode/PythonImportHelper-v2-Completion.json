@@ -1,0 +1,1938 @@
+[
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "permissions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "permissions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "permissions",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "routers",
+        "importPath": "rest_framework_nested",
+        "description": "rest_framework_nested",
+        "isExtraImport": true,
+        "detail": "rest_framework_nested",
+        "documentation": {}
+    },
+    {
+        "label": "PetViewSet",
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "isExtraImport": true,
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategoryViewSet",
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "isExtraImport": true,
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewViewSet",
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "isExtraImport": true,
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionViewSet",
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "isExtraImport": true,
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "TransactionViewSet",
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "isExtraImport": true,
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileViewSet",
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "isExtraImport": true,
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "DepositViewSet",
+        "importPath": "accounts.views",
+        "description": "accounts.views",
+        "isExtraImport": true,
+        "detail": "accounts.views",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategory",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetImage",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetReview",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Category",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "RequestedPet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Adoption",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionPet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "RequestedPet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Adoption",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionPet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "RequestedPet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Adoption",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionPet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategory",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategory",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetImage",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetReview",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategory",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetImage",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetReview",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "MinValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MinValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "MaxValueValidator",
+        "importPath": "django.core.validators",
+        "description": "django.core.validators",
+        "isExtraImport": true,
+        "detail": "django.core.validators",
+        "documentation": {}
+    },
+    {
+        "label": "PetUser",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "users.models",
+        "description": "users.models",
+        "isExtraImport": true,
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "uuid4",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "PermissionDenied",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "CreateModelMixin",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "RetrieveModelMixin",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "DestroyModelMixin",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "GenericViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "ModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "ModelViewSet",
+        "importPath": "rest_framework.viewsets",
+        "description": "rest_framework.viewsets",
+        "isExtraImport": true,
+        "detail": "rest_framework.viewsets",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdminUser",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "action",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "pets",
+        "description": "pets",
+        "isExtraImport": true,
+        "detail": "pets",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "pets",
+        "description": "pets",
+        "isExtraImport": true,
+        "detail": "pets",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "pets",
+        "description": "pets",
+        "isExtraImport": true,
+        "detail": "pets",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionService",
+        "importPath": "pets.services",
+        "description": "pets.services",
+        "isExtraImport": true,
+        "detail": "pets.services",
+        "documentation": {}
+    },
+    {
+        "label": "FilterSet",
+        "importPath": "django_filters.rest_framework",
+        "description": "django_filters.rest_framework",
+        "isExtraImport": true,
+        "detail": "django_filters.rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "DjangoFilterBackend",
+        "importPath": "django_filters.rest_framework",
+        "description": "django_filters.rest_framework",
+        "isExtraImport": true,
+        "detail": "django_filters.rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "PageNumberPagination",
+        "importPath": "rest_framework.pagination",
+        "description": "rest_framework.pagination",
+        "isExtraImport": true,
+        "detail": "rest_framework.pagination",
+        "documentation": {}
+    },
+    {
+        "label": "Decimal",
+        "importPath": "decimal",
+        "description": "decimal",
+        "isExtraImport": true,
+        "detail": "decimal",
+        "documentation": {}
+    },
+    {
+        "label": "get_user_model",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "views",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "Count",
+        "importPath": "django.db.models",
+        "description": "django.db.models",
+        "isExtraImport": true,
+        "detail": "django.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "SearchFilter",
+        "importPath": "rest_framework.filters",
+        "description": "rest_framework.filters",
+        "isExtraImport": true,
+        "detail": "rest_framework.filters",
+        "documentation": {}
+    },
+    {
+        "label": "OrderingFilter",
+        "importPath": "rest_framework.filters",
+        "description": "rest_framework.filters",
+        "isExtraImport": true,
+        "detail": "rest_framework.filters",
+        "documentation": {}
+    },
+    {
+        "label": "swagger_auto_schema",
+        "importPath": "drf_yasg.utils",
+        "description": "drf_yasg.utils",
+        "isExtraImport": true,
+        "detail": "drf_yasg.utils",
+        "documentation": {}
+    },
+    {
+        "label": "PetSerializer",
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "isExtraImport": true,
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategorySerializer",
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "isExtraImport": true,
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PetImageSerializer",
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "isExtraImport": true,
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PetReviewSerializer",
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "isExtraImport": true,
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequestSerializer",
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "isExtraImport": true,
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PetFilter",
+        "importPath": "pets.filters",
+        "description": "pets.filters",
+        "isExtraImport": true,
+        "detail": "pets.filters",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultPagination",
+        "importPath": "pets.paginations",
+        "description": "pets.paginations",
+        "isExtraImport": true,
+        "detail": "pets.paginations",
+        "documentation": {}
+    },
+    {
+        "label": "IsReviewAuthorOrReadonly",
+        "importPath": "pets.permissions",
+        "description": "pets.permissions",
+        "isExtraImport": true,
+        "detail": "pets.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_schema_view",
+        "importPath": "drf_yasg.views",
+        "description": "drf_yasg.views",
+        "isExtraImport": true,
+        "detail": "drf_yasg.views",
+        "documentation": {}
+    },
+    {
+        "label": "openapi",
+        "importPath": "drf_yasg",
+        "description": "drf_yasg",
+        "isExtraImport": true,
+        "detail": "drf_yasg",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "UserAdmin",
+        "importPath": "django.contrib.auth.admin",
+        "description": "django.contrib.auth.admin",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.admin",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "pets.users.models",
+        "description": "pets.users.models",
+        "isExtraImport": true,
+        "detail": "pets.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "BaseUserManager",
+        "importPath": "django.contrib.auth.base_user",
+        "description": "django.contrib.auth.base_user",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.base_user",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserManager",
+        "importPath": "users.managers",
+        "description": "users.managers",
+        "isExtraImport": true,
+        "detail": "users.managers",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSerializer",
+        "importPath": "djoser.serializers",
+        "description": "djoser.serializers",
+        "isExtraImport": true,
+        "detail": "djoser.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "importPath": "djoser.serializers",
+        "description": "djoser.serializers",
+        "isExtraImport": true,
+        "detail": "djoser.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "ApiConfig",
+        "kind": 6,
+        "importPath": "api.apps",
+        "description": "api.apps",
+        "peekOfCode": "class ApiConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'api'",
+        "detail": "api.apps",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdminOrReadOnly",
+        "kind": 6,
+        "importPath": "api.permission",
+        "description": "api.permission",
+        "peekOfCode": "class IsAdminOrReadOnly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        return bool(request.user and request.user.is_staff)\nclass FullDjangoModelPermission(permissions.DjangoModelPermissions):\n    def __init__(self):\n        self.perms_map['GET'] = ['%(app_label)s.view_%(model_name)s']",
+        "detail": "api.permission",
+        "documentation": {}
+    },
+    {
+        "label": "FullDjangoModelPermission",
+        "kind": 6,
+        "importPath": "api.permission",
+        "description": "api.permission",
+        "peekOfCode": "class FullDjangoModelPermission(permissions.DjangoModelPermissions):\n    def __init__(self):\n        self.perms_map['GET'] = ['%(app_label)s.view_%(model_name)s']",
+        "detail": "api.permission",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "api.urls",
+        "description": "api.urls",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('pets', PetViewSet, basename='pets')\nrouter.register('categories', PetCategoryViewSet, basename='categories')\nrouter.register('adoptions', AdoptionViewSet, basename='adoptions')\nrouter.register('transactions', TransactionViewSet, basename='transactions')\nrouter.register('profile', ProfileViewSet, basename='profile')\nrouter.register('deposit', DepositViewSet, basename='deposit')\n# Nested routes: reviews under pets\npet_router = routers.NestedDefaultRouter(router, 'pets', lookup='pet')\npet_router.register('reviews', ReviewViewSet, basename='pet-reviews')",
+        "detail": "api.urls",
+        "documentation": {}
+    },
+    {
+        "label": "pet_router",
+        "kind": 5,
+        "importPath": "api.urls",
+        "description": "api.urls",
+        "peekOfCode": "pet_router = routers.NestedDefaultRouter(router, 'pets', lookup='pet')\npet_router.register('reviews', ReviewViewSet, basename='pet-reviews')\nurlpatterns = [\n    path('', include(router.urls)),\n    path('', include(pet_router.urls)),\n    path('auth/', include('djoser.urls')),\n    path('auth/', include('djoser.urls.jwt')),\n]",
+        "detail": "api.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "api.urls",
+        "description": "api.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', include(router.urls)),\n    path('', include(pet_router.urls)),\n    path('auth/', include('djoser.urls')),\n    path('auth/', include('djoser.urls.jwt')),\n]",
+        "detail": "api.urls",
+        "documentation": {}
+    },
+    {
+        "label": "PetAdmin",
+        "kind": 6,
+        "importPath": "order.admin",
+        "description": "order.admin",
+        "peekOfCode": "class PetAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'category', 'age', 'is_adopted']\n    list_filter = ['category', 'is_adopted']\n    search_fields = ['name', 'description']\n# Category admin\n@admin.register(PetCategory)\nclass CategoryAdmin(admin.ModelAdmin):\n    list_display = ['id', 'title']\n    search_fields = ['title']\n# Review admin",
+        "detail": "order.admin",
+        "documentation": {}
+    },
+    {
+        "label": "CategoryAdmin",
+        "kind": 6,
+        "importPath": "order.admin",
+        "description": "order.admin",
+        "peekOfCode": "class CategoryAdmin(admin.ModelAdmin):\n    list_display = ['id', 'title']\n    search_fields = ['title']\n# Review admin\n@admin.register(PetReview)\nclass ReviewAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'rating']\n    list_filter = ['rating']\n    search_fields = ['comment']\n# Adoption request (like a pending order)",
+        "detail": "order.admin",
+        "documentation": {}
+    },
+    {
+        "label": "ReviewAdmin",
+        "kind": 6,
+        "importPath": "order.admin",
+        "description": "order.admin",
+        "peekOfCode": "class ReviewAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'rating']\n    list_filter = ['rating']\n    search_fields = ['comment']\n# Adoption request (like a pending order)\n@admin.register(AdoptionRequest)\nclass AdoptionRequestAdmin(admin.ModelAdmin):\n    list_display = ['id', 'user', 'pet', 'status', 'created_at']\n    list_filter = ['status']\n    search_fields = ['user__username', 'pet__name']",
+        "detail": "order.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequestAdmin",
+        "kind": 6,
+        "importPath": "order.admin",
+        "description": "order.admin",
+        "peekOfCode": "class AdoptionRequestAdmin(admin.ModelAdmin):\n    list_display = ['id', 'user', 'pet', 'status', 'created_at']\n    list_filter = ['status']\n    search_fields = ['user__username', 'pet__name']\n# Approved adoptions (finalized orders)\n@admin.register(AdoptionRequest)\nclass AdoptionAdmin(admin.ModelAdmin):\n    list_display = ['id', 'user', 'pet', 'adopted_at']\n    search_fields = ['user__username', 'pet__name']\n# Register extra models without custom admin",
+        "detail": "order.admin",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionAdmin",
+        "kind": 6,
+        "importPath": "order.admin",
+        "description": "order.admin",
+        "peekOfCode": "class AdoptionAdmin(admin.ModelAdmin):\n    list_display = ['id', 'user', 'pet', 'adopted_at']\n    search_fields = ['user__username', 'pet__name']\n# Register extra models without custom admin\nadmin.site.register(PetImage)",
+        "detail": "order.admin",
+        "documentation": {}
+    },
+    {
+        "label": "OrderConfig",
+        "kind": 6,
+        "importPath": "order.apps",
+        "description": "order.apps",
+        "peekOfCode": "class OrderConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'order'",
+        "detail": "order.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "kind": 6,
+        "importPath": "order.models",
+        "description": "order.models",
+        "peekOfCode": "class AdoptionRequest(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)\n    user = models.OneToOneField(\n        PetUser, on_delete=models.CASCADE, related_name=\"adoption_request\")\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"Adoption Request of {self.user.first_name}\"\n# Requested pets in the adoption request\nclass RequestedPet(models.Model):\n    adoption_request = models.ForeignKey(",
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "RequestedPet",
+        "kind": 6,
+        "importPath": "order.models",
+        "description": "order.models",
+        "peekOfCode": "class RequestedPet(models.Model):\n    adoption_request = models.ForeignKey(\n        AdoptionRequest, on_delete=models.CASCADE, related_name=\"requested_pets\")\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField(validators=[MinValueValidator(1)], default=1)\n    class Meta:\n        unique_together = [['adoption_request', 'pet']]\n    def __str__(self):\n        return f\"{self.quantity} x {self.pet.name}\"\n# Adoption (like Order)",
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "Adoption",
+        "kind": 6,
+        "importPath": "order.models",
+        "description": "order.models",
+        "peekOfCode": "class Adoption(models.Model):\n    PENDING = 'Pending'\n    APPROVED = 'Approved'\n    COMPLETED = 'Completed'\n    CANCELED = 'Canceled'\n    STATUS_CHOICES = [\n        (PENDING, 'Pending'),\n        (APPROVED, 'Approved'),\n        (COMPLETED, 'Completed'),\n        (CANCELED, 'Canceled'),",
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionPet",
+        "kind": 6,
+        "importPath": "order.models",
+        "description": "order.models",
+        "peekOfCode": "class AdoptionPet(models.Model):\n    adoption = models.ForeignKey(\n        Adoption, on_delete=models.CASCADE, related_name=\"adopted_pets\")\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField(default=1)\n    def __str__(self):\n        return f\"{self.quantity} x {self.pet.name}\"",
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "EmptySerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class EmptySerializer(serializers.Serializer):\n    pass\nclass SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'age', 'category']\n# Adding a pet to adoption request\nclass AddRequestedPetSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SimplePetSerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'age', 'category']\n# Adding a pet to adoption request\nclass AddRequestedPetSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = RequestedPet\n        fields = ['id', 'pet_id', 'quantity']",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AddRequestedPetSerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class AddRequestedPetSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = RequestedPet\n        fields = ['id', 'pet_id', 'quantity']\n    def save(self, **kwargs):\n        adoption_request_id = self.context['adoption_request_id']\n        pet_id = self.validated_data['pet_id']\n        quantity = self.validated_data.get('quantity', 1)\n        try:",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateRequestedPetSerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class UpdateRequestedPetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = RequestedPet\n        fields = ['quantity']\nclass RequestedPetSerializer(serializers.ModelSerializer):\n    pet = SimplePetSerializer()\n    class Meta:\n        model = RequestedPet\n        fields = ['id', 'pet', 'quantity']\nclass AdoptionRequestSerializer(serializers.ModelSerializer):",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "RequestedPetSerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class RequestedPetSerializer(serializers.ModelSerializer):\n    pet = SimplePetSerializer()\n    class Meta:\n        model = RequestedPet\n        fields = ['id', 'pet', 'quantity']\nclass AdoptionRequestSerializer(serializers.ModelSerializer):\n    requested_pets = RequestedPetSerializer(many=True, read_only=True)\n    class Meta:\n        model = AdoptionRequest\n        fields = ['id', 'user', 'requested_pets']",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequestSerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class AdoptionRequestSerializer(serializers.ModelSerializer):\n    requested_pets = RequestedPetSerializer(many=True, read_only=True)\n    class Meta:\n        model = AdoptionRequest\n        fields = ['id', 'user', 'requested_pets']\n        read_only_fields = ['user']\nclass CreateAdoptionSerializer(serializers.Serializer):\n    adoption_request_id = serializers.UUIDField()\n    def validate_adoption_request_id(self, adoption_request_id):\n        if not AdoptionRequest.objects.filter(pk=adoption_request_id).exists():",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "CreateAdoptionSerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class CreateAdoptionSerializer(serializers.Serializer):\n    adoption_request_id = serializers.UUIDField()\n    def validate_adoption_request_id(self, adoption_request_id):\n        if not AdoptionRequest.objects.filter(pk=adoption_request_id).exists():\n            raise serializers.ValidationError('No adoption request found with this id')\n        if not RequestedPet.objects.filter(adoption_request_id=adoption_request_id).exists():\n            raise serializers.ValidationError('No pets added to adoption request')\n        return adoption_request_id\n    def create(self, validated_data):\n        user_id = self.context['user_id']",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionPetSerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class AdoptionPetSerializer(serializers.ModelSerializer):\n    pet = SimplePetSerializer()\n    class Meta:\n        model = AdoptionPet\n        fields = ['id', 'pet', 'quantity']\nclass UpdateAdoptionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Adoption\n        fields = ['status']\nclass AdoptionSerializer(serializers.ModelSerializer):",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateAdoptionSerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class UpdateAdoptionSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Adoption\n        fields = ['status']\nclass AdoptionSerializer(serializers.ModelSerializer):\n    adopted_pets = AdoptionPetSerializer(many=True)\n    class Meta:\n        model = Adoption\n        fields = ['id', 'user', 'status', 'created_at', 'updated_at', 'adopted_pets']",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionSerializer",
+        "kind": 6,
+        "importPath": "order.serializers",
+        "description": "order.serializers",
+        "peekOfCode": "class AdoptionSerializer(serializers.ModelSerializer):\n    adopted_pets = AdoptionPetSerializer(many=True)\n    class Meta:\n        model = Adoption\n        fields = ['id', 'user', 'status', 'created_at', 'updated_at', 'adopted_pets']",
+        "detail": "order.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionService",
+        "kind": 6,
+        "importPath": "order.services",
+        "description": "order.services",
+        "peekOfCode": "class AdoptionService:\n    @staticmethod\n    def create_adoption(user_id, adoption_request_id):\n        \"\"\"\n        Converts an AdoptionRequest into a confirmed Adoption.\n        Marks pets as adopted.\n        \"\"\"\n        with transaction.atomic():\n            adoption_request = AdoptionRequest.objects.get(pk=adoption_request_id)\n            requested_pets = adoption_request.requested_pets.select_related('pet').all()",
+        "detail": "order.services",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequestViewSet",
+        "kind": 6,
+        "importPath": "order.views",
+        "description": "order.views",
+        "peekOfCode": "class AdoptionRequestViewSet(CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, GenericViewSet):\n    \"\"\"\n    Handles creating, retrieving, and deleting adoption requests (like cart)\n    \"\"\"\n    serializer_class = petSz.AdoptionRequestSerializer\n    permission_classes = [IsAuthenticated]\n    def perform_create(self, serializer):\n        serializer.save(user=self.request.user)\n    def get_queryset(self):\n        if getattr(self, 'swagger_fake_view', False):",
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "RequestedPetViewSet",
+        "kind": 6,
+        "importPath": "order.views",
+        "description": "order.views",
+        "peekOfCode": "class RequestedPetViewSet(ModelViewSet):\n    \"\"\"\n    Handles adding/removing/updating pets inside an adoption request\n    \"\"\"\n    http_method_names = ['get', 'post', 'patch', 'delete']\n    def get_serializer_class(self):\n        if self.request.method == 'POST':\n            return petSz.AddRequestedPetSerializer\n        elif self.request.method == 'PATCH':\n            return petSz.UpdateRequestedPetSerializer",
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionViewSet",
+        "kind": 6,
+        "importPath": "order.views",
+        "description": "order.views",
+        "peekOfCode": "class AdoptionViewSet(ModelViewSet):\n    \"\"\"\n    Handles confirmed adoptions (like orders)\n    \"\"\"\n    http_method_names = ['get', 'post', 'delete', 'patch', 'head', 'options']\n    @action(detail=True, methods=['post'])\n    def cancel(self, request, pk=None):\n        adoption = self.get_object()\n        AdoptionService.cancel_adoption(adoption=adoption, user=request.user)\n        return Response({'status': 'Adoption canceled'})",
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "PetsConfig",
+        "kind": 6,
+        "importPath": "pets.apps",
+        "description": "pets.apps",
+        "peekOfCode": "class PetsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'pets'",
+        "detail": "pets.apps",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "pets.category_urls",
+        "description": "pets.category_urls",
+        "peekOfCode": "urlpatterns = [\n    # List all pet categories\n    path('', views.ViewPetCategories.as_view(), name='pet-category-list'),\n    # View details of a specific pet category\n    path('<int:pk>/', views.PetCategoryDetails.as_view(), name='view-specific-pet-category'),\n]",
+        "detail": "pets.category_urls",
+        "documentation": {}
+    },
+    {
+        "label": "PetFilter",
+        "kind": 6,
+        "importPath": "pets.filters",
+        "description": "pets.filters",
+        "peekOfCode": "class PetFilter(FilterSet):\n    class Meta:\n        model = Pet\n        fields = {\n            'category_id': ['exact'],   # Filter by pet category\n            'age': ['gt', 'lt'],        # Filter by age greater than or less than\n            'adoption_fee': ['gt', 'lt']  # Filter by adoption fee range\n        }",
+        "detail": "pets.filters",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategory",
+        "kind": 6,
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "peekOfCode": "class PetCategory(models.Model):\n    name = models.CharField(max_length=100)\n    description = models.TextField(blank=True, null=True)\n    def __str__(self):\n        return self.name\nclass Pet(models.Model):\n    name = models.CharField(max_length=200)\n    description = models.TextField()\n    age = models.PositiveIntegerField(help_text=\"Age in months\")\n    adoption_fee = models.DecimalField(max_digits=10, decimal_places=2)",
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "kind": 6,
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "peekOfCode": "class Pet(models.Model):\n    name = models.CharField(max_length=200)\n    description = models.TextField()\n    age = models.PositiveIntegerField(help_text=\"Age in months\")\n    adoption_fee = models.DecimalField(max_digits=10, decimal_places=2)\n    category = models.ForeignKey(\n        PetCategory, on_delete=models.CASCADE, related_name=\"pets\")\n    available = models.BooleanField(default=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)",
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetImage",
+        "kind": 6,
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "peekOfCode": "class PetImage(models.Model):\n    pet = models.ForeignKey(\n        Pet, on_delete=models.CASCADE, related_name='images')\n    image = models.ImageField(\n        upload_to=\"pets/images/\", validators=[validate_file_size])\n    # Optionally, you could add a file field if needed\n    # file = models.FileField(upload_to=\"pets/files\", validators=FileExtensionValidator(['pdf']))\nclass PetReview(models.Model):\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name=\"reviews\")\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)",
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetReview",
+        "kind": 6,
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "peekOfCode": "class PetReview(models.Model):\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name=\"reviews\")\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    ratings = models.PositiveIntegerField(\n        validators=[MinValueValidator(1), MaxValueValidator(5)])\n    comment = models.TextField()\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    def __str__(self):\n        return f\"Review by {self.user.first_name} on {self.pet.name}\"",
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequest",
+        "kind": 6,
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "peekOfCode": "class AdoptionRequest(models.Model):\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name=\"adoption_requests\")\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    message = models.TextField(blank=True, null=True)\n    approved = models.BooleanField(default=False)\n    requested_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"Adoption request by {self.user.first_name} for {self.pet.name}\"",
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "validate_file_size",
+        "kind": 2,
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "peekOfCode": "def validate_file_size(file):\n    max_size_kb = 1024  # Set the maximum file size in KB\n    if file.size > max_size_kb * 1024:\n        raise ValidationError(f\"File size exceeds {max_size_kb} KB.\")\nclass PetCategory(models.Model):\n    name = models.CharField(max_length=100)\n    description = models.TextField(blank=True, null=True)\n    def __str__(self):\n        return self.name\nclass Pet(models.Model):",
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultPagination",
+        "kind": 6,
+        "importPath": "pets.paginations",
+        "description": "pets.paginations",
+        "peekOfCode": "class DefaultPagination(PageNumberPagination):\n    page_size = 10\n    page_size_query_param = 'page_size'\n    max_page_size = 100",
+        "detail": "pets.paginations",
+        "documentation": {}
+    },
+    {
+        "label": "IsReviewAuthorOrReadonly",
+        "kind": 6,
+        "importPath": "pets.permissions",
+        "description": "pets.permissions",
+        "peekOfCode": "class IsReviewAuthorOrReadonly(permissions.BasePermission):\n    def has_permission(self, request, view):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        return request.user and request.user.is_authenticated\n    def has_object_permission(self, request, view, obj):\n        if request.method in permissions.SAFE_METHODS:\n            return True\n        if request.user.is_staff:\n            return True",
+        "detail": "pets.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "pets.pet_urls",
+        "description": "pets.pet_urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.PetList.as_view(), name='pet-list'),\n    path('<int:id>/', views.PetDetails.as_view(), name='pet-list'),\n]",
+        "detail": "pets.pet_urls",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategorySerializer",
+        "kind": 6,
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "peekOfCode": "class PetCategorySerializer(serializers.ModelSerializer):\n    pet_count = serializers.IntegerField(\n        read_only=True,\n        help_text=\"Number of pets in this category\"\n    )\n    class Meta:\n        model = PetCategory\n        fields = ['id', 'name', 'description', 'pet_count']\n# Pet Image Serializer\nclass PetImageSerializer(serializers.ModelSerializer):",
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PetImageSerializer",
+        "kind": 6,
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "peekOfCode": "class PetImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = PetImage\n        fields = ['id', 'image']\n# Pet Serializer\nclass PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    adoption_fee_with_tax = serializers.SerializerMethodField(method_name='calculate_tax')\n    class Meta:\n        model = Pet",
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PetSerializer",
+        "kind": 6,
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "peekOfCode": "class PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    adoption_fee_with_tax = serializers.SerializerMethodField(method_name='calculate_tax')\n    class Meta:\n        model = Pet\n        fields = [\n            'id', 'name', 'description', 'age', 'adoption_fee',\n            'adoption_fee_with_tax', 'available', 'category', 'images'\n        ]\n    def calculate_tax(self, pet):",
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SimpleUserSerializer",
+        "kind": 6,
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "peekOfCode": "class SimpleUserSerializer(serializers.ModelSerializer):\n    name = serializers.SerializerMethodField(method_name='get_current_user_name')\n    class Meta:\n        model = get_user_model()\n        fields = ['id', 'name']\n    def get_current_user_name(self, obj):\n        return obj.get_full_name()\n# Pet Review Serializer\nclass PetReviewSerializer(serializers.ModelSerializer):\n    user = serializers.SerializerMethodField(method_name='get_user')",
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PetReviewSerializer",
+        "kind": 6,
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "peekOfCode": "class PetReviewSerializer(serializers.ModelSerializer):\n    user = serializers.SerializerMethodField(method_name='get_user')\n    class Meta:\n        model = PetReview\n        fields = ['id', 'user', 'pet', 'ratings', 'comment']\n        read_only_fields = ['user', 'pet']\n    def get_user(self, obj):\n        return SimpleUserSerializer(obj.user).data\n    def create(self, validated_data):\n        pet_id = self.context['pet_id']",
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequestSerializer",
+        "kind": 6,
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "peekOfCode": "class AdoptionRequestSerializer(serializers.ModelSerializer):\n    user = SimpleUserSerializer(read_only=True)\n    pet = PetSerializer(read_only=True)\n    class Meta:\n        model = AdoptionRequest\n        fields = ['id', 'user', 'pet', 'message', 'approved', 'requested_at']\n        read_only_fields = ['user', 'pet', 'approved', 'requested_at']",
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "pets.urls",
+        "description": "pets.urls",
+        "peekOfCode": "app_name = 'accounts'\nurlpatterns = [\n    path('register/', views.RegisterView.as_view(), name='register'),\n    path('activate/<uidb64>/<token>/', views.ActivateView.as_view(), name='activate'),\n    path('login/', auth_views.LoginView.as_view(authentication_form=CustomAuthenticationForm, template_name='registration/login.html'), name='login'),\n    path('logout/', auth_views.LogoutView.as_view(), name='logout'),\n    path('profile/', views.ProfileView.as_view(), name='profile'),\n    path('deposit/', views.DepositView.as_view(), name='deposit'),\n    path('password-change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change_form.html'), name='password_change'),\n    path('password-change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), name='password_change_done'),",
+        "detail": "pets.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "pets.urls",
+        "description": "pets.urls",
+        "peekOfCode": "urlpatterns = [\n    path('register/', views.RegisterView.as_view(), name='register'),\n    path('activate/<uidb64>/<token>/', views.ActivateView.as_view(), name='activate'),\n    path('login/', auth_views.LoginView.as_view(authentication_form=CustomAuthenticationForm, template_name='registration/login.html'), name='login'),\n    path('logout/', auth_views.LogoutView.as_view(), name='logout'),\n    path('profile/', views.ProfileView.as_view(), name='profile'),\n    path('deposit/', views.DepositView.as_view(), name='deposit'),\n    path('password-change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change_form.html'), name='password_change'),\n    path('password-change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), name='password_change_done'),\n]",
+        "detail": "pets.urls",
+        "documentation": {}
+    },
+    {
+        "label": "validate_file_size",
+        "kind": 2,
+        "importPath": "pets.validators",
+        "description": "pets.validators",
+        "peekOfCode": "def validate_file_size(file):\n    max_size = 10\n    max_size_in_bytes = max_size * 1024 * 1024\n    if file.size > max_size_in_bytes:\n        raise ValidationError(f\"File can not be larger than {max_size}MB!\")",
+        "detail": "pets.validators",
+        "documentation": {}
+    },
+    {
+        "label": "PetViewSet",
+        "kind": 6,
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "peekOfCode": "class PetViewSet(ModelViewSet):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]\n    filterset_class = PetFilter\n    pagination_class = DefaultPagination\n    search_fields = ['name', 'description']\n    ordering_fields = ['adoption_fee', 'updated_at']\n    permission_classes = [IsAdminOrReadOnly]\n    @swagger_auto_schema(operation_summary='Retrieve a list of pets')",
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "PetImageViewSet",
+        "kind": 6,
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "peekOfCode": "class PetImageViewSet(ModelViewSet):\n    serializer_class = PetImageSerializer\n    permission_classes = [IsAdminOrReadOnly]\n    def get_queryset(self):\n        return PetImage.objects.filter(pet_id=self.kwargs.get('pet_pk'))\n    def perform_create(self, serializer):\n        serializer.save(pet_id=self.kwargs.get('pet_pk'))\n# Pet Category ViewSet\nclass PetCategoryViewSet(ModelViewSet):\n    permission_classes = [IsAdminOrReadOnly]",
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategoryViewSet",
+        "kind": 6,
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "peekOfCode": "class PetCategoryViewSet(ModelViewSet):\n    permission_classes = [IsAdminOrReadOnly]\n    queryset = PetCategory.objects.annotate(\n        pet_count=Count('pets')).all()\n    serializer_class = PetCategorySerializer\n# Pet Review ViewSet\nclass PetReviewViewSet(ModelViewSet):\n    serializer_class = PetReviewSerializer\n    permission_classes = [IsReviewAuthorOrReadonly]\n    def perform_create(self, serializer):",
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "PetReviewViewSet",
+        "kind": 6,
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "peekOfCode": "class PetReviewViewSet(ModelViewSet):\n    serializer_class = PetReviewSerializer\n    permission_classes = [IsReviewAuthorOrReadonly]\n    def perform_create(self, serializer):\n        serializer.save(user=self.request.user)\n    def perform_update(self, serializer):\n        serializer.save(user=self.request.user)\n    def get_queryset(self):\n        return PetReview.objects.filter(pet_id=self.kwargs.get('pet_pk'))\n    def get_serializer_context(self):",
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "AdoptionRequestViewSet",
+        "kind": 6,
+        "importPath": "pets.views",
+        "description": "pets.views",
+        "peekOfCode": "class AdoptionRequestViewSet(ModelViewSet):\n    serializer_class = AdoptionRequestSerializer\n    permission_classes = [IsAdminOrReadOnly]\n    def get_queryset(self):\n        return AdoptionRequest.objects.all()\n    def perform_create(self, serializer):\n        serializer.save(user=self.request.user)",
+        "detail": "pets.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "pet_adoption.asgi",
+        "description": "pet_adoption.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "pet_adoption.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'pets',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'pets',\n    'order',\n    'users',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    # Use Django's standard `django.contrib.auth` permissions,\n    # or allow read-only access for unauthenticated users.\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'\n    ]\n}\nREST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',\n    'PAGE_SIZE': 10",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',\n    'PAGE_SIZE': 10\n}\nMIDDLEWARE = [\n    'debug_toolbar.middleware.DebugToolbarMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'debug_toolbar.middleware.DebugToolbarMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "ROOT_URLCONF = 'petAdoption.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'petAdoption.wsgi.application'\nINTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INTERNAL_IPS",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "INTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    # 'DEFAULT_PERMISSION_CLASSES': [",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    # 'DEFAULT_PERMISSION_CLASSES': [\n    #     'rest_framework.permissions.IsAuthenticated',\n    # ]\n}",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "REST_FRAMEWORK",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    # 'DEFAULT_PERMISSION_CLASSES': [\n    #     'rest_framework.permissions.IsAuthenticated',\n    # ]\n}\nSIMPLE_JWT = {",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SIMPLE_JWT",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SIMPLE_JWT = {\n    'AUTH_HEADER_TYPES': ('JWT',),\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=1),\n}\nDJOSER = {\n    'SERIALIZERS': {\n        'user_create': 'users.serializers.UserCreateSerializer',\n        'current_user': 'users.serializers.UserSerializer'\n    },\n}",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DJOSER",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "DJOSER = {\n    'SERIALIZERS': {\n        'user_create': 'users.serializers.UserCreateSerializer',\n        'current_user': 'users.serializers.UserSerializer'\n    },\n}\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SWAGGER_SETTINGS",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header',\n            'description': 'Enter your JWT token in the format: `JWT <your_token>`'\n        }\n    }\n}",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "schema_view",
+        "kind": 5,
+        "importPath": "pet_adoption.urls",
+        "description": "pet_adoption.urls",
+        "peekOfCode": "schema_view = get_schema_view(\n    openapi.Info(\n        title=\"Pet Adoption API\",\n        default_version='v1',\n        description=\"API Documentation for Pet Adoption Project\",\n        terms_of_service=\"https://www.google.com/policies/terms/\",\n        contact=openapi.Contact(email=\"contact@petadoption.com\"),\n        license=openapi.License(name=\"BSD License\"),\n    ),\n    public=True,",
+        "detail": "pet_adoption.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "pet_adoption.urls",
+        "description": "pet_adoption.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', api_root_view, name='api-root'),\n    path('api/v1/', include('pet_api.urls')),  # Your API app\n    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),\n    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),\n]\n# Include debug toolbar URLs only in DEBUG mode\nif settings.DEBUG:\n    import debug_toolbar",
+        "detail": "pet_adoption.urls",
+        "documentation": {}
+    },
+    {
+        "label": "api_root_view",
+        "kind": 2,
+        "importPath": "pet_adoption.views",
+        "description": "pet_adoption.views",
+        "peekOfCode": "def api_root_view(request):\n    return redirect('api-root')",
+        "detail": "pet_adoption.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "pet_adoption.wsgi",
+        "description": "pet_adoption.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "pet_adoption.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserAdmin",
+        "kind": 6,
+        "importPath": "users.admin",
+        "description": "users.admin",
+        "peekOfCode": "class CustomUserAdmin(UserAdmin):\n    model = User\n    list_display = ('email', 'first_name', 'last_name', 'is_active')\n    list_filter = ('is_staff', 'is_active')\n    fieldsets = (\n        (None, {'fields': ('email', 'password')}),\n        ('Personal Info', {'fields': ('first_name', 'last_name', 'address', 'phone_number')}),\n        ('Permissions', {'fields': ('is_staff', 'is_active', 'is_superuser', 'groups', 'user_permissions')}),\n        ('Important Dates', {'fields': ('last_login', 'date_joined')}),\n    )",
+        "detail": "users.admin",
+        "documentation": {}
+    },
+    {
+        "label": "UsersConfig",
+        "kind": 6,
+        "importPath": "users.apps",
+        "description": "users.apps",
+        "peekOfCode": "class UsersConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'users'",
+        "detail": "users.apps",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserManager",
+        "kind": 6,
+        "importPath": "users.managers",
+        "description": "users.managers",
+        "peekOfCode": "class CustomUserManager(BaseUserManager):\n    def create_user(self, email, password=None, **extra_fields):\n        if not email:\n            raise ValueError('The Email field must be set')\n        email = self.normalize_email(email)\n        user = self.model(email=email, **extra_fields)\n        user.set_password(password)\n        user.save(using=self._db)\n        return user\n    def create_superuser(self, email, password=None, **extra_fields):",
+        "detail": "users.managers",
+        "documentation": {}
+    },
+    {
+        "label": "PetUser",
+        "kind": 6,
+        "importPath": "users.models",
+        "description": "users.models",
+        "peekOfCode": "class PetUser(AbstractUser):\n    username = None\n    email = models.EmailField(unique=True)\n    address = models.TextField(blank=True, null=True)\n    phone_number = models.CharField(max_length=15, blank=True, null=True)\n    USERNAME_FIELD = 'email' \n    REQUIRED_FIELDS = []\n    objects = CustomUserManager()\n    def __str__(self):\n        return self.email",
+        "detail": "users.models",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSerializer",
+        "kind": 6,
+        "importPath": "users.serializers",
+        "description": "users.serializers",
+        "peekOfCode": "class UserCreateSerializer(BaseUserCreateSerializer):\n    class Meta(BaseUserCreateSerializer.Meta):\n        model = BaseUserCreateSerializer.Meta.model  \n        fields = [\n            'id', 'email', 'password', 'first_name',\n            'last_name', 'address', 'phone_number'\n        ]\n# User Serializer for Profile\nclass UserSerializer(BaseUserSerializer):\n    class Meta(BaseUserSerializer.Meta):",
+        "detail": "users.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "UserSerializer",
+        "kind": 6,
+        "importPath": "users.serializers",
+        "description": "users.serializers",
+        "peekOfCode": "class UserSerializer(BaseUserSerializer):\n    class Meta(BaseUserSerializer.Meta):\n        model = BaseUserSerializer.Meta.model  \n        ref_name = 'CustomUser'\n        fields = [\n            'id', 'email', 'first_name',\n            'last_name', 'address', 'phone_number'\n        ]",
+        "detail": "users.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pet_adoption.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
