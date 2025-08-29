@@ -22,6 +22,7 @@ class PetCategorySerializer(serializers.ModelSerializer):
 # Pet Image Serializer
 
 class PetImageSerializer(serializers.ModelSerializer):
+    image = serializers.ImageField()
     class Meta:
         model = PetImage
         fields = ['id', 'image']

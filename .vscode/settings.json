@@ -17,6 +17,7 @@
         "Morium",
         "nostatic",
         "paginations",
+        "petcategory",
         "petuser",
         "pooler",
         "psycopg",

@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 from pathlib import Path
 from datetime import timedelta
 from decouple import config
+import cloudinary
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +28,7 @@ SECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["vercel.app",'127.0.0.1']
+ALLOWED_HOSTS = [".vercel.app", '127.0.0.1']
 AUTH_USER_MODEL = 'users.PetUser'
 
 
@@ -44,13 +45,13 @@ INSTALLED_APPS = [
     'pets',
     'order',
     'users',
-    
     'api',
     'drf_yasg',
     'djoser',
     'django_filters',
     'rest_framework',
     "debug_toolbar",
+    
     
     
     
@@ -149,6 +150,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
+# configuration of cloudinary storage
+cloudinary.config(
+        cloud_name=config('cloud_name'),
+        api_key=config('api_key'), 
+        api_secret=config('api_secret'),
+        secure=True
+    )
+    
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
