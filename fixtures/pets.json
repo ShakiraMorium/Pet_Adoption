@@ -1,0 +1,187 @@
+[
+  {
+    "model": "pets.pet",
+    "pk": 1,
+    "fields": {
+      "name": "Buddy",
+      "breed": "Golden Retriever",
+      "category": 1,
+      "age": 3,
+      "description": "Friendly and playful dog, great with kids.",
+      "adoption_fee": "200.00",
+      "available": true,
+      "availability": true
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 2,
+    "fields": {
+      "name": "Charlie",
+      "breed": "Labrador",
+      "category": 1,
+      "age": 2,
+      "description": "Energetic Labrador who loves to play fetch.",
+      "adoption_fee": "180.00",
+      "available": true,
+      "availability": true
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 3,
+    "fields": {
+      "name": "Max",
+      "breed": "German Shepherd",
+      "category": 1,
+      "age": 4,
+      "description": "Loyal and protective German Shepherd.",
+      "adoption_fee": "220.00",
+      "available": true,
+      "availability": true
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 4,
+    "fields": {
+      "name": "Bella",
+      "breed": "Beagle",
+      "category": 1,
+      "age": 1,
+      "description": "Curious little Beagle pup, full of energy.",
+      "adoption_fee": "150.00",
+      "available": true,
+      "availability": true
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 5,
+    "fields": {
+      "name": "Rocky",
+      "breed": "Bulldog",
+      "category": 1,
+      "age": 5,
+      "description": "Calm and gentle Bulldog, perfect for families.",
+      "adoption_fee": "170.00",
+      "available": true,
+      "availability": true
+    }
+  },
+
+  {
+    "model": "pets.pet",
+    "pk": 6,
+    "fields": {
+      "name": "Milo",
+      "breed": "Persian Cat",
+      "category": 2,
+      "age": 2,
+      "description": "Fluffy Persian cat with calm personality.",
+      "adoption_fee": "120.00",
+      "available": true,
+      "availability": true
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 7,
+    "fields": {
+      "name": "Luna",
+      "breed": "Siamese Cat",
+      "category": 2,
+      "age": 3,
+      "description": "Smart Siamese cat, loves attention.",
+      "adoption_fee": "130.00",
+      "available": true,
+      "availability": true
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 8,
+    "fields": {
+      "name": "Oliver",
+      "breed": "Bengal Cat",
+      "category": 2,
+      "age": 1,
+      "description": "Active Bengal cat, loves climbing.",
+      "adoption_fee": "150.00",
+      "available": true,
+      "availability": true
+    }
+  },
+
+  {
+    "model": "pets.pet",
+    "pk": 9,
+    "fields": {
+      "name": "Coco",
+      "breed": "Holland Lop Rabbit",
+      "category": 3,
+      "age": 1,
+      "description": "Cute lop-eared rabbit, soft fur.",
+      "adoption_fee": "60.00",
+      "available": true,
+      "availability": true
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 10,
+    "fields": {
+      "name": "Snowball",
+      "breed": "Angora Rabbit",
+      "category": 3,
+      "age": 2,
+      "description": "Fluffy white rabbit, loves cuddles.",
+      "adoption_fee": "75.00",
+      "available": true,
+      "availability": true
+    }
+  },
+
+  {
+    "model": "pets.pet",
+    "pk": 11,
+    "fields": {
+      "name": "Kiwi",
+      "breed": "Parrot",
+      "category": 4,
+      "age": 3,
+      "description": "Talkative parrot, can mimic words.",
+      "adoption_fee": "90.00",
+      "available": true,
+      "availability": true
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 12,
+    "fields": {
+      "name": "Sky",
+      "breed": "Budgerigar",
+      "category": 4,
+      "age": 1,
+      "description": "Colorful budgie, very playful.",
+      "adoption_fee": "50.00",
+      "available": true,
+      "availability": true
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 13,
+    "fields": {
+      "name": "Sunny",
+      "breed": "Cockatiel",
+      "category": 4,
+      "age": 2,
+      "description": "Chirpy cockatiel with bright feathers.",
+      "adoption_fee": "70.00",
+      "available": true,
+      "availability": true
+    }
+  }
+]
