@@ -25,6 +25,8 @@ pet_router.register('reviews', PetReviewViewSet, basename='pet-reviews')
 urlpatterns = [
     path('', include(router.urls)),
     path('', include(pet_router.urls)),
+   # Djoser core endpoints (register, users, reset, etc.)
     path('auth/', include('djoser.urls')),
+    # JWT endpoints (login/create, refresh, verify)
     path('auth/', include('djoser.urls.jwt')),
 ]

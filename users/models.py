@@ -1,33 +1,18 @@
 # users/models.py
-from django.contrib.auth.models import AbstractUser, Group, Permission
+from django.contrib.auth.models import AbstractUser
 from django.db import models
+from users.managers import CustomUserManager
 
 class PetUser(AbstractUser):
-    username = None  # We’ll use email instead of username
+    username = None
     email = models.EmailField(unique=True)
-
     address = models.TextField(blank=True, null=True)
     phone_number = models.CharField(max_length=15, blank=True, null=True)
-    profile_picture = models.ImageField(upload_to="profiles/", blank=True, null=True)
 
-    USERNAME_FIELD = "email"   # login with email
-    REQUIRED_FIELDS = []       # no username required
+    USERNAME_FIELD = 'email'  # Use email instead of username
+    REQUIRED_FIELDS = []
 
-    # Fix group & permission relationships to avoid clashes
-    groups = models.ManyToManyField(
-        Group,
-        related_name="petuser_set",
-        blank=True,
-        help_text="The groups this user belongs to.",
-        verbose_name="groups",
-    )
-    user_permissions = models.ManyToManyField(
-        Permission,
-        related_name="petuser_set_permissions",
-        blank=True,
-        help_text="Specific permissions for this user.",
-        verbose_name="user permissions",
-    )
+    objects = CustomUserManager()
 
     def __str__(self):
-        return self.email if self.email else "Unnamed User"
+        return self.email

@@ -288,46 +288,6 @@
         "documentation": {}
     },
     {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "models",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
-        "label": "migrations",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -1170,14 +1130,6 @@
         "documentation": {}
     },
     {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -1187,14 +1139,6 @@
     },
     {
         "label": "include",
-        "importPath": "django.urls",
-        "description": "django.urls",
-        "isExtraImport": true,
-        "detail": "django.urls",
-        "documentation": {}
-    },
-    {
-        "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
         "isExtraImport": true,
@@ -1339,32 +1283,6 @@
         "documentation": {}
     },
     {
-        "label": "django.utils.timezone",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.utils.timezone",
-        "description": "django.utils.timezone",
-        "detail": "django.utils.timezone",
-        "documentation": {}
-    },
-    {
-        "label": "cloudinary.models",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "cloudinary.models",
-        "description": "cloudinary.models",
-        "detail": "cloudinary.models",
-        "documentation": {}
-    },
-    {
-        "label": "CloudinaryField",
-        "importPath": "cloudinary.models",
-        "description": "cloudinary.models",
-        "isExtraImport": true,
-        "detail": "cloudinary.models",
-        "documentation": {}
-    },
-    {
         "label": "FilterSet",
         "importPath": "django_filters.rest_framework",
         "description": "django_filters.rest_framework",
@@ -1381,19 +1299,11 @@
         "documentation": {}
     },
     {
-        "label": "ValidationError",
-        "importPath": "django.core.exceptions",
-        "description": "django.core.exceptions",
+        "label": "CloudinaryField",
+        "importPath": "cloudinary.models",
+        "description": "cloudinary.models",
         "isExtraImport": true,
-        "detail": "django.core.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "ValidationError",
-        "importPath": "django.core.exceptions",
-        "description": "django.core.exceptions",
-        "isExtraImport": true,
-        "detail": "django.core.exceptions",
+        "detail": "cloudinary.models",
         "documentation": {}
     },
     {
@@ -1421,11 +1331,11 @@
         "documentation": {}
     },
     {
-        "label": "views",
-        "importPath": "django.contrib.auth",
-        "description": "django.contrib.auth",
+        "label": "ValidationError",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
         "isExtraImport": true,
-        "detail": "django.contrib.auth",
+        "detail": "django.core.exceptions",
         "documentation": {}
     },
     {
@@ -1559,6 +1469,14 @@
         "documentation": {}
     },
     {
+        "label": "debug_toolbar_urls",
+        "importPath": "debug_toolbar.toolbar",
+        "description": "debug_toolbar.toolbar",
+        "isExtraImport": true,
+        "detail": "debug_toolbar.toolbar",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -1584,28 +1502,21 @@
         "documentation": {}
     },
     {
-        "label": "Group",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
-        "label": "Permission",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
-        "documentation": {}
-    },
-    {
         "label": "django.contrib.auth.validators",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "django.contrib.auth.validators",
         "description": "django.contrib.auth.validators",
         "detail": "django.contrib.auth.validators",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
         "documentation": {}
     },
     {
@@ -1622,6 +1533,14 @@
         "description": "django.contrib.auth.base_user",
         "isExtraImport": true,
         "detail": "django.contrib.auth.base_user",
+        "documentation": {}
+    },
+    {
+        "label": "CustomUserManager",
+        "importPath": "users.managers",
+        "description": "users.managers",
+        "isExtraImport": true,
+        "detail": "users.managers",
         "documentation": {}
     },
     {
@@ -2100,47 +2019,11 @@
         "documentation": {}
     },
     {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "pets.migrations.0001_initial",
-        "description": "pets.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Pet',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
-        "detail": "pets.migrations.0001_initial",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "pets.migrations.0002_pet_availability_pet_breed",
-        "description": "pets.migrations.0002_pet_availability_pet_breed",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('pets', '0001_initial'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='pet',\n            name='availability',\n            field=models.BooleanField(default=True),\n        ),",
-        "detail": "pets.migrations.0002_pet_availability_pet_breed",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "pets.migrations.0003_pet_created_at_pet_updated_at",
-        "description": "pets.migrations.0003_pet_created_at_pet_updated_at",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('pets', '0002_pet_availability_pet_breed'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='pet',\n            name='created_at',\n            field=models.DateTimeField(auto_now_add=True, default=django.utils.timezone.now),\n            preserve_default=False,",
-        "detail": "pets.migrations.0003_pet_created_at_pet_updated_at",
-        "documentation": {}
-    },
-    {
-        "label": "Migration",
-        "kind": 6,
-        "importPath": "pets.migrations.0004_alter_petimage_image",
-        "description": "pets.migrations.0004_alter_petimage_image",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('pets', '0003_pet_created_at_pet_updated_at'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='petimage',\n            name='image',\n            field=cloudinary.models.CloudinaryField(max_length=255, verbose_name='image'),\n        ),",
-        "detail": "pets.migrations.0004_alter_petimage_image",
-        "documentation": {}
-    },
-    {
         "label": "PetAdmin",
         "kind": 6,
         "importPath": "pets.admin",
         "description": "pets.admin",
-        "peekOfCode": "class PetAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'category', 'age', 'adoption_fee', 'available']\n    list_filter = ['category', 'available']\n    search_fields = ['name', 'description']\n@admin.register(PetCategory)\nclass PetCategoryAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'description']\n    search_fields = ['name']\n@admin.register(PetImage)\nclass PetImageAdmin(admin.ModelAdmin):",
+        "peekOfCode": "class PetAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'breed', 'age', 'adoption_fee', 'is_available']\n    list_filter = ['breed', 'is_available']\n    search_fields = ['name', 'breed', 'description']\n    ordering = ['name']\n@admin.register(PetCategory)\nclass PetCategoryAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'description']\n    search_fields = ['name']\n@admin.register(PetImage)",
         "detail": "pets.admin",
         "documentation": {}
     },
@@ -2149,7 +2032,7 @@
         "kind": 6,
         "importPath": "pets.admin",
         "description": "pets.admin",
-        "peekOfCode": "class PetCategoryAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'description']\n    search_fields = ['name']\n@admin.register(PetImage)\nclass PetImageAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'image']\n@admin.register(PetReview)\nclass PetReviewAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'ratings', 'created_at']\n    list_filter = ['ratings', 'created_at']",
+        "peekOfCode": "class PetCategoryAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'description']\n    search_fields = ['name']\n@admin.register(PetImage)\nclass PetImageAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet']\n@admin.register(PetReview)\nclass PetReviewAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'ratings', 'created_at']\n@admin.register(AdoptionRequest)",
         "detail": "pets.admin",
         "documentation": {}
     },
@@ -2158,7 +2041,7 @@
         "kind": 6,
         "importPath": "pets.admin",
         "description": "pets.admin",
-        "peekOfCode": "class PetImageAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'image']\n@admin.register(PetReview)\nclass PetReviewAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'ratings', 'created_at']\n    list_filter = ['ratings', 'created_at']\n    search_fields = ['comment', 'user__email', 'pet__name']\n@admin.register(AdoptionRequest)\nclass AdoptionRequestAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'approved', 'requested_at']",
+        "peekOfCode": "class PetImageAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet']\n@admin.register(PetReview)\nclass PetReviewAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'ratings', 'created_at']\n@admin.register(AdoptionRequest)\nclass AdoptionRequestAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'approved', 'requested_at']",
         "detail": "pets.admin",
         "documentation": {}
     },
@@ -2167,7 +2050,7 @@
         "kind": 6,
         "importPath": "pets.admin",
         "description": "pets.admin",
-        "peekOfCode": "class PetReviewAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'ratings', 'created_at']\n    list_filter = ['ratings', 'created_at']\n    search_fields = ['comment', 'user__email', 'pet__name']\n@admin.register(AdoptionRequest)\nclass AdoptionRequestAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'approved', 'requested_at']\n    list_filter = ['approved', 'requested_at']\n    search_fields = ['user__email', 'pet__name']\n    readonly_fields = ['requested_at']",
+        "peekOfCode": "class PetReviewAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'ratings', 'created_at']\n@admin.register(AdoptionRequest)\nclass AdoptionRequestAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'approved', 'requested_at']",
         "detail": "pets.admin",
         "documentation": {}
     },
@@ -2176,7 +2059,7 @@
         "kind": 6,
         "importPath": "pets.admin",
         "description": "pets.admin",
-        "peekOfCode": "class AdoptionRequestAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'approved', 'requested_at']\n    list_filter = ['approved', 'requested_at']\n    search_fields = ['user__email', 'pet__name']\n    readonly_fields = ['requested_at']",
+        "peekOfCode": "class AdoptionRequestAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet', 'user', 'approved', 'requested_at']",
         "detail": "pets.admin",
         "documentation": {}
     },
@@ -2194,7 +2077,7 @@
         "kind": 5,
         "importPath": "pets.category_urls",
         "description": "pets.category_urls",
-        "peekOfCode": "urlpatterns = [\n    # List all pet categories\n    path('', views.ViewPetCategories.as_view(), name='pet-category-list'),\n    # View details of a specific pet category\n    path('<int:pk>/', views.PetCategoryDetails.as_view(), name='view-specific-pet-category'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.ViewCategories.as_view(), name='category-list'),\n    path('<int:pk>/', views.CategoryDetails.as_view(),\n         name='view-specific-category')\n]",
         "detail": "pets.category_urls",
         "documentation": {}
     },
@@ -2212,7 +2095,7 @@
         "kind": 6,
         "importPath": "pets.models",
         "description": "pets.models",
-        "peekOfCode": "class PetCategory(models.Model):\n    name = models.CharField(max_length=100)\n    description = models.TextField(blank=True, null=True)\n    def __str__(self):\n        return self.name\nclass Pet(models.Model):\n    name = models.CharField(max_length=100)\n    breed = models.CharField(max_length=100, null=True, blank=True)\n    category = models.ForeignKey(PetCategory, on_delete=models.CASCADE)\n    age = models.PositiveIntegerField()",
+        "peekOfCode": "class PetCategory(models.Model):\n    name = models.CharField(max_length=100)\n    description = models.TextField(blank=True, null=True)\n    def __str__(self):\n        return self.name\nclass Pet(models.Model):\n    name = models.CharField(max_length=100)\n    breed = models.CharField(max_length=100)\n    age = models.IntegerField()\n    adoption_fee = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)",
         "detail": "pets.models",
         "documentation": {}
     },
@@ -2221,7 +2104,7 @@
         "kind": 6,
         "importPath": "pets.models",
         "description": "pets.models",
-        "peekOfCode": "class Pet(models.Model):\n    name = models.CharField(max_length=100)\n    breed = models.CharField(max_length=100, null=True, blank=True)\n    category = models.ForeignKey(PetCategory, on_delete=models.CASCADE)\n    age = models.PositiveIntegerField()\n    description = models.TextField(blank=True, null=True)\n    adoption_fee = models.DecimalField(max_digits=8, decimal_places=2)\n    available=models.BooleanField(default=True)\n    availability = models.BooleanField(default=True) \n    created_at = models.DateTimeField(auto_now_add=True)  ",
+        "peekOfCode": "class Pet(models.Model):\n    name = models.CharField(max_length=100)\n    breed = models.CharField(max_length=100)\n    age = models.IntegerField()\n    adoption_fee = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)\n    description = models.TextField(blank=True, null=True)\n    is_available = models.BooleanField(default=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    category = models.ForeignKey(",
         "detail": "pets.models",
         "documentation": {}
     },
@@ -2293,7 +2176,7 @@
         "kind": 6,
         "importPath": "pets.serializers",
         "description": "pets.serializers",
-        "peekOfCode": "class PetCategorySerializer(serializers.ModelSerializer):\n    pet_count = serializers.IntegerField(\n        read_only=True,\n        help_text=\"Number of pets in this category\"\n    )\n    class Meta:\n        model = PetCategory\n        fields = ['id', 'name', 'description', 'pet_count']\n# Pet Image Serializer\nclass PetImageSerializer(serializers.ModelSerializer):",
+        "peekOfCode": "class PetCategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = PetCategory\n        fields = ['id', 'name', 'description', 'pet_count']        \n    pet_count = serializers.IntegerField(read_only=True, help_text=\"Return the number product in this category\")\n# 2. Pet Image Serializer\nclass PetImageSerializer(serializers.ModelSerializer):\n    image = serializers.ImageField()\n    class Meta:\n        model = PetImage",
         "detail": "pets.serializers",
         "documentation": {}
     },
@@ -2302,7 +2185,7 @@
         "kind": 6,
         "importPath": "pets.serializers",
         "description": "pets.serializers",
-        "peekOfCode": "class PetImageSerializer(serializers.ModelSerializer):\n    image = serializers.ImageField()\n    class Meta:\n        model = PetImage\n        fields = ['id', 'image']\n# Pet Serializer\nclass PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    adoption_fee_with_tax = serializers.SerializerMethodField(method_name='calculate_tax')\n    class Meta:",
+        "peekOfCode": "class PetImageSerializer(serializers.ModelSerializer):\n    image = serializers.ImageField()\n    class Meta:\n        model = PetImage\n        fields = ['id', 'image']\n# 3. Pet Serializer\nclass PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    class Meta:\n        model = Pet",
         "detail": "pets.serializers",
         "documentation": {}
     },
@@ -2311,7 +2194,7 @@
         "kind": 6,
         "importPath": "pets.serializers",
         "description": "pets.serializers",
-        "peekOfCode": "class PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    adoption_fee_with_tax = serializers.SerializerMethodField(method_name='calculate_tax')\n    class Meta:\n        model = Pet\n        fields = [\n            'id', 'name', 'description', 'age', 'adoption_fee',\n            'adoption_fee_with_tax', 'available', 'category', 'images'\n        ]\n    def calculate_tax(self, pet):",
+        "peekOfCode": "class PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    class Meta:\n        model = Pet\n        fields = [\n            'id', 'name', 'description', 'age', 'adoption_fee',\n            'adoption_fee_with_tax', 'is_available', 'category', 'images'\n        ]\n        price_with_tax = serializers.SerializerMethodField(\n        method_name='calculate_tax')",
         "detail": "pets.serializers",
         "documentation": {}
     },
@@ -2320,7 +2203,7 @@
         "kind": 6,
         "importPath": "pets.serializers",
         "description": "pets.serializers",
-        "peekOfCode": "class SimpleUserSerializer(serializers.ModelSerializer):\n    name = serializers.SerializerMethodField(method_name='get_current_user_name')\n    class Meta:\n        model = get_user_model()\n        fields = ['id', 'name']\n    def get_current_user_name(self, obj):\n        return obj.get_full_name()\n# Pet Review Serializer\nclass PetReviewSerializer(serializers.ModelSerializer):\n    user = serializers.SerializerMethodField(method_name='get_user')",
+        "peekOfCode": "class SimpleUserSerializer(serializers.ModelSerializer):\n    name = serializers.SerializerMethodField(method_name='get_current_user_name')\n    class Meta:\n        model = get_user_model()\n        fields = ['id', 'name']\n    def get_current_user_name(self, obj):\n        return obj.get_full_name()\n# 5. Pet Review Serializer\nclass PetReviewSerializer(serializers.ModelSerializer):\n    user = serializers.SerializerMethodField(method_name='get_user')",
         "detail": "pets.serializers",
         "documentation": {}
     },
@@ -2338,26 +2221,8 @@
         "kind": 6,
         "importPath": "pets.serializers",
         "description": "pets.serializers",
-        "peekOfCode": "class AdoptionRequestSerializer(serializers.ModelSerializer):\n    user = SimpleUserSerializer(read_only=True)\n    pet = PetSerializer(read_only=True)\n    class Meta:\n        model = AdoptionRequest\n        fields = ['id', 'user', 'pet', 'message', 'approved', 'requested_at']\n        read_only_fields = ['user', 'pet', 'approved', 'requested_at']",
+        "peekOfCode": "class AdoptionRequestSerializer(serializers.ModelSerializer):\n    user = SimpleUserSerializer(read_only=True)\n    pet = PetSerializer(read_only=True)\n    class Meta:\n        model = AdoptionRequest\n        fields = ['id', 'user', 'pet', 'approved', 'requested_at']\n        read_only_fields = ['user', 'pet', 'approved', 'requested_at']",
         "detail": "pets.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "app_name",
-        "kind": 5,
-        "importPath": "pets.urls",
-        "description": "pets.urls",
-        "peekOfCode": "app_name = 'accounts'\nurlpatterns = [\n    path('register/', views.RegisterView.as_view(), name='register'),\n    path('activate/<uidb64>/<token>/', views.ActivateView.as_view(), name='activate'),\n    path('login/', auth_views.LoginView.as_view(authentication_form=CustomAuthenticationForm, template_name='registration/login.html'), name='login'),\n    path('logout/', auth_views.LogoutView.as_view(), name='logout'),\n    path('profile/', views.ProfileView.as_view(), name='profile'),\n    path('deposit/', views.DepositView.as_view(), name='deposit'),\n    path('password-change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change_form.html'), name='password_change'),\n    path('password-change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), name='password_change_done'),",
-        "detail": "pets.urls",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "pets.urls",
-        "description": "pets.urls",
-        "peekOfCode": "urlpatterns = [\n    path('register/', views.RegisterView.as_view(), name='register'),\n    path('activate/<uidb64>/<token>/', views.ActivateView.as_view(), name='activate'),\n    path('login/', auth_views.LoginView.as_view(authentication_form=CustomAuthenticationForm, template_name='registration/login.html'), name='login'),\n    path('logout/', auth_views.LogoutView.as_view(), name='logout'),\n    path('profile/', views.ProfileView.as_view(), name='profile'),\n    path('deposit/', views.DepositView.as_view(), name='deposit'),\n    path('password-change/', auth_views.PasswordChangeView.as_view(template_name='registration/password_change_form.html'), name='password_change'),\n    path('password-change/done/', auth_views.PasswordChangeDoneView.as_view(template_name='registration/password_change_done.html'), name='password_change_done'),\n]",
-        "detail": "pets.urls",
         "documentation": {}
     },
     {
@@ -2383,7 +2248,7 @@
         "kind": 6,
         "importPath": "pets.views",
         "description": "pets.views",
-        "peekOfCode": "class PetImageViewSet(ModelViewSet):\n    serializer_class = PetImageSerializer\n    permission_classes = [IsAdminOrReadOnly]\n    def get_queryset(self):\n        return PetImage.objects.filter(pet_id=self.kwargs.get('pet_pk'))\n    def perform_create(self, serializer):\n        serializer.save(pet_id=self.kwargs.get('pet_pk'))\n# Pet Category ViewSet\n# class PetCategoryViewSet(ModelViewSet):\n#     permission_classes = [IsAdminOrReadOnly]",
+        "peekOfCode": "class PetImageViewSet(ModelViewSet):\n    serializer_class = PetImageSerializer\n    permission_classes = [IsAdminOrReadOnly]\n    def get_queryset(self):\n        return PetImage.objects.filter(pet_id=self.kwargs.get('pet_pk'))\n    def perform_create(self, serializer):\n        serializer.save(pet_id=self.kwargs.get('pet_pk'))\n# Pet Category ViewSet\nclass PetCategoryViewSet(ModelViewSet):\n    permission_classes = [IsAdminOrReadOnly]",
         "detail": "pets.views",
         "documentation": {}
     },
@@ -2392,7 +2257,7 @@
         "kind": 6,
         "importPath": "pets.views",
         "description": "pets.views",
-        "peekOfCode": "class PetCategoryViewSet(ModelViewSet):\n    serializer_class = PetCategorySerializer\n    queryset = PetCategory.objects.annotate(\n        pet_count=Count('pet') \n    ).all()\n# Pet Review ViewSet\nclass PetReviewViewSet(ModelViewSet):\n    serializer_class = PetReviewSerializer\n    permission_classes = [IsReviewAuthorOrReadonly]\n    def perform_create(self, serializer):",
+        "peekOfCode": "class PetCategoryViewSet(ModelViewSet):\n    permission_classes = [IsAdminOrReadOnly]\n    queryset = PetCategory.objects.annotate(\n        pet_count=Count('pets')).all()\n    serializer_class = PetCategorySerializer\n# class PetCategoryViewSet(ModelViewSet):\n#     serializer_class = PetCategorySerializer\n#     queryset = PetCategory.objects.annotate(\n#         pet_count=Count('pets') \n#     ).all()",
         "detail": "pets.views",
         "documentation": {}
     },
@@ -2707,7 +2572,7 @@
         "kind": 5,
         "importPath": "pet_adoption.urls",
         "description": "pet_adoption.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', api_root_view, name='api-root'),\n    path('api/v1/', include('api.urls'), name='api-root'), \n    path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),\n    path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),\n]\n# Include debug toolbar URLs only in DEBUG mode\nif settings.DEBUG:\n    import debug_toolbar",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', api_root_view, name='api-root'),\n    path('api/v1/', include('api.urls'), name='api-root'), \n    path('swagger/', schema_view.with_ui('swagger',\n         cache_timeout=0), name='schema-swagger-ui'),\n    path('redoc/', schema_view.with_ui('redoc',\n         cache_timeout=0), name='schema-redoc'),\n]+ debug_toolbar_urls()\n# Include debug toolbar URLs only in DEBUG mode",
         "detail": "pet_adoption.urls",
         "documentation": {}
     },
@@ -2748,6 +2613,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "users.migrations.0003_alter_petuser_managers_and_more",
+        "description": "users.migrations.0003_alter_petuser_managers_and_more",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n        ('users', '0002_remove_petuser_username_petuser_address_and_more'),\n    ]\n    operations = [\n        migrations.AlterModelManagers(\n            name='petuser',\n            managers=[\n            ],",
+        "detail": "users.migrations.0003_alter_petuser_managers_and_more",
+        "documentation": {}
+    },
+    {
         "label": "CustomUserAdmin",
         "kind": 6,
         "importPath": "users.admin",
@@ -2779,7 +2653,7 @@
         "kind": 6,
         "importPath": "users.models",
         "description": "users.models",
-        "peekOfCode": "class PetUser(AbstractUser):\n    username = None  # We’ll use email instead of username\n    email = models.EmailField(unique=True)\n    address = models.TextField(blank=True, null=True)\n    phone_number = models.CharField(max_length=15, blank=True, null=True)\n    profile_picture = models.ImageField(upload_to=\"profiles/\", blank=True, null=True)\n    USERNAME_FIELD = \"email\"   # login with email\n    REQUIRED_FIELDS = []       # no username required\n    # Fix group & permission relationships to avoid clashes\n    groups = models.ManyToManyField(",
+        "peekOfCode": "class PetUser(AbstractUser):\n    username = None\n    email = models.EmailField(unique=True)\n    address = models.TextField(blank=True, null=True)\n    phone_number = models.CharField(max_length=15, blank=True, null=True)\n    USERNAME_FIELD = 'email'  # Use email instead of username\n    REQUIRED_FIELDS = []\n    objects = CustomUserManager()\n    def __str__(self):\n        return self.email",
         "detail": "users.models",
         "documentation": {}
     },
@@ -2788,7 +2662,7 @@
         "kind": 6,
         "importPath": "users.serializers",
         "description": "users.serializers",
-        "peekOfCode": "class UserCreateSerializer(BaseUserCreateSerializer):\n    class Meta(BaseUserCreateSerializer.Meta):\n        model = BaseUserCreateSerializer.Meta.model\n        fields = [\n            'id', 'email', 'password', 'first_name',\n            'last_name'\n        ]\n# User Serializer for Profile\nclass UserSerializer(BaseUserSerializer):\n    class Meta(BaseUserSerializer.Meta):",
+        "peekOfCode": "class UserCreateSerializer(BaseUserCreateSerializer):\n    class Meta(BaseUserCreateSerializer.Meta):\n        model = BaseUserCreateSerializer.Meta.model\n        fields = ['id', 'email', 'password', 'first_name', 'last_name', 'address', 'phone_number']\n# User Serializer for Profile\nclass UserSerializer(BaseUserSerializer):\n    class Meta(BaseUserSerializer.Meta):\n        model = BaseUserSerializer.Meta.model\n        ref_name = 'CustomUser'\n        fields = ['id', 'email', 'password', 'first_name', 'last_name', 'address', 'phone_number']",
         "detail": "users.serializers",
         "documentation": {}
     },
@@ -2797,7 +2671,7 @@
         "kind": 6,
         "importPath": "users.serializers",
         "description": "users.serializers",
-        "peekOfCode": "class UserSerializer(BaseUserSerializer):\n    class Meta(BaseUserSerializer.Meta):\n        model = BaseUserSerializer.Meta.model\n        ref_name = 'CustomUser'\n        fields = [\n            'id', 'email', 'first_name',\n            'last_name'\n        ]",
+        "peekOfCode": "class UserSerializer(BaseUserSerializer):\n    class Meta(BaseUserSerializer.Meta):\n        model = BaseUserSerializer.Meta.model\n        ref_name = 'CustomUser'\n        fields = ['id', 'email', 'password', 'first_name', 'last_name', 'address', 'phone_number']",
         "detail": "users.serializers",
         "documentation": {}
     },

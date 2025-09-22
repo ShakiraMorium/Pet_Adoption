@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.core.validators import MinValueValidator, MaxValueValidator
-from django.core.exceptions import ValidationError
+
 from cloudinary.models import CloudinaryField
 
 
@@ -13,18 +13,26 @@ class PetCategory(models.Model):
         return self.name
 
 
+
+
 class Pet(models.Model):
     name = models.CharField(max_length=100)
-    breed = models.CharField(max_length=100, null=True, blank=True)
-    category = models.ForeignKey(PetCategory, on_delete=models.CASCADE)
-    age = models.PositiveIntegerField()
+    breed = models.CharField(max_length=100)
+    age = models.IntegerField()
+    adoption_fee = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)
     description = models.TextField(blank=True, null=True)
-    adoption_fee = models.DecimalField(max_digits=8, decimal_places=2)
-    available=models.BooleanField(default=True)
-    availability = models.BooleanField(default=True) 
-    created_at = models.DateTimeField(auto_now_add=True)  
-    updated_at = models.DateTimeField(auto_now=True)   
+    is_available = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
+    category = models.ForeignKey(
+        PetCategory,
+        on_delete=models.CASCADE,
+        related_name="pets")
+    
+    class Meta:
+        ordering = ['-id',]
+    
     
 
     def __str__(self):

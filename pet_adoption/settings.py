@@ -57,17 +57,16 @@ INSTALLED_APPS = [
     
 ]
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
-    ]
-}
-REST_FRAMEWORK = {
+        'rest_framework.permissions.IsAuthenticated',  # secure by default
+    ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    'COERCE_DECIMAL_TO_STRING': False,
 }
-
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
@@ -192,26 +191,31 @@ REST_FRAMEWORK = {
     #     'rest_framework.permissions.IsAuthenticated',
     # ]
 }
-
+# JWT config
 SIMPLE_JWT = {
-    'AUTH_HEADER_TYPES': ('JWT',),
+    'AUTH_HEADER_TYPES': ('Bearer',),   # use Bearer instead of JWT
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
 }
 
+
+
+
+# Djoser config
 DJOSER = {
     'SERIALIZERS': {
         'user_create': 'users.serializers.UserCreateSerializer',
         'current_user': 'users.serializers.UserSerializer'
     },
 }
-
+# Swagger config
 SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,   #  prevents redirect to /accounts/login/
     'SECURITY_DEFINITIONS': {
         'Bearer': {
             'type': 'apiKey',
             'name': 'Authorization',
             'in': 'header',
-            'description': 'Enter your JWT token in the format: `JWT <your_token>`'
+            'description': 'Format: Bearer <your_token>'
         }
     }
 }

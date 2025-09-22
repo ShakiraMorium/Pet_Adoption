@@ -1,20 +1,15 @@
 from djoser.serializers import UserCreateSerializer as BaseUserCreateSerializer, UserSerializer as BaseUserSerializer
+from .models import PetUser
 
 # User Registration Serializer
 class UserCreateSerializer(BaseUserCreateSerializer):
     class Meta(BaseUserCreateSerializer.Meta):
-        model = BaseUserCreateSerializer.Meta.model
-        fields = [
-            'id', 'email', 'password', 'first_name',
-            'last_name'
-        ]
+        model = PetUser
+        fields = ['id', 'email', 'password', 'first_name', 'last_name', 'address', 'phone_number']
 
 # User Serializer for Profile
 class UserSerializer(BaseUserSerializer):
     class Meta(BaseUserSerializer.Meta):
-        model = BaseUserSerializer.Meta.model
+        model = PetUser
         ref_name = 'CustomUser'
-        fields = [
-            'id', 'email', 'first_name',
-            'last_name'
-        ]
+        fields = ['id', 'email', 'password', 'first_name', 'last_name', 'address', 'phone_number']
