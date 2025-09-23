@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Pets</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .pet-card { border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; width: 200px; vertical-align: top; }
+        img { width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+  <h1>All Pets</h1>
+<ul>
+{% for pet in pets %}
+    <li>
+        <a href="{% url 'pet-detail' pet.id %}">
+            {{ pet.name }} - {{ pet.age }} years
+        </a>
+    </li>
+{% empty %}
+    <li>No pets found.</li>
+{% endfor %}
+</ul>
+
+</body>
+</html>

@@ -8,11 +8,11 @@ from rest_framework import status
 from rest_framework.views import APIView
 # from django.http import HttpResponseRedirect
 
-from adoption import serializers as adoptionSz
-from adoption.serializers import CartSerializer, CartItemSerializer, AddCartItemSerializer, UpdateCartItemSerializer
-from adoption.models import Cart, CartItem, Adoption, AdoptionItem
-from adoption.services import AdoptionService
-# from sslcommerz_python.payment import SSLCOMMERZ
+from cart import serializers as cartSz
+from cart.serializers import CartSerializer, CartItemSerializer, AddCartItemSerializer, UpdateCartItemSerializer
+from cart.models import Cart, CartItem, Cart, CartItem
+from cart.services import CartService
+# from sslcommerz_python.payment import SSLCOMMERZ 
 from django.conf import settings as main_settings
 
 
@@ -56,20 +56,20 @@ class CartItemViewSet(ModelViewSet):
         return CartItem.objects.select_related('pet').filter(cart_id=self.kwargs.get('cart_pk'))
 
 
-class AdoptionViewSet(ModelViewSet):
+class CartViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'delete', 'patch', 'head', 'options']
 
     @action(detail=True, methods=['post'])
     def cancel(self, request, pk=None):
-        adoption = self.get_object()
-        AdoptionService.cancel_adoption(adoption=adoption, user=request.user)
+        cart = self.get_object()
+        CartService.cancel_cart(cart=cart, user=request.user)
         return Response({'status': 'Adoption canceled'})
 
     @action(detail=True, methods=['patch'])
     def update_status(self, request, pk=None):
-        adoption = self.get_object()
-        serializer = adoptionSz.UpdateAdoptionSerializer(
-            adoption, data=request.data, partial=True
+        cart = self.get_object()
+        serializer = cartSz.UpdateCartSerializer(
+            cart, data=request.data, partial=True
         )
         serializer.is_valid(raise_exception=True)
         serializer.save()
@@ -82,12 +82,12 @@ class AdoptionViewSet(ModelViewSet):
 
     def get_serializer_class(self):
         if self.action == 'cancel':
-            return adoptionSz.EmptySerializer
+            return cartSz.EmptySerializer
         if self.action == 'create':
-            return adoptionSz.CreateAdoptionSerializer
+            return cartSz.CreateCartSerializer
         elif self.action == 'update_status':
-            return adoptionSz.UpdateAdoptionSerializer
-        return adoptionSz.AdoptionSerializer
+            return cartSz.UpdateCartSerializer
+        return cartSz.CartSerializer
 
     def get_serializer_context(self):
         if getattr(self, 'swagger_fake_view', False):
@@ -96,10 +96,10 @@ class AdoptionViewSet(ModelViewSet):
 
     def get_queryset(self):
         if getattr(self, 'swagger_fake_view', False):
-            return Adoption.objects.none()
+            return Cart.objects.none()
         if self.request.user.is_staff:
-            return Adoption.objects.prefetch_related('items__pet').all()
-        return Adoption.objects.prefetch_related('items__pet').filter(user=self.request.user)
+            return Cart.objects.prefetch_related('items__pet').all()
+        return Cart.objects.prefetch_related('items__pet').filter(user=self.request.user)
 
 
 # ================== PAYMENT ==================

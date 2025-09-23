@@ -7,7 +7,7 @@ from uuid import uuid4
 # Cart model
 class Cart(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    user = models.OneToOneField(PetUser, on_delete=models.CASCADE, related_name="cart")
+    user = models.OneToOneField(PetUser, on_delete=models.CASCADE, related_name="cart_order")
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -15,15 +15,15 @@ class Cart(models.Model):
 
 # CartItem model
 class CartItem(models.Model):
-    cart = models.ForeignKey(Cart, on_delete=models.CASCADE, related_name="items")
-    pet = models.ForeignKey(Pet, on_delete=models.CASCADE)
-    quantity = models.PositiveIntegerField(validators=[MinValueValidator(1)])
-
-    class Meta:
-        unique_together = [['cart', 'pet']]
-
-    def __str__(self):
-        return f"{self.quantity} x {self.pet.name}"
+    cart = models.ForeignKey(
+        Cart, on_delete=models.CASCADE, related_name="order_items"
+    )
+    pet = models.ForeignKey(
+        Pet, on_delete=models.CASCADE, related_name="order_cart_items"  # unique related_name
+    )
+    quantity = models.PositiveIntegerField()
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    total_price = models.DecimalField(max_digits=12, decimal_places=2, default=0)
 
 # Order model
 class Order(models.Model):

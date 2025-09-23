@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cart',
     'pets',
     'order',
     'users',
@@ -150,12 +151,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 # configuration of cloudinary storage
-cloudinary.config(
-        cloud_name=config('cloud_name'),
-        api_key=config('api_key'), 
-        api_secret=config('api_secret'),
-        secure=True
-    )
+cloudinary.config( 
+  cloud_name = config('cloud_name'), 
+  api_key = config('api_key'), 
+  api_secret = config('api_secret'),
+  secure=True
+)
     
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 LANGUAGE_CODE = 'en-us'

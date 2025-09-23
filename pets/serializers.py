@@ -1,7 +1,8 @@
 from rest_framework import serializers
 from decimal import Decimal
-from pets.models import PetCategory, Pet, PetImage, PetReview, AdoptionRequest
+from pets.models import PetCategory, Pet, PetImage, PetReview, CartRequest
 from django.contrib.auth import get_user_model
+from cart.models import Cart
 
 
 # 1. Pet Category Serializer
@@ -17,34 +18,28 @@ class PetCategorySerializer(serializers.ModelSerializer):
 
 # 2. Pet Image Serializer
 class PetImageSerializer(serializers.ModelSerializer):
-    image = serializers.ImageField()
-
     class Meta:
         model = PetImage
         fields = ['id', 'image']
 
-
-# 3. Pet Serializer
 class PetSerializer(serializers.ModelSerializer):
     images = PetImageSerializer(many=True, read_only=True)
+    price_with_tax = serializers.SerializerMethodField()  # move here
+
     class Meta:
         model = Pet
         fields = [
             'id', 'name', 'description', 'age', 'adoption_fee',
-            'adoption_fee_with_tax', 'is_available', 'category', 'images'
+            'price_with_tax', 'is_available', 'category', 'images'
         ]
 
-        price_with_tax = serializers.SerializerMethodField(
-        method_name='calculate_tax')
-        
-    def calculate_tax(self, pet):
-        return round(pet.price * Decimal(1.1), 2)
+    def get_price_with_tax(self, obj):
+        return round(obj.adoption_fee * Decimal(1.1), 2)
 
-    def validate_price(self, price):
-        if price < 0:
-            raise serializers.ValidationError('Price could not be negative')
-        return price
-
+    def validate_adoption_fee(self, value):
+        if value < 0:
+            raise serializers.ValidationError("Adoption fee cannot be negative")
+        return value
 
 # 4. Simple User Serializer
 class SimpleUserSerializer(serializers.ModelSerializer):
@@ -76,11 +71,11 @@ class PetReviewSerializer(serializers.ModelSerializer):
 
 
 # 6. Adoption Request Serializer
-class AdoptionRequestSerializer(serializers.ModelSerializer):
+class CartRequestSerializer(serializers.ModelSerializer):
     user = SimpleUserSerializer(read_only=True)
     pet = PetSerializer(read_only=True)
 
     class Meta:
-        model = AdoptionRequest
+        model = CartRequest
         fields = ['id', 'user', 'pet', 'approved', 'requested_at']
         read_only_fields = ['user', 'pet', 'approved', 'requested_at']

@@ -1,31 +1,23 @@
 from django.contrib import admin
-from .models import Pet, PetCategory, PetImage, PetReview, AdoptionRequest
+from pets.models import Pet, PetCategory, PetReview, PetImage, CartRequest
 
-
-@admin.register(Pet)
-class PetAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'breed', 'age', 'adoption_fee', 'is_available']
-    list_filter = ['breed', 'is_available']
-    search_fields = ['name', 'breed', 'description']
-    ordering = ['name']
-
+# Simple registrations
+admin.site.register(PetReview)
+admin.site.register(CartRequest)
 
 @admin.register(PetCategory)
 class PetCategoryAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'description']
     search_fields = ['name']
 
-
 @admin.register(PetImage)
 class PetImageAdmin(admin.ModelAdmin):
     list_display = ['id', 'pet']
 
+@admin.register(Pet)
+class PetAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'breed', 'age', 'cart_items_count']
 
-@admin.register(PetReview)
-class PetReviewAdmin(admin.ModelAdmin):
-    list_display = ['id', 'pet', 'user', 'ratings', 'created_at']
-
-
-@admin.register(AdoptionRequest)
-class AdoptionRequestAdmin(admin.ModelAdmin):
-    list_display = ['id', 'pet', 'user', 'approved', 'requested_at']
+    def cart_items_count(self, obj):
+        return obj.cart_items.count()  # Make sure CartItem has related_name="cart_items"
+    cart_items_count.short_description = 'Cart Items'

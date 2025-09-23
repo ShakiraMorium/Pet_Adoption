@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from adoption.models import Cart, CartItem, Adoption, AdoptionItem
+from cart.models import Cart, CartItem, Cart, CartItem
 from pets.models import Pet
 from pets.serializers import PetSerializer
-from adoption.services import AdoptionService
+from cart.services import CartService
 
 
 class EmptySerializer(serializers.Serializer):
@@ -81,12 +81,12 @@ class CartSerializer(serializers.ModelSerializer):
 
     def get_total_price(self, cart: Cart):
         return sum(
-            [item.pet.adoption_fee * item.quantity for item in cart.items.all()]
+            [item.pet.cart_fee * item.quantity for item in cart.items.all()]
         )
 
 
 # Create Adoption (formerly Order)
-class CreateAdoptionSerializer(serializers.Serializer):
+class CreateCartSerializer(serializers.Serializer):
     cart_id = serializers.UUIDField()
 
     def validate_cart_id(self, cart_id):
@@ -103,37 +103,37 @@ class CreateAdoptionSerializer(serializers.Serializer):
         cart_id = validated_data['cart_id']
 
         try:
-            adoption = AdoptionService.create_adoption(
+            cart = CartService.create_cart(
                 user_id=user_id, cart_id=cart_id
             )
-            return adoption
+            return cart
         except ValueError as e:
             raise serializers.ValidationError(str(e))
 
     def to_representation(self, instance):
-        return AdoptionSerializer(instance).data
+        return CartSerializer(instance).data
 
 
-# Adoption Item Serializer
-class AdoptionItemSerializer(serializers.ModelSerializer):
+#cart Item Serializer
+class CartItemSerializer(serializers.ModelSerializer):
     pet = SimplePetSerializer()
 
     class Meta:
-        model = AdoptionItem
+        model = CartItem
         fields = ['id', 'pet', 'price', 'quantity', 'total_price']
 
 
-# Update Adoption (status only)
-class UpdateAdoptionSerializer(serializers.ModelSerializer):
+# Update cart (status only)
+class UpdateCartSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Adoption
+        model = Cart
         fields = ['status']
 
 
-# Adoption Serializer
-class AdoptionSerializer(serializers.ModelSerializer):
-    items = AdoptionItemSerializer(many=True)
+# cart Serializer
+class CartSerializer(serializers.ModelSerializer):
+    items = CartItemSerializer(many=True)
 
     class Meta:
-        model = Adoption
+        model = Cart
         fields = ['id', 'user', 'status', 'total_price', 'created_at', 'items']

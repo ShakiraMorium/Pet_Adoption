@@ -1,69 +1,52 @@
-from pets.models import AdoptionRequest, RequestedPet, Adoption, AdoptionPet
+from order.models import Cart, CartItem, OrderItem, Order 
 from django.db import transaction
 from rest_framework.exceptions import PermissionDenied, ValidationError
 
 
-class AdoptionService:
+class OrderService:
     @staticmethod
-    def create_adoption(user_id, adoption_request_id):
-        """
-        Converts an AdoptionRequest into a confirmed Adoption.
-        Marks pets as adopted.
-        """
+    def create_order(user_id, cart_id):
         with transaction.atomic():
-            adoption_request = AdoptionRequest.objects.get(pk=adoption_request_id)
-            requested_pets = adoption_request.requested_pets.select_related('pet').all()
+            cart = Cart.objects.get(pk=cart_id)
+            cart_items = cart.items.select_related('pet').all()
 
-            if not requested_pets:
-                raise ValidationError({"detail": "No pets in adoption request"})
+            total_price = sum([item.pet.price *
+                               item.quantity for item in cart_items])
 
-            adoption = Adoption.objects.create(user_id=user_id)
+            order = Order.objects.create(
+                user_id=user_id, total_price=total_price)
 
-            adoption_pets = []
-            for item in requested_pets:
-                if item.pet.is_adopted:
-                    raise ValidationError({"detail": f"Pet '{item.pet.name}' is already adopted"})
-                
-                adoption_pets.append(
-                    AdoptionPet(
-                        adoption=adoption,
-                        pet=item.pet,
-                        quantity=item.quantity
-                    )
+            order_items = [
+                OrderItem(
+                    order=order,
+                    pet=item.pet,
+                    price=item.pet.price,
+                    quantity=item.quantity,
+                    total_price=item.pet.price * item.quantity
                 )
-                # Mark pet as adopted
-                item.pet.is_adopted = True
-                item.pet.save()
+                for item in cart_items
+            ]
+            # [<OrderItem(1)>, <OrderItem(2)>]
+            OrderItem.objects.bulk_create(order_items)
 
-            AdoptionPet.objects.bulk_create(adoption_pets)
+            cart.delete()
 
-            # Delete the adoption request after adoption
-            adoption_request.delete()
-
-            return adoption
+            return order
 
     @staticmethod
-    def cancel_adoption(adoption, user):
-        """
-        Allows user or admin to cancel an adoption.
-        """
+    def cancel_order(order, user):
         if user.is_staff:
-            adoption.status = Adoption.CANCELED
-            adoption.save()
-            return adoption
+            order.status = Order.CANCELED
+            order.save()
+            return order
 
-        if adoption.user != user:
-            raise PermissionDenied({"detail": "You can only cancel your own adoption"})
+        if order.user != user:
+            raise PermissionDenied(
+                {"detail": "You can only cancel your own order"})
 
-        if adoption.status == Adoption.COMPLETED:
-            raise ValidationError({"detail": "You cannot cancel a completed adoption"})
+        if order.status == Order.DELIVERED:
+            raise ValidationError({"detail": "You can not cancel an order"})
 
-        adoption.status = Adoption.CANCELED
-        adoption.save()
-
-        # Optional: mark pets as available again
-        for item in adoption.adopted_pets.all():
-            item.pet.is_adopted = False
-            item.pet.save()
-
-        return adoption
+        order.status = Order.CANCELED
+        order.save()
+        return order

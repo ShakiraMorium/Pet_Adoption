@@ -1,7 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.core.validators import MinValueValidator, MaxValueValidator
-
+from .validators import validate_file_size
 from cloudinary.models import CloudinaryField
 
 
@@ -42,6 +42,7 @@ class Pet(models.Model):
 class PetImage(models.Model):
     pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name="images")
     image = CloudinaryField('image')
+    image = models.ImageField(upload_to="pets/images/", validators=[validate_file_size])
 
 
     def __str__(self):
@@ -54,13 +55,14 @@ class PetReview(models.Model):
     ratings = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
     comment = models.TextField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
-
+    updated_at = models.DateTimeField(auto_now=True)
+    
     def __str__(self):
-        return f"{self.pet.name} - {self.ratings}"
+        return f"{self.user.first_name} - {self.ratings}"
 
 
-class AdoptionRequest(models.Model):
-    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name="adoptions")
+class CartRequest(models.Model):
+    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name="price")
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     approved = models.BooleanField(default=False)
     requested_at = models.DateTimeField(auto_now_add=True)

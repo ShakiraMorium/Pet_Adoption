@@ -1,7 +1,10 @@
 from rest_framework import serializers
-from pets.models import Pet, Category, AdoptionRequest, RequestedPet, Adoption, AdoptionPet
-from users.models import User
-
+from pets.models import Pet, PetCategory, CartRequest
+from users.models import PetUser
+from order.models import Cart, CartItem, Order, OrderItem
+from pets.serializers import PetSerializer
+from order.services import OrderService
+from cart.serializers import AddCartItemSerializer
 
 class EmptySerializer(serializers.Serializer):
     pass
@@ -14,28 +17,27 @@ class SimplePetSerializer(serializers.ModelSerializer):
 
 
 # Adding a pet to adoption request
-class AddRequestedPetSerializer(serializers.ModelSerializer):
+class AddCartItemSerializer(serializers.ModelSerializer):
     pet_id = serializers.IntegerField()
 
     class Meta:
-        model = RequestedPet
+        model = CartItem
         fields = ['id', 'pet_id', 'quantity']
 
     def save(self, **kwargs):
-        adoption_request_id = self.context['adoption_request_id']
+        cart_id = self.context['cart_id']
         pet_id = self.validated_data['pet_id']
-        quantity = self.validated_data.get('quantity', 1)
+        quantity = self.validated_data.get('quantity')
 
         try:
-            requested_pet = RequestedPet.objects.get(
-                adoption_request_id=adoption_request_id, pet_id=pet_id)
-            requested_pet.quantity += quantity
-            requested_pet.save()
-            self.instance = requested_pet
-        except RequestedPet.DoesNotExist:
-            self.instance = RequestedPet.objects.create(
-                adoption_request_id=adoption_request_id, **self.validated_data
-            )
+            cart_item = CartItem.objects.get(
+                cart_id=cart_id, product_id=pet_id)
+            cart_item.quantity += quantity
+            self.instance = cart_item.save()
+        except CartItem.DoesNotExist:
+            self.instance = CartItem.objects.create(
+                cart_id=cart_id, **self.validated_data)
+
         return self.instance
 
     def validate_pet_id(self, value):
@@ -44,80 +46,76 @@ class AddRequestedPetSerializer(serializers.ModelSerializer):
         return value
 
 
-class UpdateRequestedPetSerializer(serializers.ModelSerializer):
+class UpdateCartItemSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RequestedPet
+        model = CartItem
         fields = ['quantity']
 
 
-class RequestedPetSerializer(serializers.ModelSerializer):
+class CartItemSerializer(serializers.ModelSerializer):
     pet = SimplePetSerializer()
+    total_price = serializers.SerializerMethodField(
+        method_name='get_total_price')
     class Meta:
-        model = RequestedPet
-        fields = ['id', 'pet', 'quantity']
+        model = CartItem
+        fields = ['id', 'pet', 'quantity','total_price']
 
 
-class AdoptionRequestSerializer(serializers.ModelSerializer):
-    requested_pets = RequestedPetSerializer(many=True, read_only=True)
+class CartSerializer(serializers.ModelSerializer):
+    items = CartItemSerializer(many=True, read_only=True)
+    total_price = serializers.SerializerMethodField(
+        method_name='get_total_price')
 
     class Meta:
-        model = AdoptionRequest
-        fields = ['id', 'user', 'requested_pets']
+        model = Cart
+        fields = ['id', 'user', 'total_price','items',]
         read_only_fields = ['user']
 
 
-class CreateAdoptionSerializer(serializers.Serializer):
-    adoption_request_id = serializers.UUIDField()
+class CreateOrderSerializer(serializers.Serializer):
+    cart_id = serializers.UUIDField()
+    
 
-    def validate_adoption_request_id(self, adoption_request_id):
-        if not AdoptionRequest.objects.filter(pk=adoption_request_id).exists():
-            raise serializers.ValidationError('No adoption request found with this id')
+    def validate_cart_id(self, cart_id):
+        if not Cart.objects.filter(pk=cart_id).exists():
+            raise serializers.ValidationError('No cart found with this id')
 
-        if not RequestedPet.objects.filter(adoption_request_id=adoption_request_id).exists():
-            raise serializers.ValidationError('No pets added to adoption request')
+        if not CartItem.objects.filter(cart_id=cart_id).exists():
+            raise serializers.ValidationError('Cart is empty')
 
-        return adoption_request_id
+        return cart_id
 
     def create(self, validated_data):
         user_id = self.context['user_id']
-        adoption_request_id = validated_data['adoption_request_id']
+        cart_id = validated_data['cart_id']
 
-        adoption_request = AdoptionRequest.objects.get(pk=adoption_request_id)
-        adoption = Adoption.objects.create(user_id=user_id)
-
-        for requested_pet in adoption_request.requested_pets.all():
-            AdoptionPet.objects.create(
-                adoption=adoption,
-                pet=requested_pet.pet,
-                quantity=requested_pet.quantity
-            )
-            # Mark pet as adopted
-            requested_pet.pet.is_adopted = True
-            requested_pet.pet.save()
-
-        return adoption
+        try:
+            order = OrderService.create_order(user_id=user_id, cart_id=cart_id)
+            return order
+        except ValueError as e:
+            raise serializers.ValidationError(str(e))
 
     def to_representation(self, instance):
-        return AdoptionSerializer(instance).data
+        return OrderSerializer(instance).data
 
 
-class AdoptionPetSerializer(serializers.ModelSerializer):
-    pet = SimplePetSerializer()
+    class AddCartItemSerializer(serializers.ModelSerializer):
+        pet = SimplePetSerializer()
 
     class Meta:
-        model = AdoptionPet
-        fields = ['id', 'pet', 'quantity']
+        model = OrderItem
+        fields = ['id', 'pet', 'price', 'quantity', 'total_price']
 
 
-class UpdateAdoptionSerializer(serializers.ModelSerializer):
+class UpdateOrderSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Adoption
+        model = Order
         fields = ['status']
 
 
-class AdoptionSerializer(serializers.ModelSerializer):
-    adopted_pets = AdoptionPetSerializer(many=True)
+class OrderSerializer(serializers.ModelSerializer):
+    items = AddCartItemSerializer(many=True)
 
     class Meta:
-        model = Adoption
-        fields = ['id', 'user', 'status', 'created_at', 'updated_at', 'adopted_pets']
+        model = Order
+        fields = ['id', 'user', 'status', 'total_price', 'created_at', 'items']
