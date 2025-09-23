@@ -2514,7 +2514,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\".vercel.app\", '127.0.0.1']\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG =True\nALLOWED_HOSTS = [\".vercel.app\", '127.0.0.1']\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2523,16 +2523,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\".vercel.app\", '127.0.0.1']\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',",
-        "detail": "pet_adoption.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DEBUG",
-        "kind": 5,
-        "importPath": "pet_adoption.settings",
-        "description": "pet_adoption.settings",
-        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\".vercel.app\", '127.0.0.1']\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG =True\nALLOWED_HOSTS = [\".vercel.app\", '127.0.0.1']\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
