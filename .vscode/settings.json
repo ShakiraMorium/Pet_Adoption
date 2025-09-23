@@ -8,6 +8,7 @@
         "djangorestframework",
         "djoser",
         "DOBA",
+        "dotenv",
         "endfor",
         "Feture",
         "filterset",

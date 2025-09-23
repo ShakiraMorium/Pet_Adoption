@@ -116,8 +116,8 @@ INTERNAL_IPS = [
 # }
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+    'default': {        
+        'ENGINE':'django.db.backends.postgresql',
         'NAME': config('dbname'),
         'USER': config('user'),
         'PASSWORD':config('password'),

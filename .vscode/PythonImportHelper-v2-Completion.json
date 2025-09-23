@@ -2622,7 +2622,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': config('dbname'),\n        'USER': config('user'),\n        'PASSWORD':config('password'),\n        'HOST':config('host'),\n        'PORT':config('port')\n    }\n}",
+        "peekOfCode": "DATABASES = {\n    'default': {        \n        'ENGINE':'django.db.backends.postgresql',\n        'NAME': config('dbname'),\n        'USER': config('user'),\n        'PASSWORD':config('password'),\n        'HOST':config('host'),\n        'PORT':config('port')\n    }\n}",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
