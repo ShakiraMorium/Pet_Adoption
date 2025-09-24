@@ -98,7 +98,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pet_adoption.wsgi.app'
+WSGI_APPLICATION = 'pet_adoption.wsgi.application'
 INTERNAL_IPS = [
    
     "127.0.0.1",

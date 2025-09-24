@@ -2604,7 +2604,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nINTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',\n#         'NAME': BASE_DIR / 'db.sqlite3',",
+        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.application'\nINTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',\n#         'NAME': BASE_DIR / 'db.sqlite3',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2798,11 +2798,11 @@
         "documentation": {}
     },
     {
-        "label": "app",
+        "label": "application",
         "kind": 5,
         "importPath": "pet_adoption.wsgi",
         "description": "pet_adoption.wsgi",
-        "peekOfCode": "app = get_wsgi_application()",
+        "peekOfCode": "application = get_wsgi_application()",
         "detail": "pet_adoption.wsgi",
         "documentation": {}
     },
