@@ -1,13 +1,14 @@
+
 {
     "builds": [{
-      "src": "pet_adoption/wsgi.py",
+      "src": "phi_mart/wsgi.py",
       "use": "@vercel/python",
-      "config": { "maxLambdaSize": "15mb", "runtime": "python3.11" }
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.3" }
     }],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "pet_adoption/wsgi.py"
+        "dest": "phi_mart/wsgi.py"
       }
     ]
 }
