@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'cart',
     'pets',
     'order',
@@ -69,6 +70,7 @@ REST_FRAMEWORK = {
     'COERCE_DECIMAL_TO_STRING': False,
 }
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
@@ -99,6 +101,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'pet_adoption.wsgi.app'
+
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173'
+    ]
+
+
 INTERNAL_IPS = [
    
     "127.0.0.1",

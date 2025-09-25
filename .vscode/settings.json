@@ -3,6 +3,7 @@
         "asgiref",
         "certifi",
         "cffi",
+        "corsheaders",
         "dbname",
         "defusedxml",
         "djangorestframework",
