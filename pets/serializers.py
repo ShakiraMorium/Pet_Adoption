@@ -21,6 +21,9 @@ class PetImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = PetImage
         fields = ['id', 'image']
+        
+    def get_image_url(self, obj):
+        return obj.image.url
 
 class PetSerializer(serializers.ModelSerializer):
     images = PetImageSerializer(many=True, read_only=True)

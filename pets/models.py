@@ -42,7 +42,7 @@ class Pet(models.Model):
 class PetImage(models.Model):
     pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name="images")
     image = CloudinaryField('image')
-    image = models.ImageField(upload_to="pets/images/", validators=[validate_file_size])
+    # image = models.ImageField(upload_to="pets/images/", validators=[validate_file_size])
 
 
     def __str__(self):
