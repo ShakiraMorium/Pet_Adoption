@@ -104,9 +104,8 @@ WSGI_APPLICATION = 'pet_adoption.wsgi.app'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
-    'https://pet-adoption-a5vw.vercel.app',
-    'https://pet-adoption-a5vw-git-main-shamimashammis-projects.vercel.app',
-    'https://pet-adoption-a5vw-ovie7zqjj-shamimashammis-projects.vercel.app',
+    
+    
     ]
 CORS_ALLOW_ALL_ORIGINS = True
 
