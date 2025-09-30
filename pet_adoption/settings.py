@@ -111,10 +111,11 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_ALL_ORIGINS = True
 
 INTERNAL_IPS = [
-   
+    
     "127.0.0.1",
- 
+   
 ]
+ 
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
