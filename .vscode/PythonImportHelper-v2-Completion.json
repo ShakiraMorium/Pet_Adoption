@@ -440,51 +440,19 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
+        "label": "PageNumberPagination",
+        "importPath": "rest_framework.pagination",
+        "description": "rest_framework.pagination",
         "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "rest_framework.pagination",
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
+        "label": "PageNumberPagination",
+        "importPath": "rest_framework.pagination",
+        "description": "rest_framework.pagination",
         "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "redirect",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
-        "documentation": {}
-    },
-    {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
-        "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "rest_framework.pagination",
         "documentation": {}
     },
     {
@@ -967,6 +935,46 @@
         "description": "rest_framework.exceptions",
         "isExtraImport": true,
         "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -1485,14 +1493,6 @@
         "documentation": {}
     },
     {
-        "label": "PageNumberPagination",
-        "importPath": "rest_framework.pagination",
-        "description": "rest_framework.pagination",
-        "isExtraImport": true,
-        "detail": "rest_framework.pagination",
-        "documentation": {}
-    },
-    {
         "label": "Decimal",
         "importPath": "decimal",
         "description": "decimal",
@@ -1808,11 +1808,20 @@
         "documentation": {}
     },
     {
+        "label": "PetPagination",
+        "kind": 6,
+        "importPath": "api.views",
+        "description": "api.views",
+        "peekOfCode": "class PetPagination(PageNumberPagination):\n    page_size = 10  # Number of pets per page\n    page_size_query_param = 'page_size'\n    max_page_size = 50\n# List and Create Pets (paginated)\nclass PetListAPI(generics.ListCreateAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    pagination_class = PetPagination  # enable pagination\n# Retrieve, Update, Delete a single pet by ID",
+        "detail": "api.views",
+        "documentation": {}
+    },
+    {
         "label": "PetListAPI",
         "kind": 6,
         "importPath": "api.views",
         "description": "api.views",
-        "peekOfCode": "class PetListAPI(generics.ListCreateAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\nclass PetDetailAPI(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    lookup_field = 'id'  # if you use <int:id> in urls",
+        "peekOfCode": "class PetListAPI(generics.ListCreateAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    pagination_class = PetPagination  # enable pagination\n# Retrieve, Update, Delete a single pet by ID\nclass PetDetailAPI(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    lookup_field = 'id'  # if your URL is <int:id>",
         "detail": "api.views",
         "documentation": {}
     },
@@ -1821,7 +1830,7 @@
         "kind": 6,
         "importPath": "api.views",
         "description": "api.views",
-        "peekOfCode": "class PetDetailAPI(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    lookup_field = 'id'  # if you use <int:id> in urls",
+        "peekOfCode": "class PetDetailAPI(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    lookup_field = 'id'  # if your URL is <int:id>",
         "detail": "api.views",
         "documentation": {}
     },
@@ -2577,7 +2586,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'debug_toolbar.middleware.DebugToolbarMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
+        "peekOfCode": "MIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'debug_toolbar.middleware.DebugToolbarMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2604,7 +2613,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173'\n    ]\nINTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\n# DATABASES = {",
+        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'https://pet-adoption-a5vw.vercel.app',\n    ]\n# CORS_ALLOW_ALL_ORIGINS = True\nINTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2613,7 +2622,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173'\n    ]\nINTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\n# DATABASES = {\n#     'default': {",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'https://pet-adoption-a5vw.vercel.app',\n    ]\n# CORS_ALLOW_ALL_ORIGINS = True\nINTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
