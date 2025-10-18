@@ -1,12 +1,7 @@
 from rest_framework import serializers
-from cart.models import Cart, CartItem, Cart, CartItem
+from cart.models import Cart, CartItem
 from pets.models import Pet
 from pets.serializers import PetSerializer
-from cart.services import CartService
-
-
-class EmptySerializer(serializers.Serializer):
-    pass
 
 
 # Simple Pet Serializer
@@ -49,7 +44,7 @@ class AddCartItemSerializer(serializers.ModelSerializer):
         return value
 
 
-# Update Cart Item
+# Update Cart Item Serializer
 class UpdateCartItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = CartItem
@@ -58,8 +53,8 @@ class UpdateCartItemSerializer(serializers.ModelSerializer):
 
 # Cart Item Serializer
 class CartItemSerializer(serializers.ModelSerializer):
-    pet = SimplePetSerializer()
-    total_price = serializers.SerializerMethodField(method_name='get_total_price')
+    pet = SimplePetSerializer(read_only=True)
+    total_price = serializers.SerializerMethodField()
 
     class Meta:
         model = CartItem
@@ -69,71 +64,17 @@ class CartItemSerializer(serializers.ModelSerializer):
         return cart_item.quantity * cart_item.pet.adoption_fee
 
 
-# Cart Serializer
+# Main Cart Serializer
 class CartSerializer(serializers.ModelSerializer):
-    items = CartItemSerializer(many=True, read_only=True)
-    total_price = serializers.SerializerMethodField(method_name='get_total_price')
+    items_cart = CartItemSerializer(many=True, read_only=True)
+    total_price = serializers.SerializerMethodField()
 
     class Meta:
         model = Cart
-        fields = ['id', 'user', 'items', 'total_price']
+        fields = ['id', 'user', 'created_at', 'items_cart', 'total_price']
         read_only_fields = ['user']
 
     def get_total_price(self, cart: Cart):
         return sum(
-            [item.pet.cart_fee * item.quantity for item in cart.items.all()]
+            [item.pet.adoption_fee * item.quantity for item in cart.items_cart.all()]
         )
-
-
-# Create Adoption (formerly Order)
-class CreateCartSerializer(serializers.Serializer):
-    cart_id = serializers.UUIDField()
-
-    def validate_cart_id(self, cart_id):
-        if not Cart.objects.filter(pk=cart_id).exists():
-            raise serializers.ValidationError("No cart found with this id")
-
-        if not CartItem.objects.filter(cart_id=cart_id).exists():
-            raise serializers.ValidationError("Cart is empty")
-
-        return cart_id
-
-    def create(self, validated_data):
-        user_id = self.context['user_id']
-        cart_id = validated_data['cart_id']
-
-        try:
-            cart = CartService.create_cart(
-                user_id=user_id, cart_id=cart_id
-            )
-            return cart
-        except ValueError as e:
-            raise serializers.ValidationError(str(e))
-
-    def to_representation(self, instance):
-        return CartSerializer(instance).data
-
-
-#cart Item Serializer
-class CartItemSerializer(serializers.ModelSerializer):
-    pet = SimplePetSerializer()
-
-    class Meta:
-        model = CartItem
-        fields = ['id', 'pet', 'price', 'quantity', 'total_price']
-
-
-# Update cart (status only)
-class UpdateCartSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Cart
-        fields = ['status']
-
-
-# cart Serializer
-class CartSerializer(serializers.ModelSerializer):
-    items = CartItemSerializer(many=True)
-
-    class Meta:
-        model = Cart
-        fields = ['id', 'user', 'status', 'total_price', 'created_at', 'items']

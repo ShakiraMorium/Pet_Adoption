@@ -8,12 +8,12 @@ from cart.models import Cart
 # 1. Pet Category Serializer
 class PetCategorySerializer(serializers.ModelSerializer):
     
-
-
     class Meta:
         model = PetCategory
         fields = ['id', 'name', 'description', 'pet_count']        
-    pet_count = serializers.IntegerField(read_only=True, help_text="Return the number product in this category")
+        pet_count = serializers.IntegerField(read_only=True, help_text="Return the number product in this category")
+
+
 
 
 # 2. Pet Image Serializer

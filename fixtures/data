@@ -1,0 +1,141 @@
+[
+  {
+    "model": "pets.pet",
+    "pk": 1,
+    "fields": {
+      "name": "Buddy",
+      "breed": "Golden Retriever",
+      "age": 3,
+      "adoption_fee": "150.00",
+      "description": "Friendly and playful",
+      "is_available": true,
+      "created_at": "2025-10-01T12:00:00Z",
+      "updated_at": "2025-10-01T12:00:00Z",
+      "category": 1
+    }
+  },
+  {
+    "model": "pets.petimage",
+    "pk": 1,
+    "fields": {
+      "pet": 1,
+      "image": "pets/images/buddy1.jpg"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 2,
+    "fields": {
+      "name": "Lucy",
+      "breed": "Labrador",
+      "age": 2,
+      "adoption_fee": "120.00",
+      "description": "Smart and friendly",
+      "is_available": true,
+      "created_at": "2025-10-01T12:10:00Z",
+      "updated_at": "2025-10-01T12:10:00Z",
+      "category": 2
+    }
+  },
+  {
+    "model": "pets.petimage",
+    "pk": 2,
+    "fields": {
+      "pet": 2,
+      "image": "pets/images/lucy1.jpg"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 3,
+    "fields": {
+      "name": "Max",
+      "breed": "German Shepherd",
+      "age": 4,
+      "adoption_fee": "180.00",
+      "description": "Protective and loyal",
+      "is_available": true,
+      "created_at": "2025-10-01T12:20:00Z",
+      "updated_at": "2025-10-01T12:20:00Z",
+      "category": 1
+    }
+  },
+  {
+    "model": "pets.petimage",
+    "pk": 3,
+    "fields": {
+      "pet": 3,
+      "image": "pets/images/max1.jpg"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 4,
+    "fields": {
+      "name": "Daisy",
+      "breed": "Beagle",
+      "age": 2,
+      "adoption_fee": "100.00",
+      "description": "Loves kids",
+      "is_available": true,
+      "created_at": "2025-10-01T12:30:00Z",
+      "updated_at": "2025-10-01T12:30:00Z",
+      "category": 2
+    }
+  },
+  {
+    "model": "pets.petimage",
+    "pk": 4,
+    "fields": {
+      "pet": 4,
+      "image": "pets/images/daisy1.jpg"
+    }
+  },
+  {
+    "model": "pets.pet",
+    "pk": 5,
+    "fields": {
+      "name": "Charlie",
+      "breed": "Poodle",
+      "age": 3,
+      "adoption_fee": "130.00",
+      "description": "Very active and playful",
+      "is_available": true,
+      "created_at": "2025-10-01T12:40:00Z",
+      "updated_at": "2025-10-01T12:40:00Z",
+      "category": 1
+    }
+  },
+  {
+    "model": "pets.petimage",
+    "pk": 5,
+    "fields": {
+      "pet": 5,
+      "image": "pets/images/charlie1.jpg"
+    }
+  },
+
+  {
+    "model": "pets.pet",
+    "pk": 30,
+    "fields": {
+      "name": "Rocky",
+      "breed": "Boxer",
+      "age": 3,
+      "adoption_fee": "140.00",
+      "description": "Energetic and friendly",
+      "is_available": true,
+      "created_at": "2025-10-01T17:00:00Z",
+      "updated_at": "2025-10-01T17:00:00Z",
+      "category": 2
+    }
+  },
+  {
+    "model": "pets.petimage",
+    "pk": 30,
+    "fields": {
+      "pet": 30,
+      "image": "pets/images/rocky1.jpg"
+    }
+  }
+]
