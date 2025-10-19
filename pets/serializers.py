@@ -2,7 +2,7 @@ from rest_framework import serializers
 from decimal import Decimal
 from pets.models import PetCategory, Pet, PetImage, PetReview, CartRequest
 from django.contrib.auth import get_user_model
-from cart.models import Cart
+# from cart.models import Cart
 
 
 # 1. Pet Category Serializer
@@ -11,7 +11,7 @@ class PetCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = PetCategory
         fields = ['id', 'name', 'description', 'pet_count']        
-        pet_count = serializers.IntegerField(read_only=True, help_text="Return the number product in this category")
+        pet_count = serializers.IntegerField(read_only=True, help_text="Return the number pets in this category")
 
 
 
