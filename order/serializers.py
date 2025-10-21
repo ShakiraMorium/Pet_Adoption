@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from pets.models import Pet, PetCategory, CartRequest
-from users.models import PetUser
+from pets.models import Pet
+# from users.models import PetUser
 from order.models import Cart, CartItem, Order, OrderItem
 from pets.serializers import PetSerializer
 from order.services import OrderService
-from cart.serializers import AddCartItemSerializer
+# from cart.serializers import AddCartItemSerializer
 
 class EmptySerializer(serializers.Serializer):
     pass
@@ -27,11 +27,11 @@ class AddCartItemSerializer(serializers.ModelSerializer):
     def save(self, **kwargs):
         cart_id = self.context['cart_id']
         pet_id = self.validated_data['pet_id']
-        quantity = self.validated_data.get('quantity')
+        quantity = self.validated_data('quantity')
 
         try:
             cart_item = CartItem.objects.get(
-                cart_id=cart_id, product_id=pet_id)
+                cart_id=cart_id, pet_id=pet_id)
             cart_item.quantity += quantity
             self.instance = cart_item.save()
         except CartItem.DoesNotExist:
@@ -59,6 +59,8 @@ class CartItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = CartItem
         fields = ['id', 'pet', 'quantity','total_price']
+    def get_total_price(self, cart_item: CartItem):
+        return cart_item.quantity * cart_item.pet.price
 
 
 class CartSerializer(serializers.ModelSerializer):
@@ -70,6 +72,10 @@ class CartSerializer(serializers.ModelSerializer):
         model = Cart
         fields = ['id', 'user', 'total_price','items',]
         read_only_fields = ['user']
+    def get_total_price(self, cart: Cart):
+        return sum(
+            [item.pet.price * item.quantity for item in cart.items.all()])
+
 
 
 class CreateOrderSerializer(serializers.Serializer):

@@ -15,7 +15,7 @@ class UserCreateSerializer(BaseUserCreateSerializer):
             'address',
             'phone_number',
         ]
-        extra_kwargs = {'password': {'write_only': True}}
+        # extra_kwargs = {'password': {'write_only': True}}
 
 
 # User Serializer (for profile & safe responses)

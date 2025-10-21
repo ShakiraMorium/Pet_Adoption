@@ -16,14 +16,17 @@ class Cart(models.Model):
 # CartItem model
 class CartItem(models.Model):
     cart = models.ForeignKey(
-        Cart, on_delete=models.CASCADE, related_name="order_items"
+        Cart, on_delete=models.CASCADE, related_name="items"
     )
     pet = models.ForeignKey(
-        Pet, on_delete=models.CASCADE, related_name="order_cart_items"  # unique related_name
-    )
-    quantity = models.PositiveIntegerField()
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    total_price = models.DecimalField(max_digits=12, decimal_places=2, default=0)
+        Pet, on_delete=models.CASCADE)
+    
+    quantity = models.PositiveIntegerField(validators=[MinValueValidator(1)])
+    class Meta:
+        unique_together = [['cart', 'pet']]
+
+    def __str__(self):
+        return f"{self.quantity} x {self.pet.name}"
 
 # Order model
 class Order(models.Model):
@@ -42,8 +45,10 @@ class Order(models.Model):
     ]
 
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    user = models.ForeignKey(PetUser, on_delete=models.CASCADE, related_name="orders")
-    status = models.CharField(max_length=20, choices=STATUS_CHOICES, default=NOT_PAID)
+    user = models.ForeignKey(
+       PetUser, on_delete=models.CASCADE, related_name="orders")
+    status = models.CharField(
+        max_length=20, choices=STATUS_CHOICES, default=NOT_PAID)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -53,11 +58,13 @@ class Order(models.Model):
 
 # OrderItem model
 class OrderItem(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="items")
+    order = models.ForeignKey(
+        Order, on_delete=models.CASCADE, related_name="items")
     pet = models.ForeignKey(Pet, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     total_price = models.DecimalField(max_digits=12, decimal_places=2)
+
 
     def __str__(self):
         return f"{self.quantity} x {self.pet.name}"

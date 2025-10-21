@@ -20,7 +20,7 @@ from pets.paginations import DefaultPagination
 
 class PetViewSet(ModelViewSet):
     
-    queryset = Pet.objects.all()
+    # queryset = Pet.objects.all()
     serializer_class = PetSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = PetFilter
@@ -28,6 +28,11 @@ class PetViewSet(ModelViewSet):
     search_fields = ['name', 'description']
     ordering_fields = ['adoption_fee', 'updated_at']
     permission_classes = [IsAdminOrReadOnly]
+    
+    
+    def get_queryset(self):
+        return Pet.objects.prefetch_related('images').all()
+    
 
     @swagger_auto_schema(operation_summary='Retrieve a list of pets')
     def list(self, request, *args, **kwargs):

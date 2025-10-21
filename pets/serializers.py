@@ -10,10 +10,13 @@ class PetCategorySerializer(serializers.ModelSerializer):
     
     class Meta:
         model = PetCategory
-        fields = ['id', 'name', 'description', 'pet_count']        
-        pet_count = serializers.IntegerField(read_only=True, help_text="Return the number pets in this category")
-
-
+        fields = ['id', 'name', 'description', 'pet_count']   
+        pet_count = serializers.SerializerMethodField()     
+        # pet_count = serializers.IntegerField(read_only=True, help_text="Return the number pets in this category")
+    
+    def get_pet_count(self, obj):
+        # obj is a PetCategory instance
+        return obj.pet_set.count() 
 
 
 # 2. Pet Image Serializer
@@ -22,27 +25,29 @@ class PetImageSerializer(serializers.ModelSerializer):
         model = PetImage
         fields = ['id', 'image']
         
-    def get_image_url(self, obj):
-        return obj.image.url
+    # def get_image_url(self, obj):
+    #     return obj.image.url
 
 class PetSerializer(serializers.ModelSerializer):
     images = PetImageSerializer(many=True, read_only=True)
-    price_with_tax = serializers.SerializerMethodField()  # move here
+    adoption_fee_with_tax = serializers.SerializerMethodField(method_name='calculate_tax')  # move here
 
     class Meta:
         model = Pet
         fields = [
             'id', 'name', 'description', 'age', 'adoption_fee',
-            'price_with_tax', 'is_available', 'category', 'images'
+            'adoption_fee_with_tax', 'is_available', 'category', 'images'
         ]
 
-    def get_price_with_tax(self, obj):
-        return round(obj.adoption_fee * Decimal(1.1), 2)
+    # def get_adoption_fee_with_tax(self, obj):
+    #     return round(obj.adoption_fee * Decimal(1.1), 2)
+    def calculate_tax(self, pet):
+        return round(pet.adoption_fee * Decimal(1.1), 2)
 
-    def validate_adoption_fee(self, value):
-        if value < 0:
+    def validate_adoption_fee(self, adoption_fee):
+        if adoption_fee < 0:
             raise serializers.ValidationError("Adoption fee cannot be negative")
-        return value
+        return adoption_fee
 
 # 4. Simple User Serializer
 class SimpleUserSerializer(serializers.ModelSerializer):

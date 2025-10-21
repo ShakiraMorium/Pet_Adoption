@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  
+DEBUG = True  
 
 ALLOWED_HOSTS = [".vercel.app", '127.0.0.1']
 AUTH_USER_MODEL = 'users.PetUser'
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
-    'cart',
+    # 'cart',
     'pets',
     'order',
     'users',
@@ -59,15 +59,18 @@ INSTALLED_APPS = [
     
 ]
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
+    # 'DEFAULT_AUTHENTICATION_CLASSES': (
+    #     'rest_framework_simplejwt.authentication.JWTAuthentication',
+    # ),
+    # 'DEFAULT_PERMISSION_CLASSES': [
+    #     'rest_framework.permissions.IsAuthenticated',  # secure by default
+    # ],
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+      'PAGE_SIZE': 10,
+      'COERCE_DECIMAL_TO_STRING': False,
+      'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated',  # secure by default
-    ],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10,
-    'COERCE_DECIMAL_TO_STRING': False,
 }
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
@@ -185,7 +188,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATIC_FILES_DIR = [BASE_DIR / 'static']
+# STATIC_FILES_DIR = [BASE_DIR / 'static']
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -209,7 +212,7 @@ REST_FRAMEWORK = {
 }
 # JWT config
 SIMPLE_JWT = {
-    'AUTH_HEADER_TYPES': ('Bearer',),   # use Bearer instead of JWT
+    'AUTH_HEADER_TYPES': ('JWT',),   # use JWT
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
 }
 
@@ -218,12 +221,12 @@ SIMPLE_JWT = {
 
 # Djoser config
 DJOSER = {
-    # 'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),
-    # 'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),
-    # 'EMAIL_FRONTEND_SITE_NAME': 'PhiMart',
-    # 'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
-    # 'ACTIVATION_URL': 'activate/{uid}/{token}',
-    # 'SEND_ACTIVATION_EMAIL': True,
+    'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),
+    'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),
+    'EMAIL_FRONTEND_SITE_NAME': 'PhiMart',
+    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
+    'ACTIVATION_URL': 'activate/{uid}/{token}',
+    'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {
         'user_create': 'users.serializers.UserCreateSerializer',
         'current_user': 'users.serializers.UserSerializer'
@@ -231,7 +234,7 @@ DJOSER = {
 }
 # Swagger config
 SWAGGER_SETTINGS = {
-    'USE_SESSION_AUTH': False,   
+    # 'USE_SESSION_AUTH': False,   
     
     'SECURITY_DEFINITIONS': {
         'Bearer': {
@@ -243,4 +246,12 @@ SWAGGER_SETTINGS = {
     }
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
+EMAIL_PORT = config('EMAIL_PORT')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
+BACKEND_URL = config("BACKEND_URL")
+FRONTEND_URL = config("FRONTEND_URL")
