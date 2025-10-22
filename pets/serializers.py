@@ -11,12 +11,15 @@ class PetCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = PetCategory
         fields = ['id', 'name', 'description', 'pet_count']   
-        pet_count = serializers.SerializerMethodField()     
-        # pet_count = serializers.IntegerField(read_only=True, help_text="Return the number pets in this category")
+        # pet_count = serializers.SerializerMethodField()     
+        per_count = serializers.IntegerField(
+        read_only=True, help_text="Return the number pet in this category")
+
+
     
-    def get_pet_count(self, obj):
-        # obj is a PetCategory instance
-        return obj.pet_set.count() 
+    # def get_pets_count(self, obj):
+    #     # obj is a PetCategory instance
+    #     return obj.pets_set.count() 
 
 
 # 2. Pet Image Serializer
