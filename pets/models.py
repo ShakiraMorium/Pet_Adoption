@@ -23,13 +23,13 @@ class Pet(models.Model):
     description = models.TextField(blank=True, null=True)
     is_available = models.BooleanField(default=True)
     category = models.ForeignKey(
-        PetCategory, on_delete=models.CASCADE, related_name="pets")
+        PetCategory, on_delete=models.CASCADE,related_name="pets")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    category = models.ForeignKey(PetCategory,on_delete=models.CASCADE,related_name="pets")
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    # category = models.ForeignKey(PetCategory,on_delete=models.CASCADE,related_name="pets")
+    # created_at = models.DateTimeField(auto_now_add=True)
+    # updated_at = models.DateTimeField(auto_now=True)
     
     class Meta:
         ordering = ['-id',]

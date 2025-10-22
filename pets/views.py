@@ -69,19 +69,19 @@ class PetImageViewSet(ModelViewSet):
 
 # Pet Category ViewSet
 
-class PetCategoryViewSet(ModelViewSet):
-    permission_classes = [IsAdminOrReadOnly]
-    queryset = PetCategory.objects.annotate(
-        pet_count=Count('pets')).all()
-    serializer_class = PetCategorySerializer
-
-
-
 # class PetCategoryViewSet(ModelViewSet):
-#     serializer_class = PetCategorySerializer
+#     permission_classes = [IsAdminOrReadOnly]
 #     queryset = PetCategory.objects.annotate(
-#         pet_count=Count('pets') 
-#     ).all()
+#         pet_count=Count('pets')).prefetch_related('pets')
+#     serializer_class = PetCategorySerializer
+
+
+
+class PetCategoryViewSet(ModelViewSet):
+    serializer_class = PetCategorySerializer
+    queryset = PetCategory.objects.annotate(
+        pet_count=Count('pets') 
+    ).all()
 
 
 # Pet Review ViewSet

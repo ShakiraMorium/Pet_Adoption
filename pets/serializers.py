@@ -5,16 +5,7 @@ from django.contrib.auth import get_user_model
 # from cart.models import Cart
 
 
-# 1. Pet Category Serializer
-class PetCategorySerializer(serializers.ModelSerializer):
-    
-    class Meta:
-        model = PetCategory
-        fields = ['id', 'name', 'description', 'pet_count']   
-        # pet_count = serializers.SerializerMethodField()     
-        per_count = serializers.IntegerField(
-        read_only=True, help_text="Return the number pet in this category")
-
+#
 
     
     # def get_pets_count(self, obj):
@@ -22,7 +13,7 @@ class PetCategorySerializer(serializers.ModelSerializer):
     #     return obj.pets_set.count() 
 
 
-# 2. Pet Image Serializer
+# 1. Pet Image Serializer
 class PetImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = PetImage
@@ -30,7 +21,8 @@ class PetImageSerializer(serializers.ModelSerializer):
         
     # def get_image_url(self, obj):
     #     return obj.image.url
-
+    
+# 2.pet serializer
 class PetSerializer(serializers.ModelSerializer):
     images = PetImageSerializer(many=True, read_only=True)
     adoption_fee_with_tax = serializers.SerializerMethodField(method_name='calculate_tax')  # move here
@@ -51,6 +43,34 @@ class PetSerializer(serializers.ModelSerializer):
         if adoption_fee < 0:
             raise serializers.ValidationError("Adoption fee cannot be negative")
         return adoption_fee
+    
+# 3. Pet Category Serializer
+# class PetCategorySerializer(serializers.ModelSerializer):
+#     #  pets = PetSerializer(many=True, read_only=True, source='pet_set')
+
+#     class Meta:
+#         model = PetCategory
+#         fields = ['id', 'name', 'description', 'pet_count']   
+#         # pet_count = serializers.SerializerMethodField()     
+#         pet_count = serializers.IntegerField(
+#         read_only=True, help_text="Return the number pet in this category")
+
+class PetCategorySerializer(serializers.ModelSerializer):
+    # pets = PetSerializer(many=True, read_only=True, source='pet_count')
+    # pets = serializers.SerializerMethodField()
+
+    class Meta:
+        model = PetCategory
+        fields = ['id', 'name', 'description', 'pet_count', 'pets']
+
+    # def get_pet_count(self, obj):
+    #     return obj.pets.count()  # uses related_name
+
+    # def get_pets(self, obj):
+    #     pets_qs = obj.pets.all()[:4]  # show first 4 pets only
+    #     return PetSerializer(pets_qs, many=True, context=self.context).data
+
+
 
 # 4. Simple User Serializer
 class SimpleUserSerializer(serializers.ModelSerializer):
