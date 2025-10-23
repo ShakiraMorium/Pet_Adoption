@@ -1,5 +1,5 @@
 from django.contrib import admin
-from pets.models import Pet, PetCategory, PetReview, PetImage, CartRequest
+from pets.models import Pet, PetCategory, PetReview, PetImage
 
 # Simple registrations
 # admin.site.register(PetReview)

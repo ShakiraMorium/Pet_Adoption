@@ -41,7 +41,8 @@ class Pet(models.Model):
 
 
 class PetImage(models.Model):
-    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name="images")
+    product = models.ForeignKey(
+        Pet, on_delete=models.CASCADE, related_name='images')
     image = CloudinaryField('image')
     # image = models.ImageField(upload_to="images", validators=[validate_file_size])
 
