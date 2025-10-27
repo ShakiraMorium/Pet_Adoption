@@ -22,6 +22,7 @@ class Pet(models.Model):
     adoption_fee = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)
     description = models.TextField(blank=True, null=True)
     is_available = models.BooleanField(default=True)
+    image = models.ImageField(upload_to='pets/', blank=True, null=True) 
     category = models.ForeignKey(
         PetCategory, on_delete=models.CASCADE,related_name="pets")
     created_at = models.DateTimeField(auto_now_add=True)
@@ -41,7 +42,7 @@ class Pet(models.Model):
 
 
 class PetImage(models.Model):
-    product = models.ForeignKey(
+    pet = models.ForeignKey(
         Pet, on_delete=models.CASCADE, related_name='images')
     image = CloudinaryField('image')
     # image = models.ImageField(upload_to="images", validators=[validate_file_size])
@@ -64,7 +65,7 @@ class PetReview(models.Model):
 
 
 class CartRequest(models.Model):
-    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name="price")
+    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name="cart_requests")
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     approved = models.BooleanField(default=False)
     requested_at = models.DateTimeField(auto_now_add=True)

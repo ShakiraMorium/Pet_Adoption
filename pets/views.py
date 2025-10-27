@@ -20,7 +20,7 @@ from pets.paginations import DefaultPagination
 
 class PetViewSet(ModelViewSet):
     
-    # queryset = Pet.objects.all()
+    queryset = Pet.objects.all()
     serializer_class = PetSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = PetFilter
@@ -70,7 +70,7 @@ class PetImageViewSet(ModelViewSet):
 # Pet Category ViewSet
 
 # class PetCategoryViewSet(ModelViewSet):
-#     permission_classes = [IsAdminOrReadOnly]
+#     permission_classes = [IsAdminOrReadOnly]/[AllowAny]
 #     queryset = PetCategory.objects.annotate(
 #         pet_count=Count('pets')).prefetch_related('pets')
 #     serializer_class = PetCategorySerializer

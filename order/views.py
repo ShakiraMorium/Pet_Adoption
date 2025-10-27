@@ -215,6 +215,7 @@ class CartViewSet(CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, Gener
 
 
 class CartItemViewSet(ModelViewSet):
+    permission_classes = [IsAuthenticated]  # ✅ Require login
     http_method_names = ['get', 'post', 'patch', 'delete']
 
     def get_serializer_class(self):
@@ -229,10 +230,13 @@ class CartItemViewSet(ModelViewSet):
         if getattr(self, 'swagger_fake_view', False):
             return context
 
-        return {'cart_id': self.kwargs.get('cart_pk')}
+        cart, _ = Cart.objects.get_or_create(user=self.request.user)
+        context['cart_id'] = cart.id
+        return context
 
     def get_queryset(self):
-        return CartItem.objects.select_related('pet').filter(cart_id=self.kwargs.get('cart_pk'))
+        cart, _ = Cart.objects.get_or_create(user=self.request.user)
+        return CartItem.objects.select_related('pet').filter(cart_id=cart.id)
 
 
 class OrderViewset(ModelViewSet):

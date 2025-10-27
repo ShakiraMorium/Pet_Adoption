@@ -35,7 +35,7 @@
   { "model": "pets.pet", "pk": 1, "fields": {
       "name": "Buddy", "breed": "Mixed", "age": 2,
       "description": "Friendly dog, loves playing.",
-      "adoption_fee": "213.80", "availability": true,
+      "adoption_fee": "213.80", "is_available": true,
       "category": 1,
       "image": "pets/buddy.jpg",
       "created_at": "2025-02-05T02:45:04.629624",
@@ -44,7 +44,7 @@
   { "model": "pets.pet", "pk": 2, "fields": {
       "name": "Milo", "breed": "Labrador", "age": 3,
       "description": "Playful Labrador looking for a home.",
-      "adoption_fee": "46.92", "availability": true,
+      "adoption_fee": "46.92", "is_available": true,
       "category": 1,
       "image": "pets/milo.jpg",
       "created_at": "2025-02-02T15:45:04.629624",
@@ -53,7 +53,7 @@
   { "model": "pets.pet", "pk": 3, "fields": {
       "name": "Luna", "breed": "German Shepherd", "age": 4,
       "description": "Loyal dog, great companion.",
-      "adoption_fee": "144.57", "availability": true,
+      "adoption_fee": "144.57", "is_available": true,
       "category": 1,
       "image": "pets/luna.jpg",
       "created_at": "2025-02-07T11:45:04.629624",
@@ -62,7 +62,7 @@
   { "model": "pets.pet", "pk": 4, "fields": {
       "name": "Nala", "breed": "Siamese Cat", "age": 2,
       "description": "Sweet and affectionate cat.",
-      "adoption_fee": "75.00", "availability": true,
+      "adoption_fee": "75.00", "is_available": true,
       "category": 2,
       "image": "pets/nala.jpg",
       "created_at": "2025-02-03T09:12:04.629624",
@@ -71,7 +71,7 @@
   { "model": "pets.pet", "pk": 5, "fields": {
       "name": "Simba", "breed": "Persian Cat", "age": 3,
       "description": "Fluffy and calm indoor cat.",
-      "adoption_fee": "92.40", "availability": false,
+      "adoption_fee": "92.40", "is_available": false,
       "category": 2,
       "image": "pets/simba.jpg",
       "created_at": "2025-02-04T07:45:04.629624",
@@ -80,7 +80,7 @@
   { "model": "pets.pet", "pk": 6, "fields": {
       "name": "Rocky", "breed": "Bulldog", "age": 5,
       "description": "Strong but gentle dog.",
-      "adoption_fee": "134.20", "availability": true,
+      "adoption_fee": "134.20", "is_available": true,
       "category": 1,
       "image": "pets/rocky.jpg",
       "created_at": "2025-02-01T12:30:04.629624",
@@ -89,7 +89,7 @@
   { "model": "pets.pet", "pk": 7, "fields": {
       "name": "Daisy", "breed": "Cockatiel", "age": 1,
       "description": "Cheerful bird, loves to whistle.",
-      "adoption_fee": "30.00", "availability": true,
+      "adoption_fee": "30.00", "is_available": true,
       "category": 3,
       "image": "pets/daisy.jpg",
       "created_at": "2025-02-09T10:00:04.629624",
@@ -98,7 +98,7 @@
   { "model": "pets.pet", "pk": 8, "fields": {
       "name": "Coco", "breed": "Parrot", "age": 4,
       "description": "Colorful parrot, can mimic words.",
-      "adoption_fee": "120.00", "availability": false,
+      "adoption_fee": "120.00", "is_available": false,
       "category": 3,
       "image": "pets/coco.jpg",
       "created_at": "2025-02-05T14:10:04.629624",
@@ -107,7 +107,7 @@
   { "model": "pets.pet", "pk": 9, "fields": {
       "name": "Thumper", "breed": "Holland Lop Rabbit", "age": 2,
       "description": "Cute bunny, loves carrots.",
-      "adoption_fee": "25.50", "availability": true,
+      "adoption_fee": "25.50", "is_available": true,
       "category": 4,
       "image": "pets/thumper.jpg",
       "created_at": "2025-02-06T08:00:04.629624",
@@ -116,7 +116,7 @@
   { "model": "pets.pet", "pk": 10, "fields": {
       "name": "Chico", "breed": "Hamster", "age": 1,
       "description": "Small and energetic hamster.",
-      "adoption_fee": "15.75", "availability": true,
+      "adoption_fee": "15.75", "is_available": true,
       "category": 4,
       "image": "pets/chico.jpg",
       "created_at": "2025-02-03T06:30:04.629624",
@@ -125,7 +125,7 @@
   { "model": "pets.pet", "pk": 11, "fields": {
       "name": "Shadow", "breed": "Husky", "age": 3,
       "description": "Active and intelligent husky.",
-      "adoption_fee": "180.00", "availability": true,
+      "adoption_fee": "180.00", "is_available": true,
       "category": 1,
       "image": "pets/shadow.jpg",
       "created_at": "2025-02-08T13:20:04.629624",
@@ -134,7 +134,7 @@
   { "model": "pets.pet", "pk": 12, "fields": {
       "name": "Lily", "breed": "Shih Tzu", "age": 4,
       "description": "Gentle dog, perfect lap companion.",
-      "adoption_fee": "95.30", "availability": true,
+      "adoption_fee": "95.30", "is_available": true,
       "category": 1,
       "image": "pets/lily.jpg",
       "created_at": "2025-02-02T09:00:04.629624",
@@ -143,7 +143,7 @@
   { "model": "pets.pet", "pk": 13, "fields": {
       "name": "Misty", "breed": "Tabby Cat", "age": 2,
       "description": "Curious and playful tabby.",
-      "adoption_fee": "65.40", "availability": true,
+      "adoption_fee": "65.40", "is_available": true,
       "category": 2,
       "image": "pets/misty.jpg",
       "created_at": "2025-02-04T10:30:04.629624",
@@ -152,7 +152,7 @@
   { "model": "pets.pet", "pk": 14, "fields": {
       "name": "Ruby", "breed": "Ragdoll Cat", "age": 5,
       "description": "Calm and affectionate ragdoll.",
-      "adoption_fee": "110.00", "availability": false,
+      "adoption_fee": "110.00", "is_available": false,
       "category": 2,
       "image": "pets/ruby.jpg",
       "created_at": "2025-02-06T11:15:04.629624",
@@ -161,7 +161,7 @@
   { "model": "pets.pet", "pk": 15, "fields": {
       "name": "Zeus", "breed": "Rottweiler", "age": 6,
       "description": "Strong and protective dog.",
-      "adoption_fee": "200.00", "availability": true,
+      "adoption_fee": "200.00", "is_available": true,
       "category": 1,
       "image": "pets/zeus.jpg",
       "created_at": "2025-02-07T16:30:04.629624",
@@ -170,7 +170,7 @@
   { "model": "pets.pet", "pk": 16, "fields": {
       "name": "Oliver", "breed": "Cockapoo", "age": 1,
       "description": "Playful and adorable puppy.",
-      "adoption_fee": "130.00", "availability": true,
+      "adoption_fee": "130.00", "is_available": true,
       "category": 1,
       "image": "pets/oliver.jpg",
       "created_at": "2025-02-05T18:00:04.629624",
@@ -179,7 +179,7 @@
   { "model": "pets.pet", "pk": 17, "fields": {
       "name": "Chloe", "breed": "Lovebird", "age": 2,
       "description": "Beautiful lovebird, very active.",
-      "adoption_fee": "50.00", "availability": true,
+      "adoption_fee": "50.00", "is_available": true,
       "category": 3,
       "image": "pets/chloe.jpg",
       "created_at": "2025-02-02T20:45:04.629624",
@@ -188,7 +188,7 @@
   { "model": "pets.pet", "pk": 18, "fields": {
       "name": "Max", "breed": "Golden Retriever", "age": 4,
       "description": "Friendly retriever, loves kids.",
-      "adoption_fee": "175.00", "availability": false,
+      "adoption_fee": "175.00", "is_available": false,
       "category": 1,
       "image": "pets/max.jpg",
       "created_at": "2025-02-01T19:30:04.629624",
@@ -197,7 +197,7 @@
   { "model": "pets.pet", "pk": 19, "fields": {
       "name": "Bella", "breed": "Beagle", "age": 3,
       "description": "Energetic beagle, loves outdoor play.",
-      "adoption_fee": "140.50", "availability": true,
+      "adoption_fee": "140.50", "is_available": true,
       "category": 1,
       "image": "pets/bella.jpg",
       "created_at": "2025-02-03T21:10:04.629624",
@@ -206,7 +206,7 @@
   { "model": "pets.pet", "pk": 20, "fields": {
       "name": "Snowy", "breed": "Angora Rabbit", "age": 1,
       "description": "Fluffy white bunny, very gentle.",
-      "adoption_fee": "35.25", "availability": true,
+      "adoption_fee": "35.25", "is_available": true,
       "category": 4,
       "image": "pets/snowy.jpg",
       "created_at": "2025-02-09T08:45:04.629624",
@@ -215,7 +215,7 @@
   { "model": "pets.pet", "pk": 21, "fields": {
       "name": "Oscar", "breed": "Dalmatian", "age": 2,
       "description": "Spotted Dalmatian, very playful.",
-      "adoption_fee": "160.00", "availability": true,
+      "adoption_fee": "160.00", "is_available": true,
       "category": 1,
       "image": "pets/oscar.jpg",
       "created_at": "2025-02-10T10:00:04.629624",
@@ -224,7 +224,7 @@
   { "model": "pets.pet", "pk": 22, "fields": {
       "name": "Mango", "breed": "Macaw", "age": 3,
       "description": "Bright and talkative parrot.",
-      "adoption_fee": "220.00", "availability": true,
+      "adoption_fee": "220.00", "is_available": true,
       "category": 3,
       "image": "pets/mango.jpg",
       "created_at": "2025-02-11T12:30:04.629624",
@@ -233,7 +233,7 @@
   { "model": "pets.pet", "pk": 23, "fields": {
       "name": "Hazel", "breed": "Guinea Pig", "age": 1,
       "description": "Small and friendly guinea pig.",
-      "adoption_fee": "18.00", "availability": true,
+      "adoption_fee": "18.00", "is_available": true,
       "category": 4,
       "image": "pets/hazel.jpg",
       "created_at": "2025-02-12T14:15:04.629624",
@@ -242,7 +242,7 @@
   { "model": "pets.pet", "pk": 24, "fields": {
       "name": "Zara", "breed": "Sphynx Cat", "age": 2,
       "description": "Hairless cat, affectionate and unique.",
-      "adoption_fee": "130.00", "availability": false,
+      "adoption_fee": "130.00", "is_available": false,
       "category": 2,
       "image": "pets/zara.jpg",
       "created_at": "2025-02-13T09:40:04.629624",
@@ -251,7 +251,7 @@
   { "model": "pets.pet", "pk": 25, "fields": {
       "name": "Apollo", "breed": "Doberman", "age": 5,
       "description": "Strong and alert, needs active owner.",
-      "adoption_fee": "210.00", "availability": true,
+      "adoption_fee": "210.00", "is_available": true,
       "category": 1,
       "image": "pets/apollo.jpg",
       "created_at": "2025-02-14T08:20:04.629624",
@@ -260,7 +260,7 @@
   { "model": "pets.pet", "pk": 26, "fields": {
       "name": "Peach", "breed": "Canary", "age": 1,
       "description": "Sweet singing canary.",
-      "adoption_fee": "25.00", "availability": true,
+      "adoption_fee": "25.00", "is_available": true,
       "category": 3,
       "image": "pets/peach.jpg",
       "created_at": "2025-02-15T07:00:04.629624",
@@ -269,7 +269,7 @@
   { "model": "pets.pet", "pk": 27, "fields": {
       "name": "Finn", "breed": "Border Collie", "age": 3,
       "description": "Energetic and smart working dog.",
-      "adoption_fee": "170.00", "availability": true,
+      "adoption_fee": "170.00", "is_available": true,
       "category": 1,
       "image": "pets/finn.jpg",
       "created_at": "2025-02-15T15:10:04.629624",
@@ -278,7 +278,7 @@
   { "model": "pets.pet", "pk": 28, "fields": {
       "name": "Lola", "breed": "Russian Blue Cat", "age": 4,
       "description": "Elegant cat with striking blue coat.",
-      "adoption_fee": "140.00", "availability": false,
+      "adoption_fee": "140.00", "is_available": false,
       "category": 2,
       "image": "pets/lola.jpg",
       "created_at": "2025-02-16T10:45:04.629624",
@@ -287,7 +287,7 @@
   { "model": "pets.pet", "pk": 29, "fields": {
       "name": "Cookie", "breed": "Chinchilla", "age": 2,
       "description": "Soft fur, gentle small animal.",
-      "adoption_fee": "60.00", "availability": true,
+      "adoption_fee": "60.00", "is_available": true,
       "category": 4,
       "image": "pets/cookie.jpg",
       "created_at": "2025-02-17T11:20:04.629624",
@@ -296,7 +296,7 @@
   { "model": "pets.pet", "pk": 30, "fields": {
       "name": "Leo", "breed": "Pomeranian", "age": 3,
       "description": "Fluffy and playful companion.",
-      "adoption_fee": "155.00", "availability": true,
+      "adoption_fee": "155.00", "is_available": true,
       "category": 1,
       "image": "pets/leo.jpg",
       "created_at": "2025-02-18T09:35:04.629624",

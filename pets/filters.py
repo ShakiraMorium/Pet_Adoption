@@ -8,5 +8,5 @@ class PetFilter(FilterSet):
             'category_id': ['exact'],# Filter by pet category
             'id':['exact'], # Filter by specific pet ID
             'age': ['gt', 'lt'],        # Filter by age greater than or less than
-            'price': ['gt', 'lt']  # Filter by adoption fee range
+            'adoption_fee': ['gt', 'lt']  # Filter by adoption fee range
         }

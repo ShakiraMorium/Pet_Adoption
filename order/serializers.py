@@ -16,7 +16,38 @@ class SimplePetSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'age', 'category']
 
 
-# Adding a pet to adoption request
+
+    pet_id = serializers.IntegerField()
+
+    class Meta:
+        model = CartItem
+        fields = ['id', 'pet_id', 'quantity']
+
+    def save(self, **kwargs):
+        cart_id = self.context['cart_id']
+        pet_id = self.validated_data['pet_id']
+        quantity = self.validated_data['quantity']  
+
+        try:
+            cart_item = CartItem.objects.get(cart_id=cart_id, pet_id=pet_id)
+            cart_item.quantity += quantity
+            cart_item.save()
+            self.instance = cart_item
+        except CartItem.DoesNotExist:
+            self.instance = CartItem.objects.create(
+                cart_id=cart_id,
+                pet_id=pet_id,
+                quantity=quantity
+            )
+
+        return self.instance
+
+    def validate_pet_id(self, value):
+        if not Pet.objects.filter(pk=value).exists():
+            raise serializers.ValidationError(f"Pet with id {value} does not exist")
+        return value
+    
+    
 class AddCartItemSerializer(serializers.ModelSerializer):
     pet_id = serializers.IntegerField()
 
@@ -27,23 +58,27 @@ class AddCartItemSerializer(serializers.ModelSerializer):
     def save(self, **kwargs):
         cart_id = self.context['cart_id']
         pet_id = self.validated_data['pet_id']
-        quantity = self.validated_data('quantity')
+        quantity = self.validated_data['quantity']  
 
         try:
-            cart_item = CartItem.objects.get(
-                cart_id=cart_id, pet_id=pet_id)
+            cart_item = CartItem.objects.get(cart_id=cart_id, pet_id=pet_id)
             cart_item.quantity += quantity
-            self.instance = cart_item.save()
+            cart_item.save()
+            self.instance = cart_item
         except CartItem.DoesNotExist:
             self.instance = CartItem.objects.create(
-                cart_id=cart_id, **self.validated_data)
+                cart_id=cart_id,
+                pet_id=pet_id,
+                quantity=quantity
+            )
 
-        return self.instance
+        return self.instance  # <-- must be inside save()
 
     def validate_pet_id(self, value):
         if not Pet.objects.filter(pk=value).exists():
             raise serializers.ValidationError(f"Pet with id {value} does not exist")
         return value
+
 
 
 class UpdateCartItemSerializer(serializers.ModelSerializer):
