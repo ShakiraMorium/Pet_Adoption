@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head><title>Your Cart</title></head>
+<body>
+  <h1>Your Cart</h1>
+  <p><a href="{% url 'orders:catalog' %}">Continue Shopping</a></p>
+
+  {% if cart_items %}
+    <ul>
+      {% for item in cart_items %}
+        <li>
+          {{ item.pet.name }} — ${{ item.unit_price }} x {{ item.quantity }} = ${{ item.line_total }}
+          <form method="post" action="{% url 'orders:cart_update' item.pet.id %}" style="display:inline;">
+            {% csrf_token %}
+            <input type="number" name="quantity" min="0" value="{{ item.quantity }}">
+            <button type="submit">Update</button>
+          </form>
+          <form method="post" action="{% url 'orders:cart_remove' item.pet.id %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Remove</button>
+          </form>
+        </li>
+      {% endfor %}
+    </ul>
+    <p><strong>Total: ${{ cart_total }}</strong></p>
+    <p><a href="{% url 'orders:checkout' %}">Proceed to Checkout</a></p>
+  {% else %}
+    <p>Your cart is empty.</p>
+  {% endif %}
+</body>
+</html>

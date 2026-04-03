@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head><title>Checkout</title></head>
+<body>
+  <h1>Checkout</h1>
+  <p><a href="{% url 'orders:cart_detail' %}">Back to Cart</a></p>
+
+  <ul>
+    {% for item in cart_items %}
+      <li>{{ item.pet.name }} × {{ item.quantity }} = ${{ item.line_total }}</li>
+    {% endfor %}
+  </ul>
+  <p><strong>Total: ${{ cart_total }}</strong></p>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Place Order</button>
+  </form>
+</body>
+</html>

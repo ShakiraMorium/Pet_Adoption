@@ -1,3 +1,5 @@
+from typing import Any
+
 from .open_id_connect import OpenIdConnectAuth
 
 
@@ -23,12 +25,12 @@ class PixelPinOpenIDConnect(OpenIdConnectAuth):
         return {
             "username": username,
             "email": response.get("email"),
-            "fullname": first_name + " " + last_name,
+            "fullname": f"{first_name} {last_name}",
             "first_name": first_name,
             "last_name": last_name,
         }
 
-    def user_data(self, access_token, *args, **kwargs):
+    def user_data(self, access_token: str, *args, **kwargs) -> dict[str, Any] | None:
         return self.get_json(
             "https://login.pixelpin.io/connect/userinfo",
             headers={"Authorization": f"Bearer {access_token}"},

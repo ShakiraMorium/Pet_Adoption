@@ -4,6 +4,8 @@ Slack OAuth2 backend, docs at:
     https://api.slack.com/docs/oauth
 """
 
+from typing import Any, cast
+
 from .oauth import BaseOAuth2
 
 
@@ -20,8 +22,8 @@ class SlackOAuth2(BaseOAuth2):
 
     def auth_extra_arguments(self):
         params = super().auth_extra_arguments() or {}
-        if self.setting("TEAM"):
-            params["team"] = self.setting("TEAM")
+        if team := self.setting("TEAM"):
+            params["team"] = cast("str", team)
         return params
 
     def get_user_details(self, response):
@@ -36,7 +38,7 @@ class SlackOAuth2(BaseOAuth2):
         fullname, first_name, last_name = self.get_user_names(name)
 
         if self.setting("USERNAME_WITH_TEAM", True) and team and "name" in team:
-            username = "{}@{}".format(username, response["team"]["name"])
+            username = f"{username}@{response['team']['name']}"
 
         return {
             "username": username,
@@ -46,7 +48,7 @@ class SlackOAuth2(BaseOAuth2):
             "last_name": last_name,
         }
 
-    def user_data(self, access_token, *args, **kwargs):
+    def user_data(self, access_token: str, *args, **kwargs) -> dict[str, Any] | None:
         """Loads user data from service"""
         response = self.get_json(
             "https://slack.com/api/users.identity",

@@ -4,7 +4,7 @@ from social_core.utils import module_member, user_is_authenticated
 from .base import BaseAuth
 
 # Cache for discovered backends.
-BACKENDSCACHE = {}
+BACKENDSCACHE: dict[str, type[BaseAuth]] = {}
 
 
 def load_backends(backends, force_load=False):
@@ -25,6 +25,7 @@ def load_backends(backends, force_load=False):
     A force_load boolean argument is also provided so that get_backend
     below can retry a requested backend that may not yet be discovered.
     """
+    # pylint: disable-next=global-statement
     global BACKENDSCACHE  # noqa: PLW0603
     if force_load:
         BACKENDSCACHE = {}
@@ -51,8 +52,8 @@ def get_backend(backends, name):
         load_backends(backends, force_load=True)
         try:
             return BACKENDSCACHE[name]
-        except KeyError:
-            raise MissingBackend(name)
+        except KeyError as error:
+            raise MissingBackend(name) from error
 
 
 def user_backends_data(user, backends, storage):

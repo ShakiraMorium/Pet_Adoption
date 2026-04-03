@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head><title>Pet Catalog</title></head>
+<body>
+  <h1>Available Pets</h1>
+  <p><a href="{% url 'orders:cart_detail' %}">View Cart ({{ cart_count }})</a></p>
+  <ul>
+    {% for pet in pets %}
+      <li>
+        <strong>{{ pet.name }}</strong> - {{ pet.breed }} - ${{ pet.adoption_fee }}
+        <form method="post" action="{% url 'orders:cart_add' pet.id %}">
+          {% csrf_token %}
+          <input type="number" name="quantity" value="1" min="1">
+          <button type="submit">Add to Cart</button>
+        </form>
+      </li>
+    {% empty %}
+      <li>No pets available.</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

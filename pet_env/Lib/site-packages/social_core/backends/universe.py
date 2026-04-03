@@ -1,3 +1,5 @@
+from typing import Any
+
 from .oauth import BaseOAuth2
 
 
@@ -8,7 +10,7 @@ class UniverseOAuth2(BaseOAuth2):
     AUTHORIZATION_URL = "https://www.universe.com/oauth/authorize"
     ACCESS_TOKEN_URL = "https://www.universe.com/oauth/token"
     BASE_API_URL = "https://www.universe.com/api"
-    USER_INFO_URL = BASE_API_URL + "/v2/current_user"
+    USER_INFO_URL = f"{BASE_API_URL}/v2/current_user"
     STATE_PARAMETER = True
     REDIRECT_STATE = True
     EXTRA_DATA = [
@@ -19,7 +21,7 @@ class UniverseOAuth2(BaseOAuth2):
     ]
 
     def get_user_id(self, details, response):
-        return response["current_user"][self.ID_KEY]
+        return response["current_user"][self.id_key()]
 
     def get_user_details(self, response):
         """Return user details from a Universe account"""
@@ -28,7 +30,7 @@ class UniverseOAuth2(BaseOAuth2):
         user_details["username"] = user_details["email"]
         return user_details
 
-    def user_data(self, access_token, *args, **kwargs):
+    def user_data(self, access_token: str, *args, **kwargs) -> dict[str, Any] | None:
         """Loads user data from service"""
         return self.get_json(
             self.USER_INFO_URL, headers={"Authorization": f"Bearer {access_token}"}

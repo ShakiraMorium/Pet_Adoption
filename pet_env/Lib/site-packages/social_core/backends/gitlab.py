@@ -8,6 +8,8 @@ GitLab as OAuth provider](http://widerin.net/blog/weblate-gitlab-oauth-login/).
 His code was a great reference when working on this implementation.
 """
 
+from typing import Any
+
 from .oauth import BaseOAuth2
 
 
@@ -22,13 +24,13 @@ class GitLabOAuth2(BaseOAuth2):
     DEFAULT_SCOPE = ["read_user"]
     EXTRA_DATA = [
         ("id", "id"),
-        ("expires_in", "expires"),
+        ("expires_in", "expires_in"),
         ("refresh_token", "refresh_token"),
     ]
 
     def api_url(self, path):
         api_url = self.setting("API_URL") or self.API_URL
-        return "{}{}".format(api_url.rstrip("/"), path)
+        return f"{api_url.rstrip('/')}{path}"
 
     def authorization_url(self):
         return self.api_url("/oauth/authorize")
@@ -47,7 +49,7 @@ class GitLabOAuth2(BaseOAuth2):
             "last_name": last_name,
         }
 
-    def user_data(self, access_token, *args, **kwargs):
+    def user_data(self, access_token: str, *args, **kwargs) -> dict[str, Any] | None:
         """Loads user data from service"""
         return self.get_json(
             self.api_url("/api/v4/user"), params={"access_token": access_token}

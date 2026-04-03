@@ -3,6 +3,8 @@ Foursquare OAuth2 backend, docs at:
     https://python-social-auth.readthedocs.io/en/latest/backends/foursquare.html
 """
 
+from typing import Any
+
 from .oauth import BaseOAuth2
 
 
@@ -23,14 +25,14 @@ class FoursquareOAuth2(BaseOAuth2):
             first_name=info.get("firstName", ""), last_name=info.get("lastName", "")
         )
         return {
-            "username": first_name + " " + last_name,
+            "username": f"{first_name} {last_name}",
             "fullname": fullname,
             "first_name": first_name,
             "last_name": last_name,
             "email": email,
         }
 
-    def user_data(self, access_token, *args, **kwargs):
+    def user_data(self, access_token: str, *args, **kwargs) -> dict[str, Any] | None:
         """Loads user data from service"""
         return self.get_json(
             "https://api.foursquare.com/v2/users/self",

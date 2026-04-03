@@ -3,6 +3,8 @@ Uber OAuth2 backend, docs at:
     https://python-social-auth.readthedocs.io/en/latest/backends/uber.html
 """
 
+from typing import Any
+
 from .oauth import BaseOAuth2
 
 
@@ -30,14 +32,10 @@ class UberOAuth2(BaseOAuth2):
             "last_name": last_name,
         }
 
-    def user_data(self, access_token, *args, **kwargs):
+    def user_data(self, access_token: str, *args, **kwargs) -> dict[str, Any] | None:
         """Loads user data from service"""
         response = kwargs.pop("response")
         return self.get_json(
             "https://api.uber.com/v1/me",
-            headers={
-                "Authorization": "{} {}".format(
-                    response.get("token_type"), access_token
-                )
-            },
+            headers={"Authorization": f"{response.get('token_type')} {access_token}"},
         )

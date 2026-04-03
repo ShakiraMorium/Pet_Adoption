@@ -10,6 +10,10 @@ class SocialAuthBaseException(ValueError):
     """Base class for pipeline exceptions."""
 
 
+class SocialAuthImproperlyConfiguredError(SocialAuthBaseException):
+    """Raised when configuration is invalid."""
+
+
 class StrategyMissingFeatureError(SocialAuthBaseException):
     """Strategy does not support this."""
 
@@ -20,6 +24,20 @@ class StrategyMissingFeatureError(SocialAuthBaseException):
 
     def __str__(self) -> str:
         return f"Strategy {self.strategy_name} does not support {self.feature_name}"
+
+
+class DefaultStrategyMissingError(SocialAuthBaseException):
+    """Default strategy is not configured."""
+
+    def __str__(self) -> str:
+        return "Default strategy is not configured"
+
+
+class StrategyMissingBackendError(SocialAuthBaseException):
+    """Strategy storage backend is not configured."""
+
+    def __str__(self) -> str:
+        return "Strategy storage backend is not configured"
 
 
 class WrongBackend(SocialAuthBaseException):
@@ -169,3 +187,15 @@ class AuthConnectionError(AuthException):
     def __str__(self) -> str:
         msg = super().__str__()
         return f"Connection error: {msg}"
+
+
+class InvalidExpiryValue(SocialAuthBaseException):
+    """Invalid expiry value in extra_data."""
+
+    def __init__(self, field_name: str, value: object) -> None:
+        self.field_name = field_name
+        self.value = value
+        super().__init__()
+
+    def __str__(self) -> str:
+        return f"Invalid expiry value for field '{self.field_name}': {self.value}"

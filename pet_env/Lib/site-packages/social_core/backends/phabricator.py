@@ -3,6 +3,8 @@ Phabricator OAuth2 backend, docs at:
     https://secure.phabricator.com/book/phabcontrib/article/using_oauthserver/
 """
 
+from typing import Any
+
 from .oauth import BaseOAuth2
 
 
@@ -17,7 +19,7 @@ class PhabricatorOAuth2(BaseOAuth2):
 
     def api_url(self, path):
         api_url = self.setting("API_URL") or self.API_URL
-        return "{}{}".format(api_url.rstrip("/"), path)
+        return f"{api_url.rstrip('/')}{path}"
 
     def authorization_url(self):
         return self.api_url("/oauthserver/auth/")
@@ -38,7 +40,7 @@ class PhabricatorOAuth2(BaseOAuth2):
             "last_name": last_name,
         }
 
-    def user_data(self, access_token, *args, **kwargs):
+    def user_data(self, access_token: str, *args, **kwargs) -> dict[str, Any] | None:
         """Loads user data from API"""
         return self.get_json(
             self.api_url("/api/user.whoami"),

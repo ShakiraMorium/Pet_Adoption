@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from .views import api_root_view 
+# from .views import api_root_view 
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import permissions
@@ -29,7 +29,9 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', api_root_view),
+    # path('', api_root_view),
+    path('', include('core.urls')),
+    path('shop/', include('orders.web_urls')),
     path('api/v1/', include('api.urls'), name='api-root'), 
     # path("api/v1/accounts/", include("users.urls")),
     path("pets/", include("pets.urls")),
