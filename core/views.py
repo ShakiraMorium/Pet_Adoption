@@ -6,4 +6,4 @@ def api_root_view(request):
 
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'core/home.html')

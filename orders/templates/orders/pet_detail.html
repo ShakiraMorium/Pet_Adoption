@@ -1,0 +1,22 @@
+{% extends 'orders/base.html' %}
+{% block title %}{{ pet.name }} Details{% endblock %}
+{% block content %}
+<div class="card" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+  <div>
+    {% if pet.image %}<img src="{{ pet.image.url }}" alt="{{ pet.name }}" style="width:100%;height:420px;object-fit:cover;">{% else %}<img src="https://placehold.co/700x500?text=Pet" alt="{{ pet.name }}" style="width:100%;height:420px;object-fit:cover;">{% endif %}
+  </div>
+  <div class="p16">
+    <h2>{{ pet.name }}</h2>
+    <p class="muted">Category: {{ pet.category.name }}</p>
+    <p>Breed: <strong>{{ pet.breed }}</strong></p>
+    <p>Age: <strong>{{ pet.age }} years</strong></p>
+    <p>{{ pet.description|default:'No detailed description yet.' }}</p>
+    <p class="price">৳ {{ pet.adoption_fee }}</p>
+    <form method="post" action="{% url 'orders:cart_add' pet.id %}" class="row">
+      {% csrf_token %}
+      <input type="number" name="quantity" value="1" min="1" style="max-width:90px;">
+      <button class="btn" type="submit">Add to Cart</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,21 +1,25 @@
-<!doctype html>
-<html>
-<head><title>Checkout</title></head>
-<body>
-  <h1>Checkout</h1>
-  <p><a href="{% url 'orders:cart_detail' %}">Back to Cart</a></p>
-
-  <ul>
+{% extends 'orders/base.html' %}
+{% block title %}Checkout{% endblock %}
+{% block content %}
+<h2>Checkout & Payment (SSLCommerz)</h2>
+<div class="grid" style="grid-template-columns:1.2fr .8fr;">
+  <section class="card p16">
+    <h3>Shipping Information</h3>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="btn" type="submit">Place Order & Continue Payment</button>
+    </form>
+  </section>
+  <aside class="card p16">
+    <h3>Order Summary</h3>
     {% for item in cart_items %}
-      <li>{{ item.pet.name }} × {{ item.quantity }} = ${{ item.line_total }}</li>
+      {% comment %} <li>{{ item.pet.name }} × {{ item.quantity }} = ${{ item.line_total }}</li> {% endcomment %}
+      <div class="row-between"><span>{{ item.pet.name }} × {{ item.quantity }}</span><strong>৳ {{ item.line_total }}</strong></div>
+      <hr style="border:none;border-bottom:1px solid #eee;">
     {% endfor %}
-  </ul>
-  <p><strong>Total: ${{ cart_total }}</strong></p>
-
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Place Order</button>
-  </form>
-</body>
-</html>
+  
+    <div class="row-between"><strong>Total</strong><strong class="price">৳ {{ cart_total }}</strong></div>
+  </aside>
+</div>
+{% endblock %}

@@ -480,6 +480,14 @@
         "documentation": {}
     },
     {
+        "label": "reverse",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "path",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -1291,6 +1299,22 @@
         "documentation": {}
     },
     {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
         "label": "Cart",
         "importPath": "orders.models",
         "description": "orders.models",
@@ -1611,11 +1635,11 @@
         "documentation": {}
     },
     {
-        "label": "login_required",
-        "importPath": "django.contrib.auth.decorators",
-        "description": "django.contrib.auth.decorators",
+        "label": "LoginRequiredMixin",
+        "importPath": "django.contrib.auth.mixins",
+        "description": "django.contrib.auth.mixins",
         "isExtraImport": true,
-        "detail": "django.contrib.auth.decorators",
+        "detail": "django.contrib.auth.mixins",
         "documentation": {}
     },
     {
@@ -1624,6 +1648,63 @@
         "description": "django.views.decorators.http",
         "isExtraImport": true,
         "detail": "django.views.decorators.http",
+        "documentation": {}
+    },
+    {
+        "label": "View",
+        "importPath": "django.views",
+        "description": "django.views",
+        "isExtraImport": true,
+        "detail": "django.views",
+        "documentation": {}
+    },
+    {
+        "label": "DetailView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "ListView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "TemplateView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "DetailView",
+        "importPath": "django.views.generic",
+        "description": "django.views.generic",
+        "isExtraImport": true,
+        "detail": "django.views.generic",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
         "documentation": {}
     },
     {
@@ -1713,22 +1794,6 @@
         "description": "django.db.models",
         "isExtraImport": true,
         "detail": "django.db.models",
-        "documentation": {}
-    },
-    {
-        "label": "TemplateView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
-        "documentation": {}
-    },
-    {
-        "label": "DetailView",
-        "importPath": "django.views.generic",
-        "description": "django.views.generic",
-        "isExtraImport": true,
-        "detail": "django.views.generic",
         "documentation": {}
     },
     {
@@ -2182,7 +2247,7 @@
         "kind": 2,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "def api_root_view(request):\n    return redirect('api-root')\ndef home(request):\n    return render(request, 'home.html')",
+        "peekOfCode": "def api_root_view(request):\n    return redirect('api-root')\ndef home(request):\n    return render(request, 'core/home.html')",
         "detail": "core.views",
         "documentation": {}
     },
@@ -2191,7 +2256,7 @@
         "kind": 2,
         "importPath": "core.views",
         "description": "core.views",
-        "peekOfCode": "def home(request):\n    return render(request, 'home.html')",
+        "peekOfCode": "def home(request):\n    return render(request, 'core/home.html')",
         "detail": "core.views",
         "documentation": {}
     },
@@ -2479,7 +2544,7 @@
         "kind": 5,
         "importPath": "orders.web_urls",
         "description": "orders.web_urls",
-        "peekOfCode": "app_name = 'orders'\nurlpatterns = [\n    path('', web_views.pet_catalog, name='catalog'),\n    path('cart/', web_views.cart_detail, name='cart_detail'),\n    path('cart/add/<int:pet_id>/', web_views.cart_add, name='cart_add'),\n    path('cart/update/<int:pet_id>/', web_views.cart_update, name='cart_update'),\n    path('cart/remove/<int:pet_id>/', web_views.cart_remove, name='cart_remove'),\n    path('checkout/', web_views.checkout, name='checkout'),\n    path('checkout/success/<uuid:order_id>/', web_views.checkout_success, name='checkout_success'),\n]",
+        "peekOfCode": "app_name = 'orders'\nurlpatterns = [\n    path('', PetCatalogView.as_view(), name='catalog'),\n    path('pets/<int:pk>/', PetDetailView.as_view(), name='pet_detail'),\n    path('cart/', CartDetailView.as_view(), name='cart_detail'),\n    path('cart/add/<int:pet_id>/', CartAddView.as_view(), name='cart_add'),\n    path('cart/update/<int:pet_id>/', CartUpdateView.as_view(), name='cart_update'),\n    path('cart/remove/<int:pet_id>/', CartRemoveView.as_view(), name='cart_remove'),\n    path('checkout/', CheckoutView.as_view(), name='checkout'),\n    path('checkout/success/<uuid:order_id>/', CheckoutSuccessView.as_view(), name='checkout_success'),",
         "detail": "orders.web_urls",
         "documentation": {}
     },
@@ -2488,70 +2553,97 @@
         "kind": 5,
         "importPath": "orders.web_urls",
         "description": "orders.web_urls",
-        "peekOfCode": "urlpatterns = [\n    path('', web_views.pet_catalog, name='catalog'),\n    path('cart/', web_views.cart_detail, name='cart_detail'),\n    path('cart/add/<int:pet_id>/', web_views.cart_add, name='cart_add'),\n    path('cart/update/<int:pet_id>/', web_views.cart_update, name='cart_update'),\n    path('cart/remove/<int:pet_id>/', web_views.cart_remove, name='cart_remove'),\n    path('checkout/', web_views.checkout, name='checkout'),\n    path('checkout/success/<uuid:order_id>/', web_views.checkout_success, name='checkout_success'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', PetCatalogView.as_view(), name='catalog'),\n    path('pets/<int:pk>/', PetDetailView.as_view(), name='pet_detail'),\n    path('cart/', CartDetailView.as_view(), name='cart_detail'),\n    path('cart/add/<int:pet_id>/', CartAddView.as_view(), name='cart_add'),\n    path('cart/update/<int:pet_id>/', CartUpdateView.as_view(), name='cart_update'),\n    path('cart/remove/<int:pet_id>/', CartRemoveView.as_view(), name='cart_remove'),\n    path('checkout/', CheckoutView.as_view(), name='checkout'),\n    path('checkout/success/<uuid:order_id>/', CheckoutSuccessView.as_view(), name='checkout_success'),\n    path('checkout/pay/<uuid:order_id>/', PaymentRedirectView.as_view(), name='payment_redirect'),",
         "detail": "orders.web_urls",
         "documentation": {}
     },
     {
-        "label": "pet_catalog",
-        "kind": 2,
+        "label": "PetCatalogView",
+        "kind": 6,
         "importPath": "orders.web_views",
         "description": "orders.web_views",
-        "peekOfCode": "def pet_catalog(request):\n    pets = Pet.objects.filter(is_available=True).select_related('category')\n    cart = SessionCart(request)\n    return render(request, 'orders/catalog.html', {'pets': pets, 'cart_count': cart.count()})\n@require_POST\ndef cart_add(request, pet_id):\n    cart = SessionCart(request)\n    pet = get_object_or_404(Pet, pk=pet_id, is_available=True)\n    quantity = int(request.POST.get('quantity', 1))\n    cart.add(pet.id, quantity)",
+        "peekOfCode": "class PetCatalogView(ListView):\n    model = Pet\n    template_name = 'orders/catalog.html'\n    context_object_name = 'pets'\n    def get_queryset(self):\n        return Pet.objects.filter(is_available=True).select_related('category')\n    def get_context_data(self, **kwargs):\n        context = super().get_context_data(**kwargs)\n        cart = SessionCart(self.request)\n        context['cart_count'] = cart.count()",
         "detail": "orders.web_views",
         "documentation": {}
     },
     {
-        "label": "cart_add",
-        "kind": 2,
+        "label": "PetDetailView",
+        "kind": 6,
         "importPath": "orders.web_views",
         "description": "orders.web_views",
-        "peekOfCode": "def cart_add(request, pet_id):\n    cart = SessionCart(request)\n    pet = get_object_or_404(Pet, pk=pet_id, is_available=True)\n    quantity = int(request.POST.get('quantity', 1))\n    cart.add(pet.id, quantity)\n    messages.success(request, f'{pet.name} added to cart.')\n    return redirect('orders:cart_detail')\n@require_POST\ndef cart_update(request, pet_id):\n    cart = SessionCart(request)",
+        "peekOfCode": "class PetDetailView(DetailView):\n    model = Pet\n    template_name = 'orders/pet_detail.html'\n    context_object_name = 'pet'\n    def get_queryset(self):\n        return Pet.objects.select_related('category').prefetch_related('reviews__user', 'images')\n    def get_context_data(self, **kwargs):\n        context = super().get_context_data(**kwargs)\n        cart = SessionCart(self.request)\n        context['cart_count'] = cart.count()",
         "detail": "orders.web_views",
         "documentation": {}
     },
     {
-        "label": "cart_update",
-        "kind": 2,
+        "label": "CartDetailView",
+        "kind": 6,
         "importPath": "orders.web_views",
         "description": "orders.web_views",
-        "peekOfCode": "def cart_update(request, pet_id):\n    cart = SessionCart(request)\n    quantity = int(request.POST.get('quantity', 1))\n    cart.update(pet_id, quantity)\n    return redirect('orders:cart_detail')\n@require_POST\ndef cart_remove(request, pet_id):\n    cart = SessionCart(request)\n    cart.remove(pet_id)\n    return redirect('orders:cart_detail')",
+        "peekOfCode": "class CartDetailView(LoginRequiredMixin, TemplateView):\n    template_name = 'orders/cart_detail.html'\n    login_url = '/admin/login/'\n    def get_context_data(self, **kwargs):\n        context = super().get_context_data(**kwargs)\n        cart = SessionCart(self.request)\n        context.update({\n            'cart_items': cart.items(),\n            'cart_total': cart.total(),\n            'cart_count': cart.count(),",
         "detail": "orders.web_views",
         "documentation": {}
     },
     {
-        "label": "cart_remove",
-        "kind": 2,
+        "label": "CartAddView",
+        "kind": 6,
         "importPath": "orders.web_views",
         "description": "orders.web_views",
-        "peekOfCode": "def cart_remove(request, pet_id):\n    cart = SessionCart(request)\n    cart.remove(pet_id)\n    return redirect('orders:cart_detail')\ndef cart_detail(request):\n    cart = SessionCart(request)\n    context = {\n        'cart_items': cart.items(),\n        'cart_total': cart.total(),\n        'cart_count': cart.count(),",
+        "peekOfCode": "class CartAddView(LoginRequiredMixin, View):\n    login_url = '/admin/login/'\n    def post(self, request, pet_id):\n        cart = SessionCart(request)\n        pet = get_object_or_404(Pet, pk=pet_id, is_available=True)\n        quantity = int(request.POST.get('quantity', 1))\n        cart.add(pet.id, quantity)\n        messages.success(request, f'{pet.name} added to cart.')\n        return redirect('orders:cart_detail')\nclass CartUpdateView(LoginRequiredMixin, View):",
         "detail": "orders.web_views",
         "documentation": {}
     },
     {
-        "label": "cart_detail",
-        "kind": 2,
+        "label": "CartUpdateView",
+        "kind": 6,
         "importPath": "orders.web_views",
         "description": "orders.web_views",
-        "peekOfCode": "def cart_detail(request):\n    cart = SessionCart(request)\n    context = {\n        'cart_items': cart.items(),\n        'cart_total': cart.total(),\n        'cart_count': cart.count(),\n    }\n    return render(request, 'orders/cart_detail.html', context)\n@login_required\n@transaction.atomic",
+        "peekOfCode": "class CartUpdateView(LoginRequiredMixin, View):\n    login_url = '/admin/login/'\n    def post(self, request, pet_id):\n        cart = SessionCart(request)\n        quantity = int(request.POST.get('quantity', 1))\n        cart.update(pet_id, quantity)\n        return redirect('orders:cart_detail')\nclass CartRemoveView(LoginRequiredMixin, View):\n    login_url = '/admin/login/'\n    def post(self, request, pet_id):",
         "detail": "orders.web_views",
         "documentation": {}
     },
     {
-        "label": "checkout",
-        "kind": 2,
+        "label": "CartRemoveView",
+        "kind": 6,
         "importPath": "orders.web_views",
         "description": "orders.web_views",
-        "peekOfCode": "def checkout(request):\n    cart = SessionCart(request)\n    if cart.is_empty():\n        messages.warning(request, 'Your cart is empty.')\n        return redirect('orders:cart_detail')\n    if request.method == 'POST':\n        form = CheckoutForm(request.POST)\n        if form.is_valid():\n            order = Order.objects.create(\n                user=request.user,",
+        "peekOfCode": "class CartRemoveView(LoginRequiredMixin, View):\n    login_url = '/admin/login/'\n    def post(self, request, pet_id):\n        cart = SessionCart(request)\n        cart.remove(pet_id)\n        messages.info(request, 'Item removed from your cart.')\n        return redirect('orders:cart_detail')\nclass CheckoutView(LoginRequiredMixin, View):\n    login_url = '/admin/login/'\n    @transaction.atomic",
         "detail": "orders.web_views",
         "documentation": {}
     },
     {
-        "label": "checkout_success",
-        "kind": 2,
+        "label": "CheckoutView",
+        "kind": 6,
         "importPath": "orders.web_views",
         "description": "orders.web_views",
-        "peekOfCode": "def checkout_success(request, order_id):\n    order = get_object_or_404(Order.objects.prefetch_related('items__pet'), pk=order_id, user=request.user)\n    return render(request, 'orders/checkout_success.html', {'order': order})",
+        "peekOfCode": "class CheckoutView(LoginRequiredMixin, View):\n    login_url = '/admin/login/'\n    @transaction.atomic\n    def post(self, request):\n        cart = SessionCart(request)\n        if cart.is_empty():\n            messages.warning(request, 'Your cart is empty.')\n            return redirect('orders:cart_detail')\n        form = CheckoutForm(request.POST)\n        if not form.is_valid():",
+        "detail": "orders.web_views",
+        "documentation": {}
+    },
+    {
+        "label": "UserDashboardView",
+        "kind": 6,
+        "importPath": "orders.web_views",
+        "description": "orders.web_views",
+        "peekOfCode": "class UserDashboardView(LoginRequiredMixin, TemplateView):\n    template_name = 'orders/dashboard.html'\n    login_url = '/admin/login/'\n    def get_context_data(self, **kwargs):\n        context = super().get_context_data(**kwargs)\n        orders = Order.objects.filter(user=self.request.user).prefetch_related('items__pet').order_by('-created_at')\n        context['orders'] = orders\n        context['total_orders'] = orders.count()\n        context['pending_orders'] = orders.filter(status=Order.NOT_PAID).count()\n        return context",
+        "detail": "orders.web_views",
+        "documentation": {}
+    },
+    {
+        "label": "CheckoutSuccessView",
+        "kind": 6,
+        "importPath": "orders.web_views",
+        "description": "orders.web_views",
+        "peekOfCode": "class CheckoutSuccessView(LoginRequiredMixin, DetailView):\n    model = Order\n    pk_url_kwarg = 'order_id'\n    context_object_name = 'order'\n    template_name = 'orders/checkout_success.html'\n    login_url = '/admin/login/'\n    def get_queryset(self):\n        return Order.objects.prefetch_related('items__pet').filter(user=self.request.user)\nclass PaymentRedirectView(LoginRequiredMixin, View):\n    login_url = '/admin/login/'",
+        "detail": "orders.web_views",
+        "documentation": {}
+    },
+    {
+        "label": "PaymentRedirectView",
+        "kind": 6,
+        "importPath": "orders.web_views",
+        "description": "orders.web_views",
+        "peekOfCode": "class PaymentRedirectView(LoginRequiredMixin, View):\n    login_url = '/admin/login/'\n    def get(self, request, order_id):\n        order = get_object_or_404(Order, id=order_id, user=request.user)\n        from payments.services import initiate_sslcommerz_payment\n        checkout_data = {\n            'full_name': request.user.get_full_name() or request.user.email,\n            'email': request.user.email,\n            'phone': request.user.phone_number or '01700000000',\n            'address': request.user.address or 'Dhaka',",
         "detail": "orders.web_views",
         "documentation": {}
     },
@@ -2562,6 +2654,15 @@
         "description": "payments.apps",
         "peekOfCode": "class PaymentsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'payments'",
         "detail": "payments.apps",
+        "documentation": {}
+    },
+    {
+        "label": "initiate_sslcommerz_payment",
+        "kind": 2,
+        "importPath": "payments.services",
+        "description": "payments.services",
+        "peekOfCode": "def initiate_sslcommerz_payment(order, user_data):\n    \"\"\"Initiate SSLCommerz payment and return redirect URL.\"\"\"\n    store_id = getattr(settings, 'SSLCOMMERZ_STORE_ID', None)\n    store_pass = getattr(settings, 'SSLCOMMERZ_STORE_PASSWORD', None)\n    sandbox = getattr(settings, 'SSLCOMMERZ_IS_SANDBOX', True)\n    if not store_id or not store_pass:\n        return None\n    endpoint = 'https://sandbox.sslcommerz.com/gwprocess/v4/api.php' if sandbox else 'https://securepay.sslcommerz.com/gwprocess/v4/api.php'\n    transaction_id = f\"order_{order.id}_{uuid.uuid4().hex[:8]}\"\n    payload = {",
+        "detail": "payments.services",
         "documentation": {}
     },
     {
@@ -2578,7 +2679,7 @@
         "kind": 2,
         "importPath": "payments.views",
         "description": "payments.views",
-        "peekOfCode": "def initiate_payment(request):\n    # Placeholder for gateway integration.\n    return Response({\"detail\": \"Payment gateway is not configured.\"}, status=status.HTTP_501_NOT_IMPLEMENTED)\n@api_view(['POST'])\ndef payment_success(request):\n    order_id = request.data.get(\"tran_id\", \"\").split('_')[-1]\n    if order_id:\n        Order.objects.filter(id=order_id).update(status=\"Ready To Ship\")\n    return HttpResponseRedirect('/api/v1/orders/')\n@api_view(['POST'])",
+        "peekOfCode": "def initiate_payment(request):\n    order_id = request.data.get('order_id')\n    if not order_id:\n        return Response({'detail': 'order_id is required'}, status=status.HTTP_400_BAD_REQUEST)\n    try:\n        order = Order.objects.get(id=order_id, user=request.user)\n    except Order.DoesNotExist:\n        return Response({'detail': 'Order not found'}, status=status.HTTP_404_NOT_FOUND)\n    user_data = {\n        'full_name': request.data.get('full_name') or request.user.get_full_name() or request.user.email,",
         "detail": "payments.views",
         "documentation": {}
     },
@@ -2587,7 +2688,7 @@
         "kind": 2,
         "importPath": "payments.views",
         "description": "payments.views",
-        "peekOfCode": "def payment_success(request):\n    order_id = request.data.get(\"tran_id\", \"\").split('_')[-1]\n    if order_id:\n        Order.objects.filter(id=order_id).update(status=\"Ready To Ship\")\n    return HttpResponseRedirect('/api/v1/orders/')\n@api_view(['POST'])\ndef payment_cancel(request):\n    return HttpResponseRedirect('/api/v1/orders/')\n@api_view(['POST'])\ndef payment_fail(request):",
+        "peekOfCode": "def payment_success(request):\n    order_id = request.data.get('value_a') or request.POST.get('value_a')\n    if order_id:\n        Order.objects.filter(id=order_id).update(status=Order.READY_TO_SHIP)\n    return HttpResponseRedirect('/shop/dashboard/')\n@api_view(['POST'])\ndef payment_cancel(request):\n    return HttpResponseRedirect('/shop/dashboard/')\n@api_view(['POST'])\ndef payment_fail(request):",
         "detail": "payments.views",
         "documentation": {}
     },
@@ -2596,7 +2697,7 @@
         "kind": 2,
         "importPath": "payments.views",
         "description": "payments.views",
-        "peekOfCode": "def payment_cancel(request):\n    return HttpResponseRedirect('/api/v1/orders/')\n@api_view(['POST'])\ndef payment_fail(request):\n    return HttpResponseRedirect('/api/v1/orders/')",
+        "peekOfCode": "def payment_cancel(request):\n    return HttpResponseRedirect('/shop/dashboard/')\n@api_view(['POST'])\ndef payment_fail(request):\n    return HttpResponseRedirect('/shop/dashboard/')",
         "detail": "payments.views",
         "documentation": {}
     },
@@ -2605,7 +2706,7 @@
         "kind": 2,
         "importPath": "payments.views",
         "description": "payments.views",
-        "peekOfCode": "def payment_fail(request):\n    return HttpResponseRedirect('/api/v1/orders/')",
+        "peekOfCode": "def payment_fail(request):\n    return HttpResponseRedirect('/shop/dashboard/')",
         "detail": "payments.views",
         "documentation": {}
     },
@@ -3091,7 +3192,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST =config('EMAIL_HOST', default='')\nEMAIL_USE_TLS =config('EMAIL_USE_TLS', default=False, cast=bool)\nEMAIL_PORT =config('EMAIL_PORT', default=587)\nEMAIL_HOST_USER =config('EMAIL_HOST_USER', default='')\nEMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD', default='')\n# URLS\nBACKEND_URL = config(\"BACKEND_URL\", default=\"http://127.0.0.1:8000\")\nFRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\n# MISC",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST =config('EMAIL_HOST', default='')\nEMAIL_USE_TLS =config('EMAIL_USE_TLS', default=False, cast=bool)\nEMAIL_PORT =config('EMAIL_PORT', default=587)\nEMAIL_HOST_USER =config('EMAIL_HOST_USER', default='')\nEMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD', default='')\n# URLS\nBACKEND_URL = config(\"BACKEND_URL\", default=\"http://127.0.0.1:8000\")\nFRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3100,7 +3201,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "BACKEND_URL = config(\"BACKEND_URL\", default=\"http://127.0.0.1:8000\")\nFRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {",
+        "peekOfCode": "BACKEND_URL = config(\"BACKEND_URL\", default=\"http://127.0.0.1:8000\")\nFRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3109,7 +3210,34 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "FRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {",
+        "peekOfCode": "FRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SSLCOMMERZ_STORE_ID",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SSLCOMMERZ_STORE_PASSWORD",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SSLCOMMERZ_IS_SANDBOX",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3289,7 +3417,7 @@
         "kind": 2,
         "importPath": "manage",
         "description": "manage",
-        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pet_adoption.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    _stabilize_runserver_autoreload()\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pet_adoption.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"",
         "detail": "manage",
         "documentation": {}
     }

@@ -1,8 +1,16 @@
-<!doctype html>
-<html lang="en">
-  <head><meta charset="UTF-8"><title>Pet Adoption</title></head>
-  <body>
-    <h1>Pet Adoption API</h1>
-    <p>Project has been modularized into users, pets, orders, payments, and core apps.</p>
-  </body>
-</html>
+{% extends 'core/base.html' %}
+{% block content %}
+
+<div class="bg-white p-10 rounded-lg shadow text-center">
+    <h1 class="text-4xl font-bold mb-4">Adopt Your Best Friend 🐶</h1>
+    <p class="text-gray-600 mb-6">
+        Browse hundreds of lovely pets waiting for a home.
+    </p>
+
+    <a href="/pets/" 
+       class="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg">
+        Explore Pets
+    </a>
+</div>
+
+{% endblock %}

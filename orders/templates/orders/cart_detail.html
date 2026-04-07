@@ -1,31 +1,38 @@
-<!doctype html>
-<html>
-<head><title>Your Cart</title></head>
-<body>
-  <h1>Your Cart</h1>
-  <p><a href="{% url 'orders:catalog' %}">Continue Shopping</a></p>
-
-  {% if cart_items %}
-    <ul>
-      {% for item in cart_items %}
-        <li>
-          {{ item.pet.name }} — ${{ item.unit_price }} x {{ item.quantity }} = ${{ item.line_total }}
-          <form method="post" action="{% url 'orders:cart_update' item.pet.id %}" style="display:inline;">
-            {% csrf_token %}
-            <input type="number" name="quantity" min="0" value="{{ item.quantity }}">
-            <button type="submit">Update</button>
-          </form>
-          <form method="post" action="{% url 'orders:cart_remove' item.pet.id %}" style="display:inline;">
-            {% csrf_token %}
-            <button type="submit">Remove</button>
-          </form>
-        </li>
-      {% endfor %}
-    </ul>
-    <p><strong>Total: ${{ cart_total }}</strong></p>
-    <p><a href="{% url 'orders:checkout' %}">Proceed to Checkout</a></p>
-  {% else %}
-    <p>Your cart is empty.</p>
-  {% endif %}
-</body>
-</html>
+{% extends 'orders/base.html' %}
+{% block title %}Your Cart{% endblock %}
+{% block content %}
+<h2>Shopping Cart</h2>
+{% if cart_items %}
+<table>
+  <thead><tr><th>Pet</th><th>Price</th><th>Qty</th><th>Total</th><th>Action</th></tr></thead>
+  <tbody>
+  {% for item in cart_items %}
+    <tr>
+      <td>{{ item.pet.name }}</td>
+      <td>৳ {{ item.unit_price }}</td>
+      <td>
+        <form method="post" action="{% url 'orders:cart_update' item.pet.id %}" class="row">
+          {% csrf_token %}
+          <input type="number" name="quantity" min="1" value="{{ item.quantity }}" style="max-width:70px;">
+          <button class="btn btn-outline" type="submit">Update</button>
+        </form>
+      </td>
+      <td>৳ {{ item.line_total }}</td>
+      <td>
+        <form method="post" action="{% url 'orders:cart_remove' item.pet.id %}">
+          {% csrf_token %}
+          <button class="btn" style="background:#d32f2f;" type="submit">Remove</button>
+        </form>
+      </td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+<div class="row-between" style="margin-top:16px;">
+  <strong style="font-size:22px;">Grand Total: ৳ {{ cart_total }}</strong>
+  <a class="btn" href="{% url 'orders:checkout' %}" style="text-decoration:none;">Proceed to Checkout</a>
+</div>
+{% else %}
+<p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}

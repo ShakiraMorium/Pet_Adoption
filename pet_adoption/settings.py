@@ -171,6 +171,11 @@ EMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD', default='')
 BACKEND_URL = config("BACKEND_URL", default="http://127.0.0.1:8000")
 FRONTEND_URL = config("FRONTEND_URL", default="http://localhost:3000")
 
+
+SSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')
+SSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')
+SSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)
+
 # MISC
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
