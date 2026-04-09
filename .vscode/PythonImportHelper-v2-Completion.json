@@ -272,6 +272,22 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -2738,6 +2754,24 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "pets.migrations.0004_ensure_breed_column",
+        "description": "pets.migrations.0004_ensure_breed_column",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('pets', '0003_pet_image'),\n    ]\n    operations = [\n        migrations.RunPython(ensure_breed_column_exists, migrations.RunPython.noop),\n    ]",
+        "detail": "pets.migrations.0004_ensure_breed_column",
+        "documentation": {}
+    },
+    {
+        "label": "ensure_breed_column_exists",
+        "kind": 2,
+        "importPath": "pets.migrations.0004_ensure_breed_column",
+        "description": "pets.migrations.0004_ensure_breed_column",
+        "peekOfCode": "def ensure_breed_column_exists(apps, schema_editor):\n    connection = schema_editor.connection\n    Pet = apps.get_model('pets', 'Pet')\n    table_name = Pet._meta.db_table\n    existing_tables = set(connection.introspection.table_names())\n    if table_name not in existing_tables:\n        return\n    with connection.cursor() as cursor:\n        columns = {\n            column.name",
+        "detail": "pets.migrations.0004_ensure_breed_column",
+        "documentation": {}
+    },
+    {
         "label": "PetsConfig",
         "kind": 6,
         "importPath": "pets.apps",
@@ -3075,7 +3109,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',",
+        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',\n#         'NAME': BASE_DIR / 'db.sqlite3',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3084,7 +3118,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "INTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }",
+        "peekOfCode": "INTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',\n#         'NAME': BASE_DIR / 'db.sqlite3',\n#     }",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3093,7 +3127,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# DATABASE\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.postgresql',",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': config('dbname'),\n        'USER': config('user'),\n        'PASSWORD': config('password'),\n        'HOST': config('host'),\n        'PORT': config('port')\n    }\n}",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
