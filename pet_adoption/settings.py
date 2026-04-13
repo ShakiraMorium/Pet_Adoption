@@ -85,16 +85,31 @@ INTERNAL_IPS = [
 #     }
 # }
 # DATABASE
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': config('dbname'),
+#         'USER': config('user'),
+#         'PASSWORD': config('password'),
+#         'HOST': config('host'),
+#         'PORT': config('port')
+#     }
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('dbname'),
-        'USER': config('user'),
-        'PASSWORD': config('password'),
-        'HOST': config('host'),
-        'PORT': config('port')
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": config("dbname"),
+            "USER": config("user"),
+            "PASSWORD":config("password"),
+            "HOST": config("host"),
+            "PORT": config("port"),
+            "OPTIONS": {
+                # "sslmode": DB_SSLMODE,
+            },
+        }
     }
-}
 
 
 AUTH_PASSWORD_VALIDATORS = [
