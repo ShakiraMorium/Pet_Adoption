@@ -22,7 +22,7 @@ class Pet(models.Model):
     adoption_fee = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)
     description = models.TextField(blank=True, null=True)
     is_available = models.BooleanField(default=True)
-    image = models.ImageField(upload_to='pets/', blank=True, null=True) 
+    # image = models.ImageField(upload_to='pets/', blank=True, null=True) 
     category = models.ForeignKey(
         PetCategory, on_delete=models.CASCADE,related_name="pets")
     created_at = models.DateTimeField(auto_now_add=True)
@@ -43,10 +43,14 @@ class Pet(models.Model):
 
 class PetImage(models.Model):
     pet = models.ForeignKey(
-        Pet, on_delete=models.CASCADE, related_name='images')
+        Pet,
+        on_delete=models.CASCADE,
+        related_name='images'
+    )
     image = CloudinaryField('image')
-    # image = models.ImageField(upload_to="images", validators=[validate_file_size])
 
+    def __str__(self):
+        return f"Image of {self.pet.name}"
 
     # def __str__(self):
     #     return f"Image of {self.pet.name}"

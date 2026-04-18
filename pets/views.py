@@ -1,5 +1,5 @@
 from django.db.models import Count
-from django.views.generic import TemplateView, DetailView
+from django.views.generic import TemplateView, DetailView, ListView
 from rest_framework.viewsets import ModelViewSet
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
@@ -12,8 +12,16 @@ from pets.serializers import (
 from django.db.models import Count
 from pets.filters import PetFilter
 from pets.paginations import DefaultPagination  
+from rest_framework.generics import ListAPIView
+from .models import Pet
+from .serializers import PetSerializer
 
 
+
+
+class PetAPI(ListAPIView):
+    queryset = Pet.objects.all()
+    serializer_class = PetSerializer
 
 
 # Pet ViewSet
@@ -23,11 +31,14 @@ class PetViewSet(ModelViewSet):
     queryset = Pet.objects.all()
     serializer_class = PetSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_class = PetFilter
-    pagination_class = DefaultPagination
-    search_fields = ['name', 'description']
-    ordering_fields = ['adoption_fee', 'updated_at']
-    permission_classes = [IsAdminOrReadOnly]
+    filterset_fields = ['category', 'is_available']
+    search_fields = ['name', 'breed']
+    ordering_fields = ['age', 'adoption_fee', 'created_at']
+    # filterset_class = PetFilter
+    # pagination_class = DefaultPagination
+    # search_fields = ['name', 'description']
+    # ordering_fields = ['adoption_fee', 'updated_at']
+    # permission_classes = [IsAdminOrReadOnly]
     
     
     def get_queryset(self):
@@ -116,6 +127,11 @@ class CartRequestViewSet(ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
+class PetList(ListView):
+    model = Pet
+    template_name = "pets/pet_list.html"
+    context_object_name = "pets"
+
 
 class PetListByCategoryView(TemplateView):
     template_name = "pets/pet_list_by_category.html"
@@ -132,4 +148,4 @@ class PetDetails(DetailView):
         model = Pet
         template_name = "pets/pet_detail.html"  # template for single pet
         context_object_name = "pet"
-        pk_url_kwarg = "id"  # matches <int:id> in urls.py
+        pk_url_kwarg = "pk"  # matches <int:id> in urls.py

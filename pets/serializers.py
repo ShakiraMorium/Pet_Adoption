@@ -15,9 +15,19 @@ from django.contrib.auth import get_user_model
 
 # 1. Pet Image Serializer
 class PetImageSerializer(serializers.ModelSerializer):
+    image = serializers.SerializerMethodField()
+
+    def get_image(self, obj):
+        if obj.image:
+            return obj.image.url   # Cloudinary already returns full URL
+        return None
+
     class Meta:
         model = PetImage
         fields = ['id', 'image']
+    # class Meta:
+    #     model = PetImage
+    #     fields = ['id', 'image']
         
     # def get_image_url(self, obj):
     #     return obj.image.url
@@ -29,6 +39,7 @@ class PetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Pet
+        # fields = ['__all__']
         fields = [
             'id', 'name', 'description', 'age', 'adoption_fee',
             'adoption_fee_with_tax', 'is_available', 'category', 'images'

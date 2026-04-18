@@ -4,8 +4,9 @@
 
     <div class="space-x-6">
         <a href="/" class="text-gray-700 hover:text-blue-600 transition">Home</a>
-        <a href="/pets/" class="text-gray-700 hover:text-blue-600 transition">Pets</a>
-        <a href="/cart/" class="text-gray-700 hover:text-blue-600 transition">Cart</a>
+        <a href="api/v1/pets/" class="text-gray-700 hover:text-blue-600 transition">Pets</a>
+        {% comment %} <a href="/cart/" class="text-gray-700 hover:text-blue-600 transition">Cart</a> {% endcomment %}
+        <a href="{% url 'orders:cart_detail' %}" class="text-gray-700 hover:text-blue-600 transition">Cart</a>
 
         <a href="/users/login/" 
            class="bg-blue-600 text-white px-4 py-2 rounded-full hover:scale-105 transition">

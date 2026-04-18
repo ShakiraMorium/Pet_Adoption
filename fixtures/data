@@ -3,7 +3,7 @@
     "model": "pets.pet",
     "pk": 1,
     "fields": {
-      "name": "Buddy",
+      "name": "Buddy1",
       "breed": "Golden Retriever",
       "age": 3,
       "adoption_fee": "150.00",

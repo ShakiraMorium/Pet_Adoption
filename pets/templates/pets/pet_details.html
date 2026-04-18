@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ pet.name }} | Pet Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50">
+
+<!-- HERO SECTION -->
+<div class="max-w-6xl mx-auto py-10 px-4">
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white shadow-xl rounded-2xl overflow-hidden">
+
+    <!-- IMAGE -->
+    <div class="bg-gray-100">
+      {% if pet.image %}
+        <img src="{{ pet.image.url }}"
+             class="w-full h-full object-cover hover:scale-105 transition duration-500">
+      {% else %}
+        <img src="https://via.placeholder.com/600x400"
+             class="w-full h-full object-cover">
+      {% endif %}
+    </div>
+
+    <!-- DETAILS -->
+    <div class="p-8 flex flex-col justify-center">
+
+      <h1 class="text-3xl font-bold text-gray-800 mb-2">{{ pet.name }}</h1>
+
+      <span class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm w-fit mb-4">
+        {% if pet.is_available %} Available for Adoption {% else %} Not Available {% endif %}
+      </span>
+
+      <p class="text-gray-600 mb-4">
+        {{ pet.description }}
+      </p>
+
+      <div class="space-y-2 text-gray-700">
+        <p><strong>Breed:</strong> {{ pet.breed }}</p>
+        <p><strong>Age:</strong> {{ pet.age }} years</p>
+        <p><strong>Category:</strong> {{ pet.category.name }}</p>
+      </div>
+
+      <div class="mt-6 text-2xl font-bold text-blue-600">
+        ${{ pet.adoption_fee }}
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="mt-6 flex gap-4">
+
+        <a href="/cart/add/{{ pet.id }}/"
+           class="bg-blue-600 text-white px-6 py-3 rounded-xl hover:bg-blue-700 transition">
+          Adopt Now
+        </a>
+
+        <a href="/pets/"
+           class="border border-gray-300 px-6 py-3 rounded-xl hover:bg-gray-100 transition">
+          Back
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EXTRA SECTION -->
+  <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg">Vaccination</h3>
+      <p class="text-gray-600 mt-2">Health checked and vaccinated pets.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg">Safe Adoption</h3>
+      <p class="text-gray-600 mt-2">Verified pet adoption process.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-bold text-lg">Support</h3>
+      <p class="text-gray-600 mt-2">24/7 support for adopters.</p>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

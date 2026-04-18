@@ -1,16 +1,9 @@
-# from django.urls import path
-
-# from pets import views
-
-# urlpatterns = [
-#     path('', views.PetListByCategoryView.as_view(), name='pet-list-by-category'),
-#     path('<int:id>/',views.PetDetails.as_view(), name='pet-list'),
-# ]
-
 from django.urls import path
 from . import views  # or from pets import views
+from .views import PetAPI, PetList
 
 urlpatterns = [
-    path('', views.PetDetails.as_view(), name='pet-list'),
-    path('<int:pk>/', views.PetDetails.as_view(), name='pet-detail'),
+    path('api/pets/', PetAPI.as_view()),
+    path('', PetList.as_view(), name='pet-list'),
+    path('<int:pk>/', views.PetDetails.as_view(), name='pet_detail'),
 ]
