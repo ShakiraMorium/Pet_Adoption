@@ -576,6 +576,14 @@
         "documentation": {}
     },
     {
+        "label": "CartViewSet",
+        "importPath": "orders.views",
+        "description": "orders.views",
+        "isExtraImport": true,
+        "detail": "orders.views",
+        "documentation": {}
+    },
+    {
         "label": "HasOrderedPet",
         "importPath": "orders.views",
         "description": "orders.views",
@@ -1943,6 +1951,14 @@
         "documentation": {}
     },
     {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
         "label": "debug_toolbar_urls",
         "importPath": "debug_toolbar.toolbar",
         "description": "debug_toolbar.toolbar",
@@ -2056,7 +2072,7 @@
         "kind": 5,
         "importPath": "api.urls",
         "description": "api.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('pets', PetViewSet, basename='pets')\nrouter.register('categories', PetCategoryViewSet, basename='categories')\nrouter.register('carts', CartItemViewSet, basename='carts')\nrouter.register('orders', OrderViewset, basename='orders')\n # Nested routes: reviews under pets\npet_router = routers.NestedDefaultRouter(router, 'pets', lookup='pet')\npet_router.register('reviews', PetReviewViewSet, basename='pet-reviews')\n# pet_router.register('images', PetImageViewSet,basename='pet-images')\npet_router.register('images', PetImageViewSet, basename='pet-images')",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('pets', PetViewSet, basename='pets')\nrouter.register('categories', PetCategoryViewSet, basename='categories')\nrouter.register('carts', CartViewSet, basename='carts')\nrouter.register('orders', OrderViewset, basename='orders')\n # Nested routes: reviews under pets\npet_router = routers.NestedDefaultRouter(router, 'pets', lookup='pet')\npet_router.register('reviews', PetReviewViewSet, basename='pet-reviews')\n# pet_router.register('images', PetImageViewSet,basename='pet-images')\npet_router.register('images', PetImageViewSet, basename='pet-images')",
         "detail": "api.urls",
         "documentation": {}
     },
@@ -3028,7 +3044,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ENV setup\n# env = environ.Env()\n# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))\n# SECURITY\nSECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\nDEBUG = config('DEBUG', default=True, cast=bool)\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ENV setup\n# env = environ.Env()\n# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))\n# SECURITY\nSECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\nDEBUG = config('DEBUG', default=True, cast=bool)\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3037,7 +3053,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\nDEBUG = config('DEBUG', default=True, cast=bool)\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\nDEBUG = config('DEBUG', default=True, cast=bool)\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3046,7 +3062,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DEBUG = config('DEBUG', default=True, cast=bool)\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "DEBUG = config('DEBUG', default=True, cast=bool)\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3055,7 +3071,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "ALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3109,7 +3125,16 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',\n#         'NAME': BASE_DIR / 'db.sqlite3',",
+        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'http://127.0.0.1:5173',\n    'http://127.0.0.1:8000'\n]\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'http://127.0.0.1:5173',\n    'http://127.0.0.1:8000'\n]\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3199,7 +3224,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n}\n# JWT\nSIMPLE_JWT = {\n    'AUTH_HEADER_TYPES': ('JWT',),\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=1),",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n}\n# JWT\nSIMPLE_JWT = {\n    'AUTH_HEADER_TYPES': ('Bearer', 'JWT'),\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=1),",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3208,7 +3233,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SIMPLE_JWT = {\n    'AUTH_HEADER_TYPES': ('JWT',),\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=1),\n}\n# DJOSER\nDJOSER = {\n    'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),\n    'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),\n    'EMAIL_FRONTEND_SITE_NAME': 'Pet_Adoption',\n    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',",
+        "peekOfCode": "SIMPLE_JWT = {\n    'AUTH_HEADER_TYPES': ('Bearer', 'JWT'),\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=1),\n}\n# DJOSER\nDJOSER = {\n    'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),\n    'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),\n    'EMAIL_FRONTEND_SITE_NAME': 'Pet_Adoption',\n    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3343,7 +3368,7 @@
         "kind": 5,
         "importPath": "pet_adoption.urls",
         "description": "pet_adoption.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('', api_root_view),\n    path('', include('core.urls')),\n    path('shop/', include('orders.web_urls')),\n    path('api/v1/', include('api.urls'), name='api-root'), \n    # path(\"api/v1/accounts/\", include(\"users.urls\")),\n    path(\"pets/\", include(\"pets.urls\")),\n     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),\n    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    # path('', api_root_view),\n    path('', include('core.urls')),\n    path('shop/', include('orders.web_urls')),\n    path('users/', include('users.urls')),\n    path('api/v1/', include('api.urls'), name='api-root'), \n    # path(\"api/v1/accounts/\", include(\"users.urls\")),\n    path('users/', include('users.urls')),\n    path(\"pets/\", include(\"pets.urls\")),",
         "detail": "pet_adoption.urls",
         "documentation": {}
     },
@@ -3433,7 +3458,7 @@
         "kind": 5,
         "importPath": "users.urls",
         "description": "users.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"register/\", register_view, name=\"register\"),\n]",
+        "peekOfCode": "urlpatterns = [\n    path(\"register/\", register_view, name=\"register\"),\n    path(\"login/\", TokenObtainPairView.as_view(), name=\"login\"),\n]",
         "detail": "users.urls",
         "documentation": {}
     },

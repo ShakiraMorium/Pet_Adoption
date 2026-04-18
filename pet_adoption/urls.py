@@ -32,11 +32,16 @@ urlpatterns = [
     # path('', api_root_view),
     path('', include('core.urls')),
     path('shop/', include('orders.web_urls')),
+    path('users/', include('users.urls')),
     path('api/v1/', include('api.urls'), name='api-root'), 
     # path("api/v1/accounts/", include("users.urls")),
+    
+    path('users/', include('users.urls')),
     path("pets/", include("pets.urls")),
     
-     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('users/login/', TokenObtainPairView.as_view(), name='users_login'),
+    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     
     path('swagger/', schema_view.with_ui('swagger',

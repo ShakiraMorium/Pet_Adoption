@@ -6,14 +6,14 @@ from rest_framework_nested import routers
 
 # from pets.views import PetViewSet, PetCategoryViewSet, PetReviewViewSet, PetImageViewSet
  
-from orders.views import CartItemViewSet, HasOrderedPet, OrderViewset
+from orders.views import CartItemViewSet, CartViewSet, HasOrderedPet, OrderViewset
 from pets.views import PetCategoryViewSet, PetImageViewSet, PetReviewViewSet, PetViewSet
  
  # Base router
 router = routers.DefaultRouter()
 router.register('pets', PetViewSet, basename='pets')
 router.register('categories', PetCategoryViewSet, basename='categories')
-router.register('carts', CartItemViewSet, basename='carts')
+router.register('carts', CartViewSet, basename='carts')
 router.register('orders', OrderViewset, basename='orders')
  
 
