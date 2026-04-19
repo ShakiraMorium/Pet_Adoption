@@ -1759,6 +1759,32 @@
         "documentation": {}
     },
     {
+        "label": "dj_database_url",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "dj_database_url",
+        "description": "dj_database_url",
+        "detail": "dj_database_url",
+        "documentation": {}
+    },
+    {
+        "label": "psycopg2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "psycopg2",
+        "description": "psycopg2",
+        "detail": "psycopg2",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
         "label": "debug_toolbar_urls",
         "importPath": "debug_toolbar.toolbar",
         "description": "debug_toolbar.toolbar",
@@ -2202,7 +2228,7 @@
         "kind": 6,
         "importPath": "orders.serializers",
         "description": "orders.serializers",
-        "peekOfCode": "class EmptySerializer(serializers.Serializer):\n    pass\nclass SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'age', 'category', 'price']\nclass AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem",
+        "peekOfCode": "class EmptySerializer(serializers.Serializer):\n    pass\nclass SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'petCategory','adoption_fee']\nclass AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem",
         "detail": "orders.serializers",
         "documentation": {}
     },
@@ -2211,7 +2237,7 @@
         "kind": 6,
         "importPath": "orders.serializers",
         "description": "orders.serializers",
-        "peekOfCode": "class SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'age', 'category', 'price']\nclass AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet_id', 'quantity']\n    def save(self, **kwargs):",
+        "peekOfCode": "class SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'petCategory','adoption_fee']\nclass AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet_id', 'quantity']\n    def save(self, **kwargs):",
         "detail": "orders.serializers",
         "documentation": {}
     },
@@ -2742,7 +2768,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    \"whitenoise.middleware.WhiteNoiseMiddleware\",\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"debug_toolbar.middleware.DebugToolbarMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    \"whitenoise.middleware.WhiteNoiseMiddleware\",\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',",
+        "peekOfCode": "MIDDLEWARE = [\n    \"whitenoise.middleware.WhiteNoiseMiddleware\",\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"debug_toolbar.middleware.DebugToolbarMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2787,7 +2813,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "INTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }",
+        "peekOfCode": "INTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',\n#         'NAME': BASE_DIR / 'db.sqlite3',\n#     }",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2796,7 +2822,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# DATABASE\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.postgresql',",
+        "peekOfCode": "DATABASES = {\n        #  dj_database_url.config(\n        # default=config('DATABASE_URL')\n           'default':{\n            \"ENGINE\": \"django.db.backends.postgresql\",\n            \"NAME\": config(\"dbname\", default=\"db.sqlite3\"),\n            \"USER\": config(\"user\"),\n            \"PASSWORD\":config(\"password\"),\n            \"HOST\": config(\"host\"),\n            \"PORT\": config(\"port\"),",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },

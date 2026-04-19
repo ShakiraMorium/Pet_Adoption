@@ -2,6 +2,14 @@ from pathlib import Path
 from datetime import timedelta
 from decouple import config
 import cloudinary
+import dj_database_url
+import psycopg2
+from dotenv import load_dotenv
+import os
+
+
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -15,6 +23,7 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 ALLOWED_HOSTS = [".vercel.app", "127.0.0.1", "localhost"]
 
 AUTH_USER_MODEL = 'users.PetUser'
+
 
 # APPLICATION
 INSTALLED_APPS = [
@@ -44,7 +53,6 @@ MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -84,12 +92,12 @@ INTERNAL_IPS = [
     # ...
 ]
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 # DATABASE
 # DATABASES = {
 #     'default': {
@@ -103,19 +111,23 @@ DATABASES = {
 # }
 
 
-# DATABASES = {
-#         "default": {
-#             "ENGINE": "django.db.backends.postgresql",
-#             "NAME": config("dbname", default="db.sqlite3"),
-#             "USER": config("user"),
-#             "PASSWORD":config("password"),
-#             "HOST": config("host"),
-#             "PORT": config("port"),
-#             "OPTIONS": {
-#                 # "sslmode": DB_SSLMODE,
-#             },
-#         }
-# }
+DATABASES = {
+        #  dj_database_url.config(
+        # default=config('DATABASE_URL')
+           'default':{
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": config("dbname", default="db.sqlite3"),
+            "USER": config("user"),
+            "PASSWORD":config("password"),
+            "HOST": config("host"),
+            "PORT": config("port"),
+            "OPTIONS": {
+                # "sslmode": DB_SSLMODE,
+            },
+        
+    }
+}
+
 
 
 AUTH_PASSWORD_VALIDATORS = [

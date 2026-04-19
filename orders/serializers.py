@@ -13,7 +13,7 @@ class EmptySerializer(serializers.Serializer):
 class SimplePetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pet
-        fields = ['id', 'name', 'age', 'category', 'price']
+        fields = ['id', 'name', 'petCategory','adoption_fee']
 
 
     
