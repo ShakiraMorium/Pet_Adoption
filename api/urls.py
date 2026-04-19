@@ -1,32 +1,26 @@
 
 from django.urls import include, path
+from pets.views import PetViewSet, CategoryViewSet, ReviewViewSet, PetImageViewSet
+from orders.views import CartViewSet, CartItemViewSet, OrderViewset
 from rest_framework_nested import routers
-# from order.views import  CartItemViewSet, OrderViewset,initiate_payment,payment_cancel, payment_fail, payment_success, HasOrderedPet
-# from rest_framework_nested import routers
-
-# from pets.views import PetViewSet, PetCategoryViewSet, PetReviewViewSet, PetImageViewSet
- 
-from orders.views import CartItemViewSet, CartViewSet, HasOrderedPet, OrderViewset
-from pets.views import PetCategoryViewSet, PetImageViewSet, PetReviewViewSet, PetViewSet
- 
  # Base router
 router = routers.DefaultRouter()
 router.register('pets', PetViewSet, basename='pets')
-router.register('categories', PetCategoryViewSet, basename='categories')
+router.register('categories', CategoryViewSet)
 router.register('carts', CartViewSet, basename='carts')
 router.register('orders', OrderViewset, basename='orders')
+
  
-
-
  # Nested routes: reviews under pets
-pet_router = routers.NestedDefaultRouter(router, 'pets', lookup='pet')
-pet_router.register('reviews', PetReviewViewSet, basename='pet-reviews')
-# pet_router.register('images', PetImageViewSet,basename='pet-images')
-pet_router.register('images', PetImageViewSet, basename='pet-images')
- 
+pet_router = routers.NestedDefaultRouter(
+    router, 'pets', lookup='pet')
+pet_router.register('reviews', ReviewViewSet, basename='pet-review')
+pet_router.register('images', PetImageViewSet,
+                        basename='pet-images')
+
 cart_router = routers.NestedDefaultRouter(router, 'carts', lookup='cart')
 cart_router.register('items', CartItemViewSet, basename='cart-item')
- 
+
 
 urlpatterns = [
      path('', include(router.urls)),
@@ -42,8 +36,8 @@ urlpatterns = [
     # path("payment/fail/", payment_fail, name="payment-fail"),
     # path("payment/cancel/", payment_cancel, name="payment-cancel"),
     # path('orders/has-ordered/<int:pet_id>/',         HasOrderedPet.as_view()),
-    path('orders/has-ordered/<int:pet_id>/', HasOrderedPet.as_view()),
-    path('payment/', include('payments.urls')),
+    # path('orders/has-ordered/<int:pet_id>/', HasOrderedPet.as_view()),
+    # path('payment/initiate/', initiate_payment, name='initiate-payment'),
  ]
 
 # from django.urls import path, include

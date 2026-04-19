@@ -70,7 +70,7 @@ TEMPLATES = [
         },
     },
 ]
-WSGI_APPLICATION = 'pet_adoption.wsgi.app'
+WSGI_APPLICATION = 'pet_adoption.wsgi.application'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
@@ -84,12 +84,12 @@ INTERNAL_IPS = [
     # ...
 ]
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 # DATABASE
 # DATABASES = {
 #     'default': {
@@ -103,19 +103,19 @@ INTERNAL_IPS = [
 # }
 
 
-DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.postgresql",
-            "NAME": config("dbname"),
-            "USER": config("user"),
-            "PASSWORD":config("password"),
-            "HOST": config("host"),
-            "PORT": config("port"),
-            "OPTIONS": {
-                # "sslmode": DB_SSLMODE,
-            },
-        }
-    }
+# DATABASES = {
+#         "default": {
+#             "ENGINE": "django.db.backends.postgresql",
+#             "NAME": config("dbname", default="db.sqlite3"),
+#             "USER": config("user"),
+#             "PASSWORD":config("password"),
+#             "HOST": config("host"),
+#             "PORT": config("port"),
+#             "OPTIONS": {
+#                 # "sslmode": DB_SSLMODE,
+#             },
+#         }
+# }
 
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -162,24 +162,31 @@ REST_FRAMEWORK = {
 
 # JWT
 SIMPLE_JWT = {
-    'AUTH_HEADER_TYPES': ('Bearer', 'JWT'),
+    # 'AUTH_HEADER_TYPES': ('Bearer', 'JWT'),
+    'AUTH_HEADER_TYPES': ('JWT',),
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
 }
 
 # DJOSER
+# DJOSER = {
+#     'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),
+#     'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),
+#     'EMAIL_FRONTEND_SITE_NAME': 'Pet_Adoption',
+#     'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
+#     'ACTIVATION_URL': 'activate/{uid}/{token}',
+#     'SEND_ACTIVATION_EMAIL': True,
+#     'SERIALIZERS': {
+#         'user_create': 'users.serializers.UserCreateSerializer',
+#         'current_user': 'users.serializers.UserSerializer'
+#     },
+# }
+
 DJOSER = {
-    'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),
-    'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),
-    'EMAIL_FRONTEND_SITE_NAME': 'Pet_Adoption',
-    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
-    'ACTIVATION_URL': 'activate/{uid}/{token}',
-    'SEND_ACTIVATION_EMAIL': True,
     'SERIALIZERS': {
         'user_create': 'users.serializers.UserCreateSerializer',
         'current_user': 'users.serializers.UserSerializer'
     },
 }
-
 # EMAIL
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST =config('EMAIL_HOST', default='')

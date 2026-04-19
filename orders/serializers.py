@@ -13,10 +13,11 @@ class EmptySerializer(serializers.Serializer):
 class SimplePetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Pet
-        fields = ['id', 'name', 'age', 'category']
+        fields = ['id', 'name', 'age', 'category', 'price']
 
 
-
+    
+class AddCartItemSerializer(serializers.ModelSerializer):
     pet_id = serializers.IntegerField()
 
     class Meta:
@@ -48,52 +49,15 @@ class SimplePetSerializer(serializers.ModelSerializer):
         return value
     
     
-class AddCartItemSerializer(serializers.ModelSerializer):
-    pet_id = serializers.IntegerField()
-
-    class Meta:
-        model = CartItem
-        fields = ['id', 'pet_id', 'quantity']
-
-    def save(self, **kwargs):
-        cart_id = self.context['cart_id']
-        pet_id = self.validated_data['pet_id']
-        quantity = self.validated_data['quantity']  
-
-        try:
-            cart_item = CartItem.objects.get(cart_id=cart_id, pet_id=pet_id)
-            cart_item.quantity += quantity
-            cart_item.save()
-            self.instance = cart_item
-        except CartItem.DoesNotExist:
-            self.instance = CartItem.objects.create(
-                cart_id=cart_id,
-                pet_id=pet_id,
-                quantity=quantity
-            )
-
-        return self.instance  # <-- must be inside save()
-
-    def validate_pet_id(self, value):
-        if not Pet.objects.filter(pk=value).exists():
-            raise serializers.ValidationError(f"Pet with id {value} does not exist")
-        return value
-
-
-
-class UpdateCartItemSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = CartItem
-        fields = ['quantity']
-
-
 class CartItemSerializer(serializers.ModelSerializer):
     pet = SimplePetSerializer()
     total_price = serializers.SerializerMethodField(
         method_name='get_total_price')
+
     class Meta:
         model = CartItem
-        fields = ['id', 'pet', 'quantity','total_price']
+        fields = ['id', 'pet', 'quantity', 'pet', 'total_price']
+
     def get_total_price(self, cart_item: CartItem):
         return cart_item.quantity * cart_item.pet.price
 
@@ -105,17 +69,16 @@ class CartSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Cart
-        fields = ['id', 'user', 'total_price','items',]
+        fields = ['id', 'user', 'items', 'total_price']
         read_only_fields = ['user']
+
     def get_total_price(self, cart: Cart):
         return sum(
-            [item.pet.price * item.quantity for item in cart.items.all()])
-
+            [item.product.price * item.quantity for item in cart.items.all()])
 
 
 class CreateOrderSerializer(serializers.Serializer):
     cart_id = serializers.UUIDField()
-    
 
     def validate_cart_id(self, cart_id):
         if not Cart.objects.filter(pk=cart_id).exists():
@@ -140,8 +103,8 @@ class CreateOrderSerializer(serializers.Serializer):
         return OrderSerializer(instance).data
 
 
-    class AddCartItemSerializer(serializers.ModelSerializer):
-        pet = SimplePetSerializer()
+class OrderItemSerializer(serializers.ModelSerializer):
+    pet = SimplePetSerializer()
 
     class Meta:
         model = OrderItem
@@ -155,7 +118,7 @@ class UpdateOrderSerializer(serializers.ModelSerializer):
 
 
 class OrderSerializer(serializers.ModelSerializer):
-    items = AddCartItemSerializer(many=True)
+    items = OrderItemSerializer(many=True)
 
     class Meta:
         model = Order

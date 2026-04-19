@@ -1,50 +1,41 @@
 from django.db.models import Count
-from django.views.generic import TemplateView, DetailView, ListView
+from rest_framework import viewsets
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, AllowAny
+from rest_framework.decorators import action
+from django.views.generic import TemplateView, DetailView
 from rest_framework.viewsets import ModelViewSet
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter, OrderingFilter
 from drf_yasg.utils import swagger_auto_schema
-from .permissions import IsAdminOrReadOnly, IsReviewAuthorOrReadonly
+from .permissions import IsAdminOrReadOnly, IsReviewAuthorOrReadOnly
 from pets.models import Pet, PetCategory, PetImage, PetReview, CartRequest
 from pets.serializers import (
-    PetSerializer, PetCategorySerializer, PetImageSerializer, PetReviewSerializer, CartRequestSerializer
+    PetSerializer, CategorySerializer, PetImageSerializer, ReviewSerializer, CartRequestSerializer
 )
 from django.db.models import Count
-from pets.filters import PetFilter
+
+# 1. UNCOMMENTED THE FILTER IMPORT
+from pets.filters import PetFilter 
 from pets.paginations import DefaultPagination  
-from rest_framework.generics import ListAPIView
-from .models import Pet
-from .serializers import PetSerializer
-
-
-
-
-class PetAPI(ListAPIView):
-    queryset = Pet.objects.all()
-    serializer_class = PetSerializer
 
 
 # Pet ViewSet
-
-class PetViewSet(ModelViewSet):
-    
+class PetViewSet(viewsets.ModelViewSet):
     queryset = Pet.objects.all()
     serializer_class = PetSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filterset_fields = ['category', 'is_available']
-    search_fields = ['name', 'breed']
-    ordering_fields = ['age', 'adoption_fee', 'created_at']
-    # filterset_class = PetFilter
-    # pagination_class = DefaultPagination
-    # search_fields = ['name', 'description']
-    # ordering_fields = ['adoption_fee', 'updated_at']
-    # permission_classes = [IsAdminOrReadOnly]
     
+    # 2. UNCOMMENTED THE FILTERSET CLASS
+    filterset_class = PetFilter 
+    
+    pagination_class = DefaultPagination
+    search_fields = ['name', 'description']
+    ordering_fields = ['adoption_fee', 'updated_at']
+    permission_classes = [IsAdminOrReadOnly]
     
     def get_queryset(self):
         return Pet.objects.prefetch_related('images').all()
     
-
     @swagger_auto_schema(operation_summary='Retrieve a list of pets')
     def list(self, request, *args, **kwargs):
         """Retrieve all pets"""
@@ -63,9 +54,7 @@ class PetViewSet(ModelViewSet):
         return super().create(request, *args, **kwargs)
 
 
-
 # Pet Image ViewSet
-
 class PetImageViewSet(ModelViewSet):
     serializer_class = PetImageSerializer
     permission_classes = [IsAdminOrReadOnly]
@@ -77,29 +66,19 @@ class PetImageViewSet(ModelViewSet):
         serializer.save(pet_id=self.kwargs.get('pet_pk'))
 
 
-
 # Pet Category ViewSet
-
-# class PetCategoryViewSet(ModelViewSet):
-#     permission_classes = [IsAdminOrReadOnly]/[AllowAny]
-#     queryset = PetCategory.objects.annotate(
-#         pet_count=Count('pets')).prefetch_related('pets')
-#     serializer_class = PetCategorySerializer
-
-
-
-class PetCategoryViewSet(ModelViewSet):
-    serializer_class = PetCategorySerializer
+class CategoryViewSet(ModelViewSet):
+    serializer_class = CategorySerializer
+    # This now works perfectly because we added related_name='pets' in models.py
     queryset = PetCategory.objects.annotate(
         pet_count=Count('pets') 
     ).all()
 
 
 # Pet Review ViewSet
-
-class PetReviewViewSet(ModelViewSet):
-    serializer_class = PetReviewSerializer
-    permission_classes = [IsReviewAuthorOrReadonly]
+class ReviewViewSet(ModelViewSet):
+    serializer_class = ReviewSerializer
+    permission_classes = [IsReviewAuthorOrReadOnly]
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
@@ -114,9 +93,7 @@ class PetReviewViewSet(ModelViewSet):
         return {'pet_id': self.kwargs.get('pet_pk')}
 
 
-
 # Adoption Request ViewSet
-
 class CartRequestViewSet(ModelViewSet):
     serializer_class = CartRequestSerializer
     permission_classes = [IsAdminOrReadOnly]
@@ -127,25 +104,20 @@ class CartRequestViewSet(ModelViewSet):
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
-class PetList(ListView):
-    model = Pet
-    template_name = "pets/pet_list.html"
-    context_object_name = "pets"
-
 
 class PetListByCategoryView(TemplateView):
     template_name = "pets/pet_list_by_category.html"
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # Fetch all categories with their pets
         categories = PetCategory.objects.all()
-        category_pets = {cat: Pet.objects.filter(category=cat) for cat in categories}
+        # 3. FIXED: Changed 'category=cat' to 'petCategory=cat'
+        category_pets = {cat: Pet.objects.filter(petCategory=cat) for cat in categories} 
         context['category_pets'] = category_pets
         return context
 
 class PetDetails(DetailView):
-        model = Pet
-        template_name = "pets/pet_detail.html"  # template for single pet
-        context_object_name = "pet"
-        pk_url_kwarg = "pk"  # matches <int:id> in urls.py
+    model = Pet
+    template_name = "pets/pet_detail.html"  
+    context_object_name = "pet"
+    pk_url_kwarg = "id"

@@ -1,12 +1,11 @@
-from django_filters.rest_framework import FilterSet
-from pets.models import Pet
+from django_filters import rest_framework as filters
+from .models import Pet
 
-class PetFilter(FilterSet):
+class PetFilter(filters.FilterSet):
     class Meta:
         model = Pet
         fields = {
-            'category_id': ['exact'],# Filter by pet category
-            'id':['exact'], # Filter by specific pet ID
-            'age': ['gt', 'lt'],        # Filter by age greater than or less than
-            'adoption_fee': ['gt', 'lt']  # Filter by adoption fee range
+            'petCategory': ['exact'],  # Must match the model exactly
+            'name': ['icontains'],
+            'description': ['icontains'],
         }

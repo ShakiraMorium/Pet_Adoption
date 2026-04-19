@@ -2,92 +2,56 @@ from rest_framework import serializers
 from decimal import Decimal
 from pets.models import PetCategory, Pet, PetImage, PetReview, CartRequest
 from django.contrib.auth import get_user_model
-# from cart.models import Cart
 
 
-#
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PetCategory
+        fields = ['id', 'name', 'description', 'pet_count']
 
-    
-    # def get_pets_count(self, obj):
-    #     # obj is a PetCategory instance
-    #     return obj.pets_set.count() 
+    pet_count = serializers.IntegerField(
+        read_only=True, help_text="Return the number pet in this category")
 
 
-# 1. Pet Image Serializer
 class PetImageSerializer(serializers.ModelSerializer):
-    image = serializers.SerializerMethodField()
-
-    def get_image(self, obj):
-        if obj.image:
-            return obj.image.url   # Cloudinary already returns full URL
-        return None
-
     class Meta:
         model = PetImage
         fields = ['id', 'image']
-    # class Meta:
-    #     model = PetImage
-    #     fields = ['id', 'image']
-        
-    # def get_image_url(self, obj):
-    #     return obj.image.url
-    
-# 2.pet serializer
+
+
 class PetSerializer(serializers.ModelSerializer):
     images = PetImageSerializer(many=True, read_only=True)
-    adoption_fee_with_tax = serializers.SerializerMethodField(method_name='calculate_tax')  # move here
 
     class Meta:
         model = Pet
-        # fields = ['__all__']
-        fields = [
-            'id', 'name', 'description', 'age', 'adoption_fee',
-            'adoption_fee_with_tax', 'is_available', 'category', 'images'
-        ]
+        fields = ['id', 
+            'name', 
+            'breed', 
+            'age', 
+            'price_with_tax',
+            'description', 
+            'adoption_fee', 
+            'is_available', 
+            'petCategory', 
+            'images',  # <--- ADD THIS LINE HERE
+            'created_at', 
+            'updated_at']  # other
 
-    # def get_adoption_fee_with_tax(self, obj):
-    #     return round(obj.adoption_fee * Decimal(1.1), 2)
+    price_with_tax = serializers.SerializerMethodField(
+        method_name='calculate_tax')
+
     def calculate_tax(self, pet):
         return round(pet.adoption_fee * Decimal(1.1), 2)
 
     def validate_adoption_fee(self, adoption_fee):
         if adoption_fee < 0:
-            raise serializers.ValidationError("Adoption fee cannot be negative")
+            raise serializers.ValidationError('Adoption fee could not be negative')
         return adoption_fee
-    
-# 3. Pet Category Serializer
-# class PetCategorySerializer(serializers.ModelSerializer):
-#     #  pets = PetSerializer(many=True, read_only=True, source='pet_set')
 
-#     class Meta:
-#         model = PetCategory
-#         fields = ['id', 'name', 'description', 'pet_count']   
-#         # pet_count = serializers.SerializerMethodField()     
-#         pet_count = serializers.IntegerField(
-#         read_only=True, help_text="Return the number pet in this category")
 
-class PetCategorySerializer(serializers.ModelSerializer):
-    # pets = PetSerializer(many=True, read_only=True, source='pet_count')
-    # pets = serializers.SerializerMethodField()
-    pet_count = serializers.SerializerMethodField()
-
-    class Meta:
-        model = PetCategory
-        fields = ['id', 'name', 'description', 'pet_count', 'pets']
-
-    # def get_pet_count(self, obj):
-    #     return obj.pets.count()  # uses related_name
-
-    # def get_pets(self, obj):
-    #     pets_qs = obj.pets.all()[:4]  # show first 4 pets only
-    #     return PetSerializer(pets_qs, many=True, context=self.context).data
-
-    def get_pet_count(self, obj):
-        return obj.pets.count() 
-
-# 4. Simple User Serializer
 class SimpleUserSerializer(serializers.ModelSerializer):
-    name = serializers.SerializerMethodField(method_name='get_current_user_name')
+    name = serializers.SerializerMethodField(
+        method_name='get_current_user_name')
 
     class Meta:
         model = get_user_model()
@@ -97,8 +61,8 @@ class SimpleUserSerializer(serializers.ModelSerializer):
         return obj.get_full_name()
 
 
-# 5. Pet Review Serializer
-class PetReviewSerializer(serializers.ModelSerializer):
+class ReviewSerializer(serializers.ModelSerializer):
+    # user = SimpleUserSerializer()
     user = serializers.SerializerMethodField(method_name='get_user')
 
     class Meta:
@@ -114,7 +78,6 @@ class PetReviewSerializer(serializers.ModelSerializer):
         return PetReview.objects.create(pet_id=pet_id, **validated_data)
 
 
-# 6. Adoption Request Serializer
 class CartRequestSerializer(serializers.ModelSerializer):
     user = SimpleUserSerializer(read_only=True)
     pet = PetSerializer(read_only=True)
