@@ -19,7 +19,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY
 SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')
-DEBUG = config('DEBUG', default=True, cast=bool)
+# DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = False
+
 ALLOWED_HOSTS = [".vercel.app", "127.0.0.1", "localhost"]
 
 AUTH_USER_MODEL = 'users.PetUser'

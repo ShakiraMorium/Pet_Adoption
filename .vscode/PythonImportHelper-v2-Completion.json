@@ -2714,7 +2714,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ENV setup\n# env = environ.Env()\n# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))\n# SECURITY\nSECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\nDEBUG = config('DEBUG', default=True, cast=bool)\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ENV setup\n# env = environ.Env()\n# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))\n# SECURITY\nSECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = False\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2723,7 +2723,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\nDEBUG = config('DEBUG', default=True, cast=bool)\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = False\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2732,7 +2732,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DEBUG = config('DEBUG', default=True, cast=bool)\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
