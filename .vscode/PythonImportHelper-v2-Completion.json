@@ -2778,7 +2778,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'Pet_Adoption.wsgi.app'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'http://127.0.0.1:5173',\n    'http://127.0.0.1:8000'\n]\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...",
+        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'http://127.0.0.1:5173',\n    'http://127.0.0.1:8000'\n]\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },

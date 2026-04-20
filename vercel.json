@@ -1,14 +1,14 @@
 
 {
     "builds": [{
-      "src": "Pet_Adoption/wsgi.py",
+      "src": "pet_adoption/wsgi.py",
       "use": "@vercel/python",
       "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.3" }
     }],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "Pet_Adoption/wsgi.py"
+        "dest": "pet_adoption/wsgi.py"
       }
     ]
 }

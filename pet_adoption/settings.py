@@ -87,7 +87,7 @@ TEMPLATES = [
         },
     },
 ]
-WSGI_APPLICATION = 'Pet_Adoption.wsgi.app'
+WSGI_APPLICATION = 'pet_adoption.wsgi.app'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
