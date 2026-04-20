@@ -2697,7 +2697,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ENV setup\n# env = environ.Env()\n# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))\n# SECURITY\nSECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = True\nALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\", \"localhost\"]\n# ALLOWED_HOSTS = config(",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ENV setup\n# env = environ.Env()\n# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))\n# SECURITY\nSECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = False\nALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\"]\n# ALLOWED_HOSTS = config(",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2706,7 +2706,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = True\nALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\", \"localhost\"]\n# ALLOWED_HOSTS = config(\n#     \"ALLOWED_HOSTS\",\n#     default=\"127.0.0.1,localhost\"\n# ).split(\",\")\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = False\nALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\"]\n# ALLOWED_HOSTS = config(\n#     \"ALLOWED_HOSTS\",\n#     default=\"127.0.0.1,localhost\"\n# ).split(\",\")\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2715,7 +2715,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\", \"localhost\"]\n# ALLOWED_HOSTS = config(\n#     \"ALLOWED_HOSTS\",\n#     default=\"127.0.0.1,localhost\"\n# ).split(\",\")\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\"]\n# ALLOWED_HOSTS = config(\n#     \"ALLOWED_HOSTS\",\n#     default=\"127.0.0.1,localhost\"\n# ).split(\",\")\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2724,7 +2724,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\", \"localhost\"]\n# ALLOWED_HOSTS = config(\n#     \"ALLOWED_HOSTS\",\n#     default=\"127.0.0.1,localhost\"\n# ).split(\",\")\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',",
+        "peekOfCode": "ALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\"]\n# ALLOWED_HOSTS = config(\n#     \"ALLOWED_HOSTS\",\n#     default=\"127.0.0.1,localhost\"\n# ).split(\",\")\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
