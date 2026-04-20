@@ -1768,23 +1768,6 @@
         "documentation": {}
     },
     {
-        "label": "psycopg2",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "psycopg2",
-        "description": "psycopg2",
-        "detail": "psycopg2",
-        "documentation": {}
-    },
-    {
-        "label": "load_dotenv",
-        "importPath": "dotenv",
-        "description": "dotenv",
-        "isExtraImport": true,
-        "detail": "dotenv",
-        "documentation": {}
-    },
-    {
         "label": "debug_toolbar_urls",
         "importPath": "debug_toolbar.toolbar",
         "description": "debug_toolbar.toolbar",
@@ -2714,7 +2697,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ENV setup\n# env = environ.Env()\n# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))\n# SECURITY\nSECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = False\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ENV setup\n# env = environ.Env()\n# environ.Env.read_env(os.path.join(BASE_DIR, '.env'))\n# SECURITY\nSECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = True\nALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\", \"localhost\"]\n# ALLOWED_HOSTS = config(",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2723,7 +2706,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = False\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')\n# DEBUG = config('DEBUG', default=True, cast=bool)\nDEBUG = True\nALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\", \"localhost\"]\n# ALLOWED_HOSTS = config(\n#     \"ALLOWED_HOSTS\",\n#     default=\"127.0.0.1,localhost\"\n# ).split(\",\")\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2732,7 +2715,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\", \"localhost\"]\n# ALLOWED_HOSTS = config(\n#     \"ALLOWED_HOSTS\",\n#     default=\"127.0.0.1,localhost\"\n# ).split(\",\")\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2741,7 +2724,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\".vercel.app\", \"127.0.0.1\", \"localhost\"]\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "ALLOWED_HOSTS = [ \".vercel.com\",\"127.0.0.1\", \"localhost\"]\n# ALLOWED_HOSTS = config(\n#     \"ALLOWED_HOSTS\",\n#     default=\"127.0.0.1,localhost\"\n# ).split(\",\")\nAUTH_USER_MODEL = 'users.PetUser'\n# APPLICATION\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2759,7 +2742,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'drf_yasg',\n    'django_filters',",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'cloudinary',\n    'cloudinary_storage',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2768,7 +2751,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    \"whitenoise.middleware.WhiteNoiseMiddleware\",\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"debug_toolbar.middleware.DebugToolbarMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
+        "peekOfCode": "MIDDLEWARE = [\n    \"debug_toolbar.middleware.DebugToolbarMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    \"whitenoise.middleware.WhiteNoiseMiddleware\",\n    \"corsheaders.middleware.CorsMiddleware\",\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2795,7 +2778,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.application'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'http://127.0.0.1:5173',\n    'http://127.0.0.1:8000'\n]\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...",
+        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'http://127.0.0.1:5173',\n    'http://127.0.0.1:8000'\n]\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2840,7 +2823,16 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\n# STATIC & MEDIA\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# REST FRAMEWORK\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,",
+        "peekOfCode": "DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# STATIC & MEDIA\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# REST FRAMEWORK\nREST_FRAMEWORK = {",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# STATIC & MEDIA\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# REST FRAMEWORK\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2903,7 +2895,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SIMPLE_JWT = {\n    # 'AUTH_HEADER_TYPES': ('Bearer', 'JWT'),\n    'AUTH_HEADER_TYPES': ('JWT',),\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=1),\n}\n# DJOSER\n# DJOSER = {\n#     'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),\n#     'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),\n#     'EMAIL_FRONTEND_SITE_NAME': 'Pet_Adoption',",
+        "peekOfCode": "SIMPLE_JWT = {\n    # 'AUTH_HEADER_TYPES': ('Bearer', 'JWT'),\n    'AUTH_HEADER_TYPES': ('JWT',),\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=1),\n}\nDJOSER = {\n    'LOGIN_FIELD': 'email',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'SEND_ACTIVATION_EMAIL': True,\n    'ACTIVATION_URL': 'activate/{uid}/{token}',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2912,7 +2904,16 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DJOSER = {\n    'SERIALIZERS': {\n        'user_create': 'users.serializers.UserCreateSerializer',\n        'current_user': 'users.serializers.UserSerializer'\n    },\n}\n# EMAIL\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST =config('EMAIL_HOST', default='')\nEMAIL_USE_TLS =config('EMAIL_USE_TLS', default=False, cast=bool)",
+        "peekOfCode": "DJOSER = {\n    'LOGIN_FIELD': 'email',\n    'USER_CREATE_PASSWORD_RETYPE': True,\n    'SEND_ACTIVATION_EMAIL': True,\n    'ACTIVATION_URL': 'activate/{uid}/{token}',\n    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',\n    'EMAIL': {\n        'activation': 'djoser.email.ActivationEmail',\n        'password_reset': 'djoser.email.PasswordResetEmail',\n    },",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DJOSER",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "DJOSER = {\n    'SERIALIZERS': {\n        'user_create': 'users.serializers.UserCreateSerializer',\n        'current_user': 'users.serializers.UserSerializer'\n    },\n}\n# EMAIL\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST =config('EMAIL_HOST', default='')\nEMAIL_PORT =config('EMAIL_PORT', default=587)",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2921,16 +2922,43 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST =config('EMAIL_HOST', default='')\nEMAIL_USE_TLS =config('EMAIL_USE_TLS', default=False, cast=bool)\nEMAIL_PORT =config('EMAIL_PORT', default=587)\nEMAIL_HOST_USER =config('EMAIL_HOST_USER', default='')\nEMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD', default='')\n# URLS\nBACKEND_URL = config(\"BACKEND_URL\", default=\"http://127.0.0.1:8000\")\nFRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST =config('EMAIL_HOST', default='')\nEMAIL_PORT =config('EMAIL_PORT', default=587)\nEMAIL_USE_TLS =config('EMAIL_USE_TLS', default=False, cast=bool)\nEMAIL_HOST_USER =config('EMAIL_HOST_USER', default='')\nEMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD', default='')\n# print(\"EMAIL_HOST:\", EMAIL_HOST)\nFRONTEND_PROTOCOL = config('FRONTEND_PROTOCOL')\nFRONTEND_DOMAIN = config('FRONTEND_DOMAIN')\nBACKEND_PROTOCOL = config('BACKEND_PROTOCOL')",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
     {
-        "label": "BACKEND_URL",
+        "label": "FRONTEND_PROTOCOL",
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "BACKEND_URL = config(\"BACKEND_URL\", default=\"http://127.0.0.1:8000\")\nFRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True",
+        "peekOfCode": "FRONTEND_PROTOCOL = config('FRONTEND_PROTOCOL')\nFRONTEND_DOMAIN = config('FRONTEND_DOMAIN')\nBACKEND_PROTOCOL = config('BACKEND_PROTOCOL')\nBACKEND_DOMAIN = config('BACKEND_DOMAIN')\nFRONTEND_URL = f\"{FRONTEND_PROTOCOL}://{FRONTEND_DOMAIN}\"\nBACKEND_URL = f\"{BACKEND_PROTOCOL}://{BACKEND_DOMAIN}\"\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "FRONTEND_DOMAIN",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "FRONTEND_DOMAIN = config('FRONTEND_DOMAIN')\nBACKEND_PROTOCOL = config('BACKEND_PROTOCOL')\nBACKEND_DOMAIN = config('BACKEND_DOMAIN')\nFRONTEND_URL = f\"{FRONTEND_PROTOCOL}://{FRONTEND_DOMAIN}\"\nBACKEND_URL = f\"{BACKEND_PROTOCOL}://{BACKEND_DOMAIN}\"\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BACKEND_PROTOCOL",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "BACKEND_PROTOCOL = config('BACKEND_PROTOCOL')\nBACKEND_DOMAIN = config('BACKEND_DOMAIN')\nFRONTEND_URL = f\"{FRONTEND_PROTOCOL}://{FRONTEND_DOMAIN}\"\nBACKEND_URL = f\"{BACKEND_PROTOCOL}://{BACKEND_DOMAIN}\"\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BACKEND_DOMAIN",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "BACKEND_DOMAIN = config('BACKEND_DOMAIN')\nFRONTEND_URL = f\"{FRONTEND_PROTOCOL}://{FRONTEND_DOMAIN}\"\nBACKEND_URL = f\"{BACKEND_PROTOCOL}://{BACKEND_DOMAIN}\"\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2939,7 +2967,16 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "FRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "FRONTEND_URL = f\"{FRONTEND_PROTOCOL}://{FRONTEND_DOMAIN}\"\nBACKEND_URL = f\"{BACKEND_PROTOCOL}://{BACKEND_DOMAIN}\"\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BACKEND_URL",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "BACKEND_URL = f\"{BACKEND_PROTOCOL}://{BACKEND_DOMAIN}\"\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -3049,15 +3086,6 @@
         "description": "pet_adoption.views",
         "peekOfCode": "def api_root_view(request):\n    return redirect('api-root')",
         "detail": "pet_adoption.views",
-        "documentation": {}
-    },
-    {
-        "label": "application",
-        "kind": 5,
-        "importPath": "pet_adoption.wsgi",
-        "description": "pet_adoption.wsgi",
-        "peekOfCode": "application = get_wsgi_application()",
-        "detail": "pet_adoption.wsgi",
         "documentation": {}
     },
     {

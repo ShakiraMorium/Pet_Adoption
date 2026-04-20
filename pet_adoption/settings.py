@@ -3,13 +3,14 @@ from datetime import timedelta
 from decouple import config
 import cloudinary
 import dj_database_url
-import psycopg2
-from dotenv import load_dotenv
 import os
 
 
 
-load_dotenv()
+
+
+
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,9 +21,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY
 SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key')
 # DEBUG = config('DEBUG', default=True, cast=bool)
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = [ ".vercel.com","127.0.0.1", "localhost"]
+# ALLOWED_HOSTS = config(
+#     "ALLOWED_HOSTS",
+#     default="127.0.0.1,localhost"
+# ).split(",")
 
 AUTH_USER_MODEL = 'users.PetUser'
 
@@ -36,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
+    'cloudinary_storage',
     'drf_yasg',
     'django_filters',
     "corsheaders",
@@ -51,10 +58,10 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    "whitenoise.middleware.WhiteNoiseMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
     "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -80,7 +87,7 @@ TEMPLATES = [
         },
     },
 ]
-WSGI_APPLICATION = 'pet_adoption.wsgi.application'
+WSGI_APPLICATION = 'pet_adoption.wsgi.app'
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
@@ -98,17 +105,6 @@ INTERNAL_IPS = [
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-# DATABASE
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': config('dbname'),
-#         'USER': config('user'),
-#         'PASSWORD': config('password'),
-#         'HOST': config('host'),
-#         'PORT': config('port')
 #     }
 # }
 
@@ -157,6 +153,7 @@ cloudinary.config(
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # STATIC & MEDIA
 STATIC_URL = 'static/'
@@ -181,19 +178,26 @@ SIMPLE_JWT = {
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1),
 }
 
-# DJOSER
-# DJOSER = {
-#     'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),
-#     'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),
-#     'EMAIL_FRONTEND_SITE_NAME': 'Pet_Adoption',
-#     'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
-#     'ACTIVATION_URL': 'activate/{uid}/{token}',
-#     'SEND_ACTIVATION_EMAIL': True,
-#     'SERIALIZERS': {
-#         'user_create': 'users.serializers.UserCreateSerializer',
-#         'current_user': 'users.serializers.UserSerializer'
-#     },
-# }
+DJOSER = {
+    'LOGIN_FIELD': 'email',
+
+    'USER_CREATE_PASSWORD_RETYPE': True,
+
+    'SEND_ACTIVATION_EMAIL': True,
+    'ACTIVATION_URL': 'activate/{uid}/{token}',
+
+    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',
+
+    'EMAIL': {
+        'activation': 'djoser.email.ActivationEmail',
+        'password_reset': 'djoser.email.PasswordResetEmail',
+    },
+
+    'SERIALIZERS': {
+        'user_create': 'users.serializers.UserCreateSerializer',
+        'current_user': 'users.serializers.UserSerializer',
+    },
+}
 
 DJOSER = {
     'SERIALIZERS': {
@@ -203,15 +207,24 @@ DJOSER = {
 }
 # EMAIL
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
 EMAIL_HOST =config('EMAIL_HOST', default='')
-EMAIL_USE_TLS =config('EMAIL_USE_TLS', default=False, cast=bool)
 EMAIL_PORT =config('EMAIL_PORT', default=587)
+EMAIL_USE_TLS =config('EMAIL_USE_TLS', default=False, cast=bool)
 EMAIL_HOST_USER =config('EMAIL_HOST_USER', default='')
 EMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD', default='')
+# print("EMAIL_HOST:", EMAIL_HOST)
 
-# URLS
-BACKEND_URL = config("BACKEND_URL", default="http://127.0.0.1:8000")
-FRONTEND_URL = config("FRONTEND_URL", default="http://localhost:3000")
+
+
+FRONTEND_PROTOCOL = config('FRONTEND_PROTOCOL')
+FRONTEND_DOMAIN = config('FRONTEND_DOMAIN')
+
+BACKEND_PROTOCOL = config('BACKEND_PROTOCOL')
+BACKEND_DOMAIN = config('BACKEND_DOMAIN')
+
+FRONTEND_URL = f"{FRONTEND_PROTOCOL}://{FRONTEND_DOMAIN}"
+BACKEND_URL = f"{BACKEND_PROTOCOL}://{BACKEND_DOMAIN}"
 
 
 SSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')
