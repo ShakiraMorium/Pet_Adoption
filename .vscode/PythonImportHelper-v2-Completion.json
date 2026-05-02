@@ -104,14 +104,6 @@
         "documentation": {}
     },
     {
-        "label": "transaction",
-        "importPath": "django.db",
-        "description": "django.db",
-        "isExtraImport": true,
-        "detail": "django.db",
-        "documentation": {}
-    },
-    {
         "label": "migrations",
         "importPath": "django.db",
         "description": "django.db",
@@ -137,6 +129,22 @@
     },
     {
         "label": "transaction",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
@@ -209,14 +217,6 @@
     },
     {
         "label": "permissions",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
-        "label": "generics",
         "importPath": "rest_framework",
         "description": "rest_framework",
         "isExtraImport": true,
@@ -240,14 +240,6 @@
         "documentation": {}
     },
     {
-        "label": "serializers",
-        "importPath": "rest_framework",
-        "description": "rest_framework",
-        "isExtraImport": true,
-        "detail": "rest_framework",
-        "documentation": {}
-    },
-    {
         "label": "permissions",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -352,6 +344,14 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "include",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -360,11 +360,11 @@
         "documentation": {}
     },
     {
-        "label": "path",
-        "importPath": "django.urls",
-        "description": "django.urls",
+        "label": "routers",
+        "importPath": "rest_framework_nested",
+        "description": "rest_framework_nested",
         "isExtraImport": true,
-        "detail": "django.urls",
+        "detail": "rest_framework_nested",
         "documentation": {}
     },
     {
@@ -392,7 +392,39 @@
         "documentation": {}
     },
     {
-        "label": "OrderViewset",
+        "label": "initiate_payment",
+        "importPath": "order.views",
+        "description": "order.views",
+        "isExtraImport": true,
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment_cancel",
+        "importPath": "order.views",
+        "description": "order.views",
+        "isExtraImport": true,
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment_fail",
+        "importPath": "order.views",
+        "description": "order.views",
+        "isExtraImport": true,
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment_success",
+        "importPath": "order.views",
+        "description": "order.views",
+        "isExtraImport": true,
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "HasOrderedPet",
         "importPath": "order.views",
         "description": "order.views",
         "isExtraImport": true,
@@ -424,211 +456,11 @@
         "documentation": {}
     },
     {
-        "label": "CartRequestViewSet",
-        "importPath": "pets.views",
-        "description": "pets.views",
-        "isExtraImport": true,
-        "detail": "pets.views",
-        "documentation": {}
-    },
-    {
         "label": "PetImageViewSet",
         "importPath": "pets.views",
         "description": "pets.views",
         "isExtraImport": true,
         "detail": "pets.views",
-        "documentation": {}
-    },
-    {
-        "label": "PageNumberPagination",
-        "importPath": "rest_framework.pagination",
-        "description": "rest_framework.pagination",
-        "isExtraImport": true,
-        "detail": "rest_framework.pagination",
-        "documentation": {}
-    },
-    {
-        "label": "PageNumberPagination",
-        "importPath": "rest_framework.pagination",
-        "description": "rest_framework.pagination",
-        "isExtraImport": true,
-        "detail": "rest_framework.pagination",
-        "documentation": {}
-    },
-    {
-        "label": "Pet",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Pet",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Pet",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Pet",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Pet",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetCategory",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartRequest",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Pet",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetCategory",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetReview",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetImage",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartRequest",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetCategory",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Pet",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetImage",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetReview",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartRequest",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "Pet",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetCategory",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetImage",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetReview",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartRequest",
-        "importPath": "pets.models",
-        "description": "pets.models",
-        "isExtraImport": true,
-        "detail": "pets.models",
         "documentation": {}
     },
     {
@@ -697,11 +529,147 @@
         "documentation": {}
     },
     {
-        "label": "PetUser",
-        "importPath": "users.models",
-        "description": "users.models",
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
         "isExtraImport": true,
-        "detail": "users.models",
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategory",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetReview",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetImage",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategory",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetImage",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetReview",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "CartRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "Pet",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategory",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetImage",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "PetReview",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
+        "documentation": {}
+    },
+    {
+        "label": "CartRequest",
+        "importPath": "pets.models",
+        "description": "pets.models",
+        "isExtraImport": true,
+        "detail": "pets.models",
         "documentation": {}
     },
     {
@@ -730,115 +698,172 @@
         "documentation": {}
     },
     {
-        "label": "Cart",
-        "importPath": "cart.models",
-        "description": "cart.models",
+        "label": "django.db.models.deletion",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "cart.models",
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "Cart",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
         "documentation": {}
     },
     {
         "label": "CartItem",
-        "importPath": "cart.models",
-        "description": "cart.models",
+        "importPath": "order.models",
+        "description": "order.models",
         "isExtraImport": true,
-        "detail": "cart.models",
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItem",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
         "documentation": {}
     },
     {
         "label": "Cart",
-        "importPath": "cart.models",
-        "description": "cart.models",
+        "importPath": "order.models",
+        "description": "order.models",
         "isExtraImport": true,
-        "detail": "cart.models",
+        "detail": "order.models",
         "documentation": {}
     },
     {
         "label": "CartItem",
-        "importPath": "cart.models",
-        "description": "cart.models",
+        "importPath": "order.models",
+        "description": "order.models",
         "isExtraImport": true,
-        "detail": "cart.models",
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItem",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
         "documentation": {}
     },
     {
         "label": "Cart",
-        "importPath": "cart.models",
-        "description": "cart.models",
+        "importPath": "order.models",
+        "description": "order.models",
         "isExtraImport": true,
-        "detail": "cart.models",
+        "detail": "order.models",
         "documentation": {}
     },
     {
         "label": "CartItem",
-        "importPath": "cart.models",
-        "description": "cart.models",
+        "importPath": "order.models",
+        "description": "order.models",
         "isExtraImport": true,
-        "detail": "cart.models",
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "OrderItem",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "Order",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
+        "documentation": {}
+    },
+    {
+        "label": "Cart",
+        "importPath": "order.models",
+        "description": "order.models",
+        "isExtraImport": true,
+        "detail": "order.models",
         "documentation": {}
     },
     {
         "label": "CartItem",
-        "importPath": "cart.models",
-        "description": "cart.models",
+        "importPath": "order.models",
+        "description": "order.models",
         "isExtraImport": true,
-        "detail": "cart.models",
+        "detail": "order.models",
         "documentation": {}
     },
     {
-        "label": "Cart",
-        "importPath": "cart.models",
-        "description": "cart.models",
+        "label": "Order",
+        "importPath": "order.models",
+        "description": "order.models",
         "isExtraImport": true,
-        "detail": "cart.models",
+        "detail": "order.models",
         "documentation": {}
     },
     {
-        "label": "Cart",
-        "importPath": "cart.models",
-        "description": "cart.models",
+        "label": "OrderItem",
+        "importPath": "order.models",
+        "description": "order.models",
         "isExtraImport": true,
-        "detail": "cart.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartItem",
-        "importPath": "cart.models",
-        "description": "cart.models",
-        "isExtraImport": true,
-        "detail": "cart.models",
-        "documentation": {}
-    },
-    {
-        "label": "Cart",
-        "importPath": "cart.models",
-        "description": "cart.models",
-        "isExtraImport": true,
-        "detail": "cart.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartItem",
-        "importPath": "cart.models",
-        "description": "cart.models",
-        "isExtraImport": true,
-        "detail": "cart.models",
-        "documentation": {}
-    },
-    {
-        "label": "Cart",
-        "importPath": "cart.models",
-        "description": "cart.models",
-        "isExtraImport": true,
-        "detail": "cart.models",
-        "documentation": {}
-    },
-    {
-        "label": "PetSerializer",
-        "importPath": "pets.serializers",
-        "description": "pets.serializers",
-        "isExtraImport": true,
-        "detail": "pets.serializers",
+        "detail": "order.models",
         "documentation": {}
     },
     {
@@ -890,35 +915,19 @@
         "documentation": {}
     },
     {
-        "label": "CartService",
-        "importPath": "cart.services",
-        "description": "cart.services",
+        "label": "OrderService",
+        "importPath": "order.services",
+        "description": "order.services",
         "isExtraImport": true,
-        "detail": "cart.services",
+        "detail": "order.services",
         "documentation": {}
     },
     {
-        "label": "CartService",
-        "importPath": "cart.services",
-        "description": "cart.services",
+        "label": "OrderService",
+        "importPath": "order.services",
+        "description": "order.services",
         "isExtraImport": true,
-        "detail": "cart.services",
-        "documentation": {}
-    },
-    {
-        "label": "PermissionDenied",
-        "importPath": "rest_framework.exceptions",
-        "description": "rest_framework.exceptions",
-        "isExtraImport": true,
-        "detail": "rest_framework.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "ValidationError",
-        "importPath": "rest_framework.exceptions",
-        "description": "rest_framework.exceptions",
-        "isExtraImport": true,
-        "detail": "rest_framework.exceptions",
+        "detail": "order.services",
         "documentation": {}
     },
     {
@@ -938,11 +947,35 @@
         "documentation": {}
     },
     {
-        "label": "render",
-        "importPath": "django.shortcuts",
-        "description": "django.shortcuts",
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
         "isExtraImport": true,
-        "detail": "django.shortcuts",
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponseRedirect",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "action",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
         "documentation": {}
     },
     {
@@ -1002,46 +1035,6 @@
         "documentation": {}
     },
     {
-        "label": "CreateModelMixin",
-        "importPath": "rest_framework.mixins",
-        "description": "rest_framework.mixins",
-        "isExtraImport": true,
-        "detail": "rest_framework.mixins",
-        "documentation": {}
-    },
-    {
-        "label": "RetrieveModelMixin",
-        "importPath": "rest_framework.mixins",
-        "description": "rest_framework.mixins",
-        "isExtraImport": true,
-        "detail": "rest_framework.mixins",
-        "documentation": {}
-    },
-    {
-        "label": "DestroyModelMixin",
-        "importPath": "rest_framework.mixins",
-        "description": "rest_framework.mixins",
-        "isExtraImport": true,
-        "detail": "rest_framework.mixins",
-        "documentation": {}
-    },
-    {
-        "label": "GenericViewSet",
-        "importPath": "rest_framework.viewsets",
-        "description": "rest_framework.viewsets",
-        "isExtraImport": true,
-        "detail": "rest_framework.viewsets",
-        "documentation": {}
-    },
-    {
-        "label": "ModelViewSet",
-        "importPath": "rest_framework.viewsets",
-        "description": "rest_framework.viewsets",
-        "isExtraImport": true,
-        "detail": "rest_framework.viewsets",
-        "documentation": {}
-    },
-    {
         "label": "GenericViewSet",
         "importPath": "rest_framework.viewsets",
         "description": "rest_framework.viewsets",
@@ -1063,335 +1056,6 @@
         "description": "rest_framework.viewsets",
         "isExtraImport": true,
         "detail": "rest_framework.viewsets",
-        "documentation": {}
-    },
-    {
-        "label": "IsAuthenticated",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "IsAdminUser",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "IsAuthenticated",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "IsAdminUser",
-        "importPath": "rest_framework.permissions",
-        "description": "rest_framework.permissions",
-        "isExtraImport": true,
-        "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "action",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "api_view",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "action",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
-        "isExtraImport": true,
-        "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "rest_framework.response",
-        "description": "rest_framework.response",
-        "isExtraImport": true,
-        "detail": "rest_framework.response",
-        "documentation": {}
-    },
-    {
-        "label": "APIView",
-        "importPath": "rest_framework.views",
-        "description": "rest_framework.views",
-        "isExtraImport": true,
-        "detail": "rest_framework.views",
-        "documentation": {}
-    },
-    {
-        "label": "serializers",
-        "importPath": "cart",
-        "description": "cart",
-        "isExtraImport": true,
-        "detail": "cart",
-        "documentation": {}
-    },
-    {
-        "label": "CartSerializer",
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "isExtraImport": true,
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CartItemSerializer",
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "isExtraImport": true,
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "AddCartItemSerializer",
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "isExtraImport": true,
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "UpdateCartItemSerializer",
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "isExtraImport": true,
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "AddCartItemSerializer",
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "isExtraImport": true,
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "settings",
-        "importPath": "django.conf",
-        "description": "django.conf",
-        "isExtraImport": true,
-        "detail": "django.conf",
-        "documentation": {}
-    },
-    {
-        "label": "django.db.models.deletion",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "django.db.models.deletion",
-        "description": "django.db.models.deletion",
-        "detail": "django.db.models.deletion",
-        "documentation": {}
-    },
-    {
-        "label": "Cart",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartItem",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "Order",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "OrderItem",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "Cart",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartItem",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "Order",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "OrderItem",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "Cart",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartItem",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "OrderItem",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "Order",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "Cart",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "CartItem",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "Order",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "OrderItem",
-        "importPath": "order.models",
-        "description": "order.models",
-        "isExtraImport": true,
-        "detail": "order.models",
-        "documentation": {}
-    },
-    {
-        "label": "OrderService",
-        "importPath": "order.services",
-        "description": "order.services",
-        "isExtraImport": true,
-        "detail": "order.services",
-        "documentation": {}
-    },
-    {
-        "label": "OrderService",
-        "importPath": "order.services",
-        "description": "order.services",
-        "isExtraImport": true,
-        "detail": "order.services",
         "documentation": {}
     },
     {
@@ -1435,6 +1099,30 @@
         "documentation": {}
     },
     {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdminUser",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
         "label": "cloudinary.models",
         "kind": 6,
         "isExtraImport": true,
@@ -1449,15 +1137,6 @@
         "description": "cloudinary.models",
         "isExtraImport": true,
         "detail": "cloudinary.models",
-        "documentation": {}
-    },
-    {
-        "label": "pets.validators",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pets.validators",
-        "description": "pets.validators",
-        "detail": "pets.validators",
         "documentation": {}
     },
     {
@@ -1490,6 +1169,22 @@
         "description": "django_filters.rest_framework",
         "isExtraImport": true,
         "detail": "django_filters.rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "validate_file_size",
+        "importPath": "pets.validators",
+        "description": "pets.validators",
+        "isExtraImport": true,
+        "detail": "pets.validators",
+        "documentation": {}
+    },
+    {
+        "label": "PageNumberPagination",
+        "importPath": "rest_framework.pagination",
+        "description": "rest_framework.pagination",
+        "isExtraImport": true,
+        "detail": "rest_framework.pagination",
         "documentation": {}
     },
     {
@@ -1663,6 +1358,22 @@
         "documentation": {}
     },
     {
+        "label": "TokenObtainPairView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
+        "label": "TokenRefreshView",
+        "importPath": "rest_framework_simplejwt.views",
+        "description": "rest_framework_simplejwt.views",
+        "isExtraImport": true,
+        "detail": "rest_framework_simplejwt.views",
+        "documentation": {}
+    },
+    {
         "label": "debug_toolbar_urls",
         "importPath": "debug_toolbar.toolbar",
         "description": "debug_toolbar.toolbar",
@@ -1776,7 +1487,7 @@
         "kind": 5,
         "importPath": "api.urls",
         "description": "api.urls",
-        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('pets', PetViewSet, basename='pets')\nrouter.register('categories', PetCategoryViewSet, basename='categories')\nrouter.register('carts', CartRequestViewSet, basename='carts')\nrouter.register('orders', OrderViewset, basename='orders')\n# Nested routes: reviews under pets\npet_router = routers.NestedDefaultRouter(router, 'pets', lookup='pet')\npet_router.register('reviews', PetReviewViewSet, basename='pet-reviews')\npet_router.register('images', PetImageViewSet,basename='pet-images')\ncart_router = routers.NestedDefaultRouter(router, 'carts', lookup='cart')",
+        "peekOfCode": "router = routers.DefaultRouter()\nrouter.register('pets', PetViewSet, basename='pets')\nrouter.register('categories', PetCategoryViewSet, basename='categories')\nrouter.register('carts', CartItemViewSet, basename='carts')\nrouter.register('orders', OrderViewset, basename='orders')\n# Nested routes: reviews under pets\npet_router = routers.NestedDefaultRouter(router, 'pets', lookup='pet')\npet_router.register('reviews', PetReviewViewSet, basename='pet-reviews')\npet_router.register('images', PetImageViewSet,basename='pet-images')\ncart_router = routers.NestedDefaultRouter(router, 'carts', lookup='cart')",
         "detail": "api.urls",
         "documentation": {}
     },
@@ -1803,35 +1514,8 @@
         "kind": 5,
         "importPath": "api.urls",
         "description": "api.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', include(router.urls)),\n    path('', include(pet_router.urls)),\n    path('', include(cart_router.urls)),\n   # Djoser core endpoints (register, users, reset, etc.)\n    path('auth/', include('djoser.urls')),\n    # JWT endpoints (login/create, refresh, verify)\n    path('auth/', include('djoser.urls.jwt')),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', include(router.urls)),\n    path('', include(pet_router.urls)),\n    path('', include(cart_router.urls)),\n   # Djoser core endpoints (register, users, reset, etc.)\n    path('auth/', include('djoser.urls')),\n    # JWT endpoints (login/create, refresh, verify)\n    path('auth/', include('djoser.urls.jwt')),\n     path(\"payment/initiate/\", initiate_payment, name=\"initiate-payment\"),\n    path(\"payment/success/\", payment_success, name=\"payment-success\"),",
         "detail": "api.urls",
-        "documentation": {}
-    },
-    {
-        "label": "PetPagination",
-        "kind": 6,
-        "importPath": "api.views",
-        "description": "api.views",
-        "peekOfCode": "class PetPagination(PageNumberPagination):\n    page_size = 10  # Number of pets per page\n    page_size_query_param = 'page_size'\n    max_page_size = 50\n# List and Create Pets (paginated)\nclass PetListAPI(generics.ListCreateAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    pagination_class = PetPagination  # enable pagination\n# Retrieve, Update, Delete a single pet by ID",
-        "detail": "api.views",
-        "documentation": {}
-    },
-    {
-        "label": "PetListAPI",
-        "kind": 6,
-        "importPath": "api.views",
-        "description": "api.views",
-        "peekOfCode": "class PetListAPI(generics.ListCreateAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    pagination_class = PetPagination  # enable pagination\n# Retrieve, Update, Delete a single pet by ID\nclass PetDetailAPI(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    lookup_field = 'id'  # if your URL is <int:id>",
-        "detail": "api.views",
-        "documentation": {}
-    },
-    {
-        "label": "PetDetailAPI",
-        "kind": 6,
-        "importPath": "api.views",
-        "description": "api.views",
-        "peekOfCode": "class PetDetailAPI(generics.RetrieveUpdateDestroyAPIView):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    lookup_field = 'id'  # if your URL is <int:id>",
-        "detail": "api.views",
         "documentation": {}
     },
     {
@@ -1916,137 +1600,11 @@
         "documentation": {}
     },
     {
-        "label": "EmptySerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class EmptySerializer(serializers.Serializer):\n    pass\n# Simple Pet Serializer\nclass SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'adoption_fee']\n# Add Cart Item Serializer\nclass AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "SimplePetSerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'adoption_fee']\n# Add Cart Item Serializer\nclass AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet_id', 'quantity']",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "AddCartItemSerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet_id', 'quantity']\n    def save(self, **kwargs):\n        cart_id = self.context['cart_id']\n        pet_id = self.validated_data['pet_id']\n        quantity = self.validated_data['quantity']\n        try:",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "UpdateCartItemSerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class UpdateCartItemSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = CartItem\n        fields = ['quantity']\n# Cart Item Serializer\nclass CartItemSerializer(serializers.ModelSerializer):\n    pet = SimplePetSerializer()\n    total_price = serializers.SerializerMethodField(method_name='get_total_price')\n    class Meta:\n        model = CartItem",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CartItemSerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class CartItemSerializer(serializers.ModelSerializer):\n    pet = SimplePetSerializer()\n    total_price = serializers.SerializerMethodField(method_name='get_total_price')\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet', 'quantity', 'total_price']\n    def get_total_price(self, cart_item: CartItem):\n        return cart_item.quantity * cart_item.pet.adoption_fee\n# Cart Serializer\nclass CartSerializer(serializers.ModelSerializer):",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CartSerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class CartSerializer(serializers.ModelSerializer):\n    items = CartItemSerializer(many=True, read_only=True)\n    total_price = serializers.SerializerMethodField(method_name='get_total_price')\n    class Meta:\n        model = Cart\n        fields = ['id', 'user', 'items', 'total_price']\n        read_only_fields = ['user']\n    def get_total_price(self, cart: Cart):\n        return sum(\n            [item.pet.cart_fee * item.quantity for item in cart.items.all()]",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CreateCartSerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class CreateCartSerializer(serializers.Serializer):\n    cart_id = serializers.UUIDField()\n    def validate_cart_id(self, cart_id):\n        if not Cart.objects.filter(pk=cart_id).exists():\n            raise serializers.ValidationError(\"No cart found with this id\")\n        if not CartItem.objects.filter(cart_id=cart_id).exists():\n            raise serializers.ValidationError(\"Cart is empty\")\n        return cart_id\n    def create(self, validated_data):\n        user_id = self.context['user_id']",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CartItemSerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class CartItemSerializer(serializers.ModelSerializer):\n    pet = SimplePetSerializer()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet', 'price', 'quantity', 'total_price']\n# Update cart (status only)\nclass UpdateCartSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Cart\n        fields = ['status']",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "UpdateCartSerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class UpdateCartSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Cart\n        fields = ['status']\n# cart Serializer\nclass CartSerializer(serializers.ModelSerializer):\n    items = CartItemSerializer(many=True)\n    class Meta:\n        model = Cart\n        fields = ['id', 'user', 'status', 'total_price', 'created_at', 'items']",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CartSerializer",
-        "kind": 6,
-        "importPath": "cart.serializers",
-        "description": "cart.serializers",
-        "peekOfCode": "class CartSerializer(serializers.ModelSerializer):\n    items = CartItemSerializer(many=True)\n    class Meta:\n        model = Cart\n        fields = ['id', 'user', 'status', 'total_price', 'created_at', 'items']",
-        "detail": "cart.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "CartService",
-        "kind": 6,
-        "importPath": "cart.services",
-        "description": "cart.services",
-        "peekOfCode": "class CartService:\n    @staticmethod\n    def create_cart(user_id, cart_id):\n        with transaction.atomic():\n            cart = Cart.objects.get(pk=cart_id)\n            cart_items = cart.items.select_related('pet').all()\n            total_price = sum([item.pet.cart_fee * item.quantity for item in cart_items])\n            cart = Cart.objects.create(\n                user_id=user_id,\n                total_price=total_price",
-        "detail": "cart.services",
-        "documentation": {}
-    },
-    {
-        "label": "CartViewSet",
-        "kind": 6,
-        "importPath": "cart.views",
-        "description": "cart.views",
-        "peekOfCode": "class CartViewSet(CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, GenericViewSet):\n    serializer_class = CartSerializer\n    permission_classes = [IsAuthenticated]\n    def perform_create(self, serializer):\n        serializer.save(user=self.request.user)\n    def get_queryset(self):\n        if getattr(self, 'swagger_fake_view', False):\n            return Cart.objects.none()\n        return Cart.objects.prefetch_related('items__pet').filter(user=self.request.user)\n    def create(self, request, *args, **kwargs):",
-        "detail": "cart.views",
-        "documentation": {}
-    },
-    {
-        "label": "CartItemViewSet",
-        "kind": 6,
-        "importPath": "cart.views",
-        "description": "cart.views",
-        "peekOfCode": "class CartItemViewSet(ModelViewSet):\n    http_method_names = ['get', 'post', 'patch', 'delete']\n    def get_serializer_class(self):\n        if self.request.method == 'POST':\n            return AddCartItemSerializer\n        elif self.request.method == 'PATCH':\n            return UpdateCartItemSerializer\n        return CartItemSerializer\n    def get_serializer_context(self):\n        context = super().get_serializer_context()",
-        "detail": "cart.views",
-        "documentation": {}
-    },
-    {
-        "label": "CartViewSet",
-        "kind": 6,
-        "importPath": "cart.views",
-        "description": "cart.views",
-        "peekOfCode": "class CartViewSet(ModelViewSet):\n    http_method_names = ['get', 'post', 'delete', 'patch', 'head', 'options']\n    @action(detail=True, methods=['post'])\n    def cancel(self, request, pk=None):\n        cart = self.get_object()\n        CartService.cancel_cart(cart=cart, user=request.user)\n        return Response({'status': 'Adoption canceled'})\n    @action(detail=True, methods=['patch'])\n    def update_status(self, request, pk=None):\n        cart = self.get_object()",
-        "detail": "cart.views",
-        "documentation": {}
-    },
-    {
         "label": "Migration",
         "kind": 6,
         "importPath": "order.migrations.0001_initial",
         "description": "order.migrations.0001_initial",
-        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('pets', '0002_petreview_updated_at_alter_petimage_image_and_more'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Cart',\n            fields=[",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('pets', '0001_initial'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Cart',\n            fields=[",
         "detail": "order.migrations.0001_initial",
         "documentation": {}
     },
@@ -2082,7 +1640,7 @@
         "kind": 6,
         "importPath": "order.models",
         "description": "order.models",
-        "peekOfCode": "class Cart(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)\n    user = models.OneToOneField(PetUser, on_delete=models.CASCADE, related_name=\"cart_order\")\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"Cart of {self.user.first_name}\"\n# CartItem model\nclass CartItem(models.Model):\n    cart = models.ForeignKey(\n        Cart, on_delete=models.CASCADE, related_name=\"order_items\"",
+        "peekOfCode": "class Cart(models.Model):\n    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)\n    user = models.OneToOneField(PetUser, on_delete=models.CASCADE, related_name=\"cart_order\")\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"Cart of {self.user.first_name}\"\n# CartItem model\nclass CartItem(models.Model):\n    cart = models.ForeignKey(\n        Cart, on_delete=models.CASCADE, related_name=\"items\"",
         "detail": "order.models",
         "documentation": {}
     },
@@ -2091,7 +1649,7 @@
         "kind": 6,
         "importPath": "order.models",
         "description": "order.models",
-        "peekOfCode": "class CartItem(models.Model):\n    cart = models.ForeignKey(\n        Cart, on_delete=models.CASCADE, related_name=\"order_items\"\n    )\n    pet = models.ForeignKey(\n        Pet, on_delete=models.CASCADE, related_name=\"order_cart_items\"  # unique related_name\n    )\n    quantity = models.PositiveIntegerField()\n    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)\n    total_price = models.DecimalField(max_digits=12, decimal_places=2, default=0)",
+        "peekOfCode": "class CartItem(models.Model):\n    cart = models.ForeignKey(\n        Cart, on_delete=models.CASCADE, related_name=\"items\"\n    )\n    pet = models.ForeignKey(\n        Pet, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField(validators=[MinValueValidator(1)])\n    class Meta:\n        unique_together = [['cart', 'pet']]\n    def __str__(self):",
         "detail": "order.models",
         "documentation": {}
     },
@@ -2109,7 +1667,7 @@
         "kind": 6,
         "importPath": "order.models",
         "description": "order.models",
-        "peekOfCode": "class OrderItem(models.Model):\n    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name=\"items\")\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField()\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    total_price = models.DecimalField(max_digits=12, decimal_places=2)\n    def __str__(self):\n        return f\"{self.quantity} x {self.pet.name}\"",
+        "peekOfCode": "class OrderItem(models.Model):\n    order = models.ForeignKey(\n        Order, on_delete=models.CASCADE, related_name=\"items\")\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE)\n    quantity = models.PositiveIntegerField()\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    total_price = models.DecimalField(max_digits=12, decimal_places=2)\n    def __str__(self):\n        return f\"{self.quantity} x {self.pet.name}\"",
         "detail": "order.models",
         "documentation": {}
     },
@@ -2118,7 +1676,7 @@
         "kind": 6,
         "importPath": "order.serializers",
         "description": "order.serializers",
-        "peekOfCode": "class EmptySerializer(serializers.Serializer):\n    pass\nclass SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'age', 'category']\n# Adding a pet to adoption request\nclass AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:",
+        "peekOfCode": "class EmptySerializer(serializers.Serializer):\n    pass\nclass SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'age', 'category']\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet_id', 'quantity']",
         "detail": "order.serializers",
         "documentation": {}
     },
@@ -2127,7 +1685,7 @@
         "kind": 6,
         "importPath": "order.serializers",
         "description": "order.serializers",
-        "peekOfCode": "class SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'age', 'category']\n# Adding a pet to adoption request\nclass AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet_id', 'quantity']",
+        "peekOfCode": "class SimplePetSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = Pet\n        fields = ['id', 'name', 'age', 'category']\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet_id', 'quantity']\n    def save(self, **kwargs):\n        cart_id = self.context['cart_id']",
         "detail": "order.serializers",
         "documentation": {}
     },
@@ -2136,7 +1694,7 @@
         "kind": 6,
         "importPath": "order.serializers",
         "description": "order.serializers",
-        "peekOfCode": "class AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet_id', 'quantity']\n    def save(self, **kwargs):\n        cart_id = self.context['cart_id']\n        pet_id = self.validated_data['pet_id']\n        quantity = self.validated_data.get('quantity')\n        try:",
+        "peekOfCode": "class AddCartItemSerializer(serializers.ModelSerializer):\n    pet_id = serializers.IntegerField()\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet_id', 'quantity']\n    def save(self, **kwargs):\n        cart_id = self.context['cart_id']\n        pet_id = self.validated_data['pet_id']\n        quantity = self.validated_data['quantity']  \n        try:",
         "detail": "order.serializers",
         "documentation": {}
     },
@@ -2154,7 +1712,7 @@
         "kind": 6,
         "importPath": "order.serializers",
         "description": "order.serializers",
-        "peekOfCode": "class CartItemSerializer(serializers.ModelSerializer):\n    pet = SimplePetSerializer()\n    total_price = serializers.SerializerMethodField(\n        method_name='get_total_price')\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet', 'quantity','total_price']\nclass CartSerializer(serializers.ModelSerializer):\n    items = CartItemSerializer(many=True, read_only=True)\n    total_price = serializers.SerializerMethodField(",
+        "peekOfCode": "class CartItemSerializer(serializers.ModelSerializer):\n    pet = SimplePetSerializer()\n    total_price = serializers.SerializerMethodField(\n        method_name='get_total_price')\n    class Meta:\n        model = CartItem\n        fields = ['id', 'pet', 'quantity','total_price']\n    def get_total_price(self, cart_item: CartItem):\n        return cart_item.quantity * cart_item.pet.price\nclass CartSerializer(serializers.ModelSerializer):",
         "detail": "order.serializers",
         "documentation": {}
     },
@@ -2163,7 +1721,7 @@
         "kind": 6,
         "importPath": "order.serializers",
         "description": "order.serializers",
-        "peekOfCode": "class CartSerializer(serializers.ModelSerializer):\n    items = CartItemSerializer(many=True, read_only=True)\n    total_price = serializers.SerializerMethodField(\n        method_name='get_total_price')\n    class Meta:\n        model = Cart\n        fields = ['id', 'user', 'total_price','items',]\n        read_only_fields = ['user']\nclass CreateOrderSerializer(serializers.Serializer):\n    cart_id = serializers.UUIDField()",
+        "peekOfCode": "class CartSerializer(serializers.ModelSerializer):\n    items = CartItemSerializer(many=True, read_only=True)\n    total_price = serializers.SerializerMethodField(\n        method_name='get_total_price')\n    class Meta:\n        model = Cart\n        fields = ['id', 'user', 'total_price','items',]\n        read_only_fields = ['user']\n    def get_total_price(self, cart: Cart):\n        return sum(",
         "detail": "order.serializers",
         "documentation": {}
     },
@@ -2208,7 +1766,7 @@
         "kind": 6,
         "importPath": "order.views",
         "description": "order.views",
-        "peekOfCode": "class CartViewSet(CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, GenericViewSet):\n    serializer_class = CartSerializer\n    permission_classes = [IsAuthenticated]\n    def perform_create(self, serializer):\n        serializer.save(user=self.request.user)\n    def get_queryset(self):\n        if getattr(self, 'swagger_fake_view', False):\n            return Cart.objects.none()\n        return Cart.objects.prefetch_related('items__pet').filter(user=self.request.user)\nclass CartItemViewSet(ModelViewSet):",
+        "peekOfCode": "class CartViewSet(CreateModelMixin, RetrieveModelMixin, DestroyModelMixin, GenericViewSet):\n    serializer_class = CartSerializer\n    permission_classes = [IsAuthenticated]\n    def perform_create(self, serializer):\n        serializer.save(user=self.request.user)\n    def get_queryset(self):\n        if getattr(self, 'swagger_fake_view', False):\n            return Cart.objects.none()\n        return Cart.objects.prefetch_related('items__pet').filter(user=self.request.user)\n    def create(self, request, *args, **kwargs):",
         "detail": "order.views",
         "documentation": {}
     },
@@ -2217,7 +1775,7 @@
         "kind": 6,
         "importPath": "order.views",
         "description": "order.views",
-        "peekOfCode": "class CartItemViewSet(ModelViewSet):\n    http_method_names = ['get', 'post', 'patch', 'delete']\n    def get_serializer_class(self):\n        if self.request.method == 'POST':\n            return AddCartItemSerializer\n        elif self.request.method == 'PATCH':\n            return UpdateCartItemSerializer\n        return CartItemSerializer\n    def get_serializer_context(self):\n        context = super().get_serializer_context()",
+        "peekOfCode": "class CartItemViewSet(ModelViewSet):\n    permission_classes = [IsAuthenticated]  # ✅ Require login\n    http_method_names = ['get', 'post', 'patch', 'delete']\n    def get_serializer_class(self):\n        if self.request.method == 'POST':\n            return AddCartItemSerializer\n        elif self.request.method == 'PATCH':\n            return UpdateCartItemSerializer\n        return CartItemSerializer\n    def get_serializer_context(self):",
         "detail": "order.views",
         "documentation": {}
     },
@@ -2227,6 +1785,51 @@
         "importPath": "order.views",
         "description": "order.views",
         "peekOfCode": "class OrderViewset(ModelViewSet):\n    http_method_names = ['get', 'post', 'delete', 'patch', 'head', 'options']\n    @action(detail=True, methods=['post'])\n    def cancel(self, request, pk=None):\n        order = self.get_object()\n        OrderService.cancel_order(order=order, user=request.user)\n        return Response({'status': 'Order canceled'})\n    @action(detail=True, methods=['patch'])\n    def update_status(self, request, pk=None):\n        order = self.get_object()",
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "HasOrderedPet",
+        "kind": 6,
+        "importPath": "order.views",
+        "description": "order.views",
+        "peekOfCode": "class HasOrderedPet(APIView):\n    permission_classes = [IsAuthenticated]\n    def get(self, request, pet_id):\n        user = request.user\n        has_ordered = OrderItem.objects.filter(\n            order__user=user, pet_id=pet_id).exists()\n        return Response({\"hasOrdered\": has_ordered})",
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "initiate_payment",
+        "kind": 2,
+        "importPath": "order.views",
+        "description": "order.views",
+        "peekOfCode": "def initiate_payment(request):\n    user = request.user\n    amount = request.data.get(\"amount\")\n    order_id = request.data.get(\"orderId\")\n    num_items = request.data.get(\"numItems\")\n    settings = {'store_id': 'petadop67ddc8dba290b',\n                'store_pass': 'petadop67ddc8dba290b@ssl', 'issandbox': True}\n    sslcz = SSLCOMMERZ(settings)\n    post_body = {}\n    post_body['total_amount'] = amount",
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment_success",
+        "kind": 2,
+        "importPath": "order.views",
+        "description": "order.views",
+        "peekOfCode": "def payment_success(request):\n    print(\"Inside success\")\n    order_id = request.data.get(\"tran_id\").split('_')[1]\n    order = Order.objects.get(id=order_id)\n    order.status = \"Ready To Ship\"\n    order.save()\n    return HttpResponseRedirect(f\"{main_settings.FRONTEND_URL}/dashboard/orders/\")\n@api_view(['POST'])\ndef payment_cancel(request):\n    return HttpResponseRedirect(f\"{main_settings.FRONTEND_URL}/dashboard/orders/\")",
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment_cancel",
+        "kind": 2,
+        "importPath": "order.views",
+        "description": "order.views",
+        "peekOfCode": "def payment_cancel(request):\n    return HttpResponseRedirect(f\"{main_settings.FRONTEND_URL}/dashboard/orders/\")\n@api_view(['POST'])\ndef payment_fail(request):\n    print(\"Inside fail\")\n    return HttpResponseRedirect(f\"{main_settings.FRONTEND_URL}/dashboard/orders/\")\nclass HasOrderedPet(APIView):\n    permission_classes = [IsAuthenticated]\n    def get(self, request, pet_id):\n        user = request.user",
+        "detail": "order.views",
+        "documentation": {}
+    },
+    {
+        "label": "payment_fail",
+        "kind": 2,
+        "importPath": "order.views",
+        "description": "order.views",
+        "peekOfCode": "def payment_fail(request):\n    print(\"Inside fail\")\n    return HttpResponseRedirect(f\"{main_settings.FRONTEND_URL}/dashboard/orders/\")\nclass HasOrderedPet(APIView):\n    permission_classes = [IsAuthenticated]\n    def get(self, request, pet_id):\n        user = request.user\n        has_ordered = OrderItem.objects.filter(\n            order__user=user, pet_id=pet_id).exists()\n        return Response({\"hasOrdered\": has_ordered})",
         "detail": "order.views",
         "documentation": {}
     },
@@ -2242,37 +1845,19 @@
     {
         "label": "Migration",
         "kind": 6,
-        "importPath": "pets.migrations.0002_petreview_updated_at_alter_petimage_image_and_more",
-        "description": "pets.migrations.0002_petreview_updated_at_alter_petimage_image_and_more",
-        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('pets', '0001_initial'),\n        migrations.swappable_dependency(settings.AUTH_USER_MODEL),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='petreview',\n            name='updated_at',\n            field=models.DateTimeField(auto_now=True),",
-        "detail": "pets.migrations.0002_petreview_updated_at_alter_petimage_image_and_more",
+        "importPath": "pets.migrations.0002_alter_cartrequest_pet",
+        "description": "pets.migrations.0002_alter_cartrequest_pet",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('pets', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterField(\n            model_name='cartrequest',\n            name='pet',\n            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='cart_requests', to='pets.pet'),\n        ),",
+        "detail": "pets.migrations.0002_alter_cartrequest_pet",
         "documentation": {}
     },
     {
-        "label": "PetCategoryAdmin",
+        "label": "Migration",
         "kind": 6,
-        "importPath": "pets.admin",
-        "description": "pets.admin",
-        "peekOfCode": "class PetCategoryAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'description']\n    search_fields = ['name']\n@admin.register(PetImage)\nclass PetImageAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet']\n@admin.register(Pet)\nclass PetAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'breed', 'age', 'cart_items_count']\n    def cart_items_count(self, obj):",
-        "detail": "pets.admin",
-        "documentation": {}
-    },
-    {
-        "label": "PetImageAdmin",
-        "kind": 6,
-        "importPath": "pets.admin",
-        "description": "pets.admin",
-        "peekOfCode": "class PetImageAdmin(admin.ModelAdmin):\n    list_display = ['id', 'pet']\n@admin.register(Pet)\nclass PetAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'breed', 'age', 'cart_items_count']\n    def cart_items_count(self, obj):\n        return obj.cart_items.count()  # Make sure CartItem has related_name=\"cart_items\"\n    cart_items_count.short_description = 'Cart Items'",
-        "detail": "pets.admin",
-        "documentation": {}
-    },
-    {
-        "label": "PetAdmin",
-        "kind": 6,
-        "importPath": "pets.admin",
-        "description": "pets.admin",
-        "peekOfCode": "class PetAdmin(admin.ModelAdmin):\n    list_display = ['id', 'name', 'breed', 'age', 'cart_items_count']\n    def cart_items_count(self, obj):\n        return obj.cart_items.count()  # Make sure CartItem has related_name=\"cart_items\"\n    cart_items_count.short_description = 'Cart Items'",
-        "detail": "pets.admin",
+        "importPath": "pets.migrations.0003_pet_image",
+        "description": "pets.migrations.0003_pet_image",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('pets', '0002_alter_cartrequest_pet'),\n    ]\n    operations = [\n        migrations.AddField(\n            model_name='pet',\n            name='image',\n            field=models.ImageField(blank=True, null=True, upload_to='pets/'),\n        ),",
+        "detail": "pets.migrations.0003_pet_image",
         "documentation": {}
     },
     {
@@ -2298,7 +1883,7 @@
         "kind": 6,
         "importPath": "pets.filters",
         "description": "pets.filters",
-        "peekOfCode": "class PetFilter(FilterSet):\n    class Meta:\n        # model = Pet\n        fields = {\n            'category_id': ['exact'],   # Filter by pet category\n            'age': ['gt', 'lt'],        # Filter by age greater than or less than\n            'price': ['gt', 'lt']  # Filter by adoption fee range\n        }",
+        "peekOfCode": "class PetFilter(FilterSet):\n    class Meta:\n        model = Pet\n        fields = {\n            'category_id': ['exact'],# Filter by pet category\n            'id':['exact'], # Filter by specific pet ID\n            'age': ['gt', 'lt'],        # Filter by age greater than or less than\n            'adoption_fee': ['gt', 'lt']  # Filter by adoption fee range\n        }",
         "detail": "pets.filters",
         "documentation": {}
     },
@@ -2316,7 +1901,7 @@
         "kind": 6,
         "importPath": "pets.models",
         "description": "pets.models",
-        "peekOfCode": "class Pet(models.Model):\n    name = models.CharField(max_length=100)\n    breed = models.CharField(max_length=100)\n    age = models.IntegerField()\n    adoption_fee = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)\n    description = models.TextField(blank=True, null=True)\n    is_available = models.BooleanField(default=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    updated_at = models.DateTimeField(auto_now=True)\n    category = models.ForeignKey(",
+        "peekOfCode": "class Pet(models.Model):\n    name = models.CharField(max_length=100)\n    breed = models.CharField(max_length=100)\n    age = models.IntegerField()\n    adoption_fee = models.DecimalField(max_digits=8, decimal_places=2, default=0.00)\n    description = models.TextField(blank=True, null=True)\n    is_available = models.BooleanField(default=True)\n    image = models.ImageField(upload_to='pets/', blank=True, null=True) \n    category = models.ForeignKey(\n        PetCategory, on_delete=models.CASCADE,related_name=\"pets\")",
         "detail": "pets.models",
         "documentation": {}
     },
@@ -2325,7 +1910,7 @@
         "kind": 6,
         "importPath": "pets.models",
         "description": "pets.models",
-        "peekOfCode": "class PetImage(models.Model):\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name=\"images\")\n    image = CloudinaryField('image')\n    image = models.ImageField(upload_to=\"pets/images/\", validators=[validate_file_size])\n    def __str__(self):\n        return f\"Image of {self.pet.name}\"\nclass PetReview(models.Model):\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name=\"reviews\")\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    ratings = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])",
+        "peekOfCode": "class PetImage(models.Model):\n    pet = models.ForeignKey(\n        Pet, on_delete=models.CASCADE, related_name='images')\n    image = CloudinaryField('image')\n    # image = models.ImageField(upload_to=\"images\", validators=[validate_file_size])\n    # def __str__(self):\n    #     return f\"Image of {self.pet.name}\"\nclass PetReview(models.Model):\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name=\"reviews\")\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)",
         "detail": "pets.models",
         "documentation": {}
     },
@@ -2343,7 +1928,7 @@
         "kind": 6,
         "importPath": "pets.models",
         "description": "pets.models",
-        "peekOfCode": "class CartRequest(models.Model):\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name=\"price\")\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    approved = models.BooleanField(default=False)\n    requested_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.user} -> {self.pet.name}\"",
+        "peekOfCode": "class CartRequest(models.Model):\n    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name=\"cart_requests\")\n    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)\n    approved = models.BooleanField(default=False)\n    requested_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return f\"{self.user} -> {self.pet.name}\"",
         "detail": "pets.models",
         "documentation": {}
     },
@@ -2352,7 +1937,7 @@
         "kind": 6,
         "importPath": "pets.paginations",
         "description": "pets.paginations",
-        "peekOfCode": "class DefaultPagination(PageNumberPagination):\n    page_size = 10\n    page_size_query_param = 'page_size'\n    max_page_size = 100",
+        "peekOfCode": "class DefaultPagination(PageNumberPagination):\n    page_size = 10",
         "detail": "pets.paginations",
         "documentation": {}
     },
@@ -2375,12 +1960,12 @@
         "documentation": {}
     },
     {
-        "label": "PetCategorySerializer",
-        "kind": 6,
-        "importPath": "pets.serializers",
-        "description": "pets.serializers",
-        "peekOfCode": "class PetCategorySerializer(serializers.ModelSerializer):\n    class Meta:\n        model = PetCategory\n        fields = ['id', 'name', 'description', 'pet_count']        \n    pet_count = serializers.IntegerField(read_only=True, help_text=\"Return the number product in this category\")\n# 2. Pet Image Serializer\nclass PetImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = PetImage\n        fields = ['id', 'image']",
-        "detail": "pets.serializers",
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "pets.pet_urls",
+        "description": "pets.pet_urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.PetList.as_view(), name='pet-list'),\n    path('<int:id>/', views.PetDetails.as_view(), name='pet-list'),\n]",
+        "detail": "pets.pet_urls",
         "documentation": {}
     },
     {
@@ -2388,7 +1973,7 @@
         "kind": 6,
         "importPath": "pets.serializers",
         "description": "pets.serializers",
-        "peekOfCode": "class PetImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = PetImage\n        fields = ['id', 'image']\nclass PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    price_with_tax = serializers.SerializerMethodField()  # move here\n    class Meta:\n        model = Pet\n        fields = [",
+        "peekOfCode": "class PetImageSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = PetImage\n        fields = ['id', 'image']\n    # def get_image_url(self, obj):\n    #     return obj.image.url\n# 2.pet serializer\nclass PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    adoption_fee_with_tax = serializers.SerializerMethodField(method_name='calculate_tax')  # move here",
         "detail": "pets.serializers",
         "documentation": {}
     },
@@ -2397,7 +1982,16 @@
         "kind": 6,
         "importPath": "pets.serializers",
         "description": "pets.serializers",
-        "peekOfCode": "class PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    price_with_tax = serializers.SerializerMethodField()  # move here\n    class Meta:\n        model = Pet\n        fields = [\n            'id', 'name', 'description', 'age', 'adoption_fee',\n            'price_with_tax', 'is_available', 'category', 'images'\n        ]\n    def get_price_with_tax(self, obj):",
+        "peekOfCode": "class PetSerializer(serializers.ModelSerializer):\n    images = PetImageSerializer(many=True, read_only=True)\n    adoption_fee_with_tax = serializers.SerializerMethodField(method_name='calculate_tax')  # move here\n    class Meta:\n        model = Pet\n        fields = [\n            'id', 'name', 'description', 'age', 'adoption_fee',\n            'adoption_fee_with_tax', 'is_available', 'category', 'images'\n        ]\n    # def get_adoption_fee_with_tax(self, obj):",
+        "detail": "pets.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "PetCategorySerializer",
+        "kind": 6,
+        "importPath": "pets.serializers",
+        "description": "pets.serializers",
+        "peekOfCode": "class PetCategorySerializer(serializers.ModelSerializer):\n    # pets = PetSerializer(many=True, read_only=True, source='pet_count')\n    # pets = serializers.SerializerMethodField()\n    pet_count = serializers.SerializerMethodField()\n    class Meta:\n        model = PetCategory\n        fields = ['id', 'name', 'description', 'pet_count', 'pets']\n    # def get_pet_count(self, obj):\n    #     return obj.pets.count()  # uses related_name\n    # def get_pets(self, obj):",
         "detail": "pets.serializers",
         "documentation": {}
     },
@@ -2424,7 +2018,7 @@
         "kind": 6,
         "importPath": "pets.serializers",
         "description": "pets.serializers",
-        "peekOfCode": "class CartRequestSerializer(serializers.ModelSerializer):\n    user = SimpleUserSerializer(read_only=True)\n    pet = PetSerializer(read_only=True)\n    class Meta:\n        model = CartRequest\n        fields = ['id', 'user', 'pet', 'approved', 'requested_at']\n        read_only_fields = ['user', 'pet', 'approved', 'requested_at']",
+        "peekOfCode": "class CartRequestSerializer(serializers.ModelSerializer):\n    user = SimpleUserSerializer(read_only=True)\n    pet = PetSerializer(read_only=True)\n    pet_id = serializers.PrimaryKeyRelatedField(\n        queryset=Pet.objects.all(), write_only=True\n    )\n    class Meta:\n        model = CartRequest\n        fields = ['id', 'user', 'pet', 'approved', 'requested_at']\n        read_only_fields = ['user', 'pet', 'approved', 'requested_at']",
         "detail": "pets.serializers",
         "documentation": {}
     },
@@ -2433,7 +2027,7 @@
         "kind": 5,
         "importPath": "pets.urls",
         "description": "pets.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.PetListByCategoryView.as_view(), name='pet-list-by-category'),\n    path('<int:id>/',views.PetDetails.as_view(), name='pet-list'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.PetDetails.as_view(), name='pet-list'),\n    path('<int:pk>/', views.PetDetails.as_view(), name='pet-detail'),\n]",
         "detail": "pets.urls",
         "documentation": {}
     },
@@ -2451,7 +2045,7 @@
         "kind": 6,
         "importPath": "pets.views",
         "description": "pets.views",
-        "peekOfCode": "class PetViewSet(ModelViewSet):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]\n    filterset_class = PetFilter\n    pagination_class = DefaultPagination\n    search_fields = ['name', 'description']\n    ordering_fields = ['price', 'updated_at']\n    permission_classes = [IsAdminOrReadOnly]\n    @swagger_auto_schema(operation_summary='Retrieve a list of pets')",
+        "peekOfCode": "class PetViewSet(ModelViewSet):\n    queryset = Pet.objects.all()\n    serializer_class = PetSerializer\n    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]\n    filterset_class = PetFilter\n    # pagination_class = DefaultPagination\n    pagination_class = None\n    search_fields = ['name', 'description']\n    ordering_fields = ['adoption_fee', 'updated_at']\n    permission_classes = [IsAdminOrReadOnly]",
         "detail": "pets.views",
         "documentation": {}
     },
@@ -2460,7 +2054,7 @@
         "kind": 6,
         "importPath": "pets.views",
         "description": "pets.views",
-        "peekOfCode": "class PetImageViewSet(ModelViewSet):\n    serializer_class = PetImageSerializer\n    permission_classes = [IsAdminOrReadOnly]\n    def get_queryset(self):\n        return PetImage.objects.filter(pet_id=self.kwargs.get('pet_pk'))\n    def perform_create(self, serializer):\n        serializer.save(pet_id=self.kwargs.get('pet_pk'))\n# Pet Category ViewSet\nclass PetCategoryViewSet(ModelViewSet):\n    permission_classes = [IsAdminOrReadOnly]",
+        "peekOfCode": "class PetImageViewSet(ModelViewSet):\n    serializer_class = PetImageSerializer\n    permission_classes = [IsAdminOrReadOnly]\n    def get_queryset(self):\n        return PetImage.objects.filter(pet_id=self.kwargs.get('pet_pk'))\n    def perform_create(self, serializer):\n        serializer.save(pet_id=self.kwargs.get('pet_pk'))\n# Pet Category ViewSet\n# class PetCategoryViewSet(ModelViewSet):\n#     permission_classes = [IsAdminOrReadOnly]/[AllowAny]",
         "detail": "pets.views",
         "documentation": {}
     },
@@ -2469,7 +2063,7 @@
         "kind": 6,
         "importPath": "pets.views",
         "description": "pets.views",
-        "peekOfCode": "class PetCategoryViewSet(ModelViewSet):\n    permission_classes = [IsAdminOrReadOnly]\n    queryset = PetCategory.objects.annotate(\n        pet_count=Count('pets')).all()\n    serializer_class = PetCategorySerializer\n# class PetCategoryViewSet(ModelViewSet):\n#     serializer_class = PetCategorySerializer\n#     queryset = PetCategory.objects.annotate(\n#         pet_count=Count('pets') \n#     ).all()",
+        "peekOfCode": "class PetCategoryViewSet(ModelViewSet):\n    serializer_class = PetCategorySerializer\n    queryset = PetCategory.objects.annotate(\n        pet_count=Count('pets') \n    ).all()\n# Pet Review ViewSet\nclass PetReviewViewSet(ModelViewSet):\n    serializer_class = PetReviewSerializer\n    permission_classes = [IsReviewAuthorOrReadonly]\n    def perform_create(self, serializer):",
         "detail": "pets.views",
         "documentation": {}
     },
@@ -2523,7 +2117,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False  \nALLOWED_HOSTS = [\".vercel.app\", '127.0.0.1']\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\n    \".vercel.app\",\n    \"127.0.0.1\",",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2532,7 +2126,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False  \nALLOWED_HOSTS = [\".vercel.app\", '127.0.0.1']\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = False\nALLOWED_HOSTS = [\n    \".vercel.app\",\n    \"127.0.0.1\",\n    \"localhost\",\n]\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2541,7 +2135,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DEBUG = False  \nALLOWED_HOSTS = [\".vercel.app\", '127.0.0.1']\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "DEBUG = False\nALLOWED_HOSTS = [\n    \".vercel.app\",\n    \"127.0.0.1\",\n    \"localhost\",\n]\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2550,7 +2144,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "ALLOWED_HOSTS = [\".vercel.app\", '127.0.0.1']\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
+        "peekOfCode": "ALLOWED_HOSTS = [\n    \".vercel.app\",\n    \"127.0.0.1\",\n    \"localhost\",\n]\nAUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2559,7 +2153,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "AUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "AUTH_USER_MODEL = 'users.PetUser'\n# Application definition\nINSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2568,16 +2162,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'whitenoise.runserver_nostatic',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'corsheaders',\n    'cart',",
-        "detail": "pet_adoption.settings",
-        "documentation": {}
-    },
-    {
-        "label": "REST_FRAMEWORK",
-        "kind": 5,
-        "importPath": "pet_adoption.settings",
-        "description": "pet_adoption.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    'DEFAULT_PERMISSION_CLASSES': [\n        'rest_framework.permissions.IsAuthenticated',  # secure by default\n    ],\n    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',\n    'PAGE_SIZE': 10,\n    'COERCE_DECIMAL_TO_STRING': False,",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"whitenoise.runserver_nostatic\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'drf_yasg',\n    'django_filters',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2586,7 +2171,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    'corsheaders.middleware.CorsMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'debug_toolbar.middleware.DebugToolbarMiddleware',\n    'django.middleware.security.SecurityMiddleware',\n    'whitenoise.middleware.WhiteNoiseMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
+        "peekOfCode": "MIDDLEWARE = [\n    \"corsheaders.middleware.CorsMiddleware\",\n    \"debug_toolbar.middleware.DebugToolbarMiddleware\",\n    'django.middleware.security.SecurityMiddleware',\n    \"whitenoise.middleware.WhiteNoiseMiddleware\",\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2613,7 +2198,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'https://pet-adoption-a5vw.vercel.app',\n    ]\n# CORS_ALLOW_ALL_ORIGINS = True\nINTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database",
+        "peekOfCode": "WSGI_APPLICATION = 'pet_adoption.wsgi.app'\nCORS_ALLOWED_ORIGINS = [\n    'http://localhost:5174',\n]\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\n# Database",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2622,7 +2207,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:5173',\n    'https://pet-adoption-a5vw.vercel.app',\n    ]\n# CORS_ALLOW_ALL_ORIGINS = True\nINTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = [\n    'http://localhost:5174',\n]\nINTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2631,7 +2216,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "INTERNAL_IPS = [\n    \"127.0.0.1\",\n]\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',\n#         'NAME': BASE_DIR / 'db.sqlite3',\n#     }",
+        "peekOfCode": "INTERNAL_IPS = [\n    # ...\n    \"127.0.0.1\",\n    # ...\n]\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\n# DATABASES = {\n#     'default': {\n#         'ENGINE': 'django.db.backends.sqlite3',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2640,7 +2225,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {        \n        'ENGINE':'django.db.backends.postgresql',\n        'NAME': config('dbname'),\n        'USER': config('user'),\n        'PASSWORD':config('password'),\n        'HOST':config('host'),\n        'PORT':config('port')\n    }\n}",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': config('dbname'),\n        'USER': config('user'),\n        'PASSWORD': config('password'),\n        'HOST': config('host'),\n        'PORT': config('port')\n    }\n}",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2658,7 +2243,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATIC_FILES_DIR = [BASE_DIR / 'static']",
+        "peekOfCode": "DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\n# STATIC_FILES_DIR = BASE_DIR / 'static'",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2667,7 +2252,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATIC_FILES_DIR = [BASE_DIR / 'static']\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\n# STATIC_FILES_DIR = BASE_DIR / 'static'\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2676,7 +2261,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATIC_FILES_DIR = [BASE_DIR / 'static']\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\n# STATIC_FILES_DIR = BASE_DIR / 'static'\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"\nMEDIA_URL = '/media/'",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2685,7 +2270,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATIC_FILES_DIR = [BASE_DIR / 'static']\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\n# STATIC_FILES_DIR = BASE_DIR / 'static'\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2694,7 +2279,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATIC_FILES_DIR = [BASE_DIR / 'static']\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\n# STATIC_FILES_DIR = BASE_DIR / 'static'\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2703,7 +2288,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATIC_FILES_DIR = [BASE_DIR / 'static']\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\n# STATIC_FILES_DIR = BASE_DIR / 'static'\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2712,16 +2297,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "STATIC_ROOT = BASE_DIR / 'staticfiles'\nSTATIC_FILES_DIR = [BASE_DIR / 'static']\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,",
-        "detail": "pet_adoption.settings",
-        "documentation": {}
-    },
-    {
-        "label": "STATIC_FILES_DIR",
-        "kind": 5,
-        "importPath": "pet_adoption.settings",
-        "description": "pet_adoption.settings",
-        "peekOfCode": "STATIC_FILES_DIR = [BASE_DIR / 'static']\nSTATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / \"staticfiles\"\n# STATIC_FILES_DIR = BASE_DIR / 'static'\nSTATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2730,7 +2306,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',",
+        "peekOfCode": "STATICFILES_STORAGE = \"whitenoise.storage.CompressedStaticFilesStorage\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2739,7 +2315,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2748,7 +2324,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    # 'DEFAULT_PERMISSION_CLASSES': [",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    #  'DEFAULT_PERMISSION_CLASSES': [",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2757,7 +2333,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    # 'DEFAULT_PERMISSION_CLASSES': [\n    #     'rest_framework.permissions.IsAuthenticated',\n    # ]\n}",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nREST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    #  'DEFAULT_PERMISSION_CLASSES': [\n    #      'rest_framework.permissions.IsAuthenticated',\n    # ]\n}",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2766,7 +2342,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "REST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    # 'DEFAULT_PERMISSION_CLASSES': [\n    #     'rest_framework.permissions.IsAuthenticated',\n    # ]\n}\n# JWT config",
+        "peekOfCode": "REST_FRAMEWORK = {\n    'COERCE_DECIMAL_TO_STRING': False,\n    'DEFAULT_AUTHENTICATION_CLASSES': (\n        'rest_framework_simplejwt.authentication.JWTAuthentication',\n    ),\n    #  'DEFAULT_PERMISSION_CLASSES': [\n    #      'rest_framework.permissions.IsAuthenticated',\n    # ]\n}\nSIMPLE_JWT = {",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2775,7 +2351,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SIMPLE_JWT = {\n    'AUTH_HEADER_TYPES': ('Bearer',),   # use Bearer instead of JWT\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=1),\n}\n# Djoser config\nDJOSER = {\n    'SERIALIZERS': {\n        'user_create': 'users.serializers.UserCreateSerializer',\n        'current_user': 'users.serializers.UserSerializer'\n    },",
+        "peekOfCode": "SIMPLE_JWT = {\n    'AUTH_HEADER_TYPES': ('JWT',),\n    \"ACCESS_TOKEN_LIFETIME\": timedelta(days=1),\n}\nDJOSER = {\n    'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),\n    'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),\n    'EMAIL_FRONTEND_SITE_NAME': 'PhiMart',\n    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',\n    'ACTIVATION_URL': 'activate/{uid}/{token}',",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2784,7 +2360,7 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "DJOSER = {\n    'SERIALIZERS': {\n        'user_create': 'users.serializers.UserCreateSerializer',\n        'current_user': 'users.serializers.UserSerializer'\n    },\n}\n# Swagger config\nSWAGGER_SETTINGS = {\n    'USE_SESSION_AUTH': False,   #  prevents redirect to /accounts/login/\n    'SECURITY_DEFINITIONS': {",
+        "peekOfCode": "DJOSER = {\n    'EMAIL_FRONTEND_PROTOCOL': config('FRONTEND_PROTOCOL'),\n    'EMAIL_FRONTEND_DOMAIN': config('FRONTEND_DOMAIN'),\n    'EMAIL_FRONTEND_SITE_NAME': 'PhiMart',\n    'PASSWORD_RESET_CONFIRM_URL': 'password/reset/confirm/{uid}/{token}',\n    'ACTIVATION_URL': 'activate/{uid}/{token}',\n    'SEND_ACTIVATION_EMAIL': True,\n    'SERIALIZERS': {\n        'user_create': 'users.serializers.UserCreateSerializer',\n        'current_user': 'users.serializers.UserSerializer'",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2793,7 +2369,142 @@
         "kind": 5,
         "importPath": "pet_adoption.settings",
         "description": "pet_adoption.settings",
-        "peekOfCode": "SWAGGER_SETTINGS = {\n    'USE_SESSION_AUTH': False,   #  prevents redirect to /accounts/login/\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header',\n            'description': 'Format: Bearer <your_token>'\n        }\n    }",
+        "peekOfCode": "SWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header',\n            'description': 'Enter your JWT token in the format: `JWT <your_token>`'\n        }\n    }\n}",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST =config('EMAIL_HOST', default='')\nEMAIL_USE_TLS =config('EMAIL_USE_TLS', default=False, cast=bool)\nEMAIL_PORT =config('EMAIL_PORT', default=587)\nEMAIL_HOST_USER =config('EMAIL_HOST_USER', default='')\nEMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD', default='')\n# URLS\nBACKEND_URL = config(\"BACKEND_URL\", default=\"http://127.0.0.1:8000\")\nFRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\ndefault_cors_origins = [",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BACKEND_URL",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "BACKEND_URL = config(\"BACKEND_URL\", default=\"http://127.0.0.1:8000\")\nFRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\ndefault_cors_origins = [\n    \"http://localhost:3000\",\n    \"http://127.0.0.1:3000\",\n    \"http://localhost:5173\",\n    \"http://127.0.0.1:5173\",\n]\nfrontend_origin = FRONTEND_URL.rstrip(\"/\")\nif frontend_origin and frontend_origin not in default_cors_origins:",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "FRONTEND_URL",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "FRONTEND_URL = config(\"FRONTEND_URL\", default=\"http://localhost:3000\")\ndefault_cors_origins = [\n    \"http://localhost:3000\",\n    \"http://127.0.0.1:3000\",\n    \"http://localhost:5173\",\n    \"http://127.0.0.1:5173\",\n]\nfrontend_origin = FRONTEND_URL.rstrip(\"/\")\nif frontend_origin and frontend_origin not in default_cors_origins:\n    default_cors_origins.append(frontend_origin)",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "default_cors_origins",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "default_cors_origins = [\n    \"http://localhost:3000\",\n    \"http://127.0.0.1:3000\",\n    \"http://localhost:5173\",\n    \"http://127.0.0.1:5173\",\n]\nfrontend_origin = FRONTEND_URL.rstrip(\"/\")\nif frontend_origin and frontend_origin not in default_cors_origins:\n    default_cors_origins.append(frontend_origin)\nCORS_ALLOWED_ORIGINS = default_cors_origins",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "frontend_origin",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "frontend_origin = FRONTEND_URL.rstrip(\"/\")\nif frontend_origin and frontend_origin not in default_cors_origins:\n    default_cors_origins.append(frontend_origin)\nCORS_ALLOWED_ORIGINS = default_cors_origins\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ALLOWED_ORIGINS",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "CORS_ALLOWED_ORIGINS = default_cors_origins\nSSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SSLCOMMERZ_STORE_ID",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')\nSSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SSLCOMMERZ_STORE_PASSWORD",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')\nSSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SSLCOMMERZ_IS_SANDBOX",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)\n# MISC\nLANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header',",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header',\n            'description': 'Enter your JWT token in the format: `JWT <your_token>`'",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "USE_TZ = True\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header',\n            'description': 'Enter your JWT token in the format: `JWT <your_token>`'\n        }",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nSWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header',\n            'description': 'Enter your JWT token in the format: `JWT <your_token>`'\n        }\n    }",
+        "detail": "pet_adoption.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SWAGGER_SETTINGS",
+        "kind": 5,
+        "importPath": "pet_adoption.settings",
+        "description": "pet_adoption.settings",
+        "peekOfCode": "SWAGGER_SETTINGS = {\n    'SECURITY_DEFINITIONS': {\n        'Bearer': {\n            'type': 'apiKey',\n            'name': 'Authorization',\n            'in': 'header',\n            'description': 'Enter your JWT token in the format: `JWT <your_token>`'\n        }\n    }\n}",
         "detail": "pet_adoption.settings",
         "documentation": {}
     },
@@ -2811,7 +2522,7 @@
         "kind": 5,
         "importPath": "pet_adoption.urls",
         "description": "pet_adoption.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', api_root_view),\n    path('api/v1/', include('api.urls'), name='api-root'), \n    # path(\"api/v1/accounts/\", include(\"users.urls\")),\n    path(\"pets/\", include(\"pets.urls\")),\n    path('swagger/', schema_view.with_ui('swagger',\n         cache_timeout=0), name='schema-swagger-ui'),\n    path('redoc/', schema_view.with_ui('redoc',\n         cache_timeout=0), name='schema-redoc'),",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', api_root_view),\n    path('api/v1/', include('api.urls'), name='api-root'), \n    # path(\"api/v1/accounts/\", include(\"users.urls\")),\n    path(\"pets/\", include(\"pets.urls\")),\n     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),\n    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),\n    path('swagger/', schema_view.with_ui('swagger',\n         cache_timeout=0), name='schema-swagger-ui'),",
         "detail": "pet_adoption.urls",
         "documentation": {}
     },
@@ -2894,15 +2605,6 @@
         "description": "users.serializers",
         "peekOfCode": "class UserSerializer(BaseUserSerializer):\n    class Meta(BaseUserSerializer.Meta):\n        model = PetUser\n        ref_name = 'CustomUser'   # keep if you want unique schema name\n        fields = [\n            'id',\n            'email',\n            'first_name',\n            'last_name',\n            'address',",
         "detail": "users.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "urlpatterns",
-        "kind": 5,
-        "importPath": "users.urls",
-        "description": "users.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"register/\", register_view, name=\"register\"),\n]",
-        "detail": "users.urls",
         "documentation": {}
     },
     {

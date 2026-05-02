@@ -276,7 +276,11 @@ SECRET_KEY = 'django-insecure-frisf^xxi**a3#)^t&^nd6@gs62l_)!7%v1mfwjngi-6$!kaz7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = [".vercel.app", '127.0.0.1']
+ALLOWED_HOSTS = [
+    ".vercel.app",
+    "127.0.0.1",
+    "localhost",
+]
 AUTH_USER_MODEL = 'users.PetUser'
 
 # Application definition
@@ -466,12 +470,50 @@ SWAGGER_SETTINGS = {
 }
 
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = config('EMAIL_HOST')
-# EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
-# EMAIL_PORT = config('EMAIL_PORT')
-# EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST =config('EMAIL_HOST', default='')
+EMAIL_USE_TLS =config('EMAIL_USE_TLS', default=False, cast=bool)
+EMAIL_PORT =config('EMAIL_PORT', default=587)
+EMAIL_HOST_USER =config('EMAIL_HOST_USER', default='')
+EMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD', default='')
 
-# BACKEND_URL = config("BACKEND_URL")
-# FRONTEND_URL = config("FRONTEND_URL")
+# URLS
+BACKEND_URL = config("BACKEND_URL", default="http://127.0.0.1:8000")
+FRONTEND_URL = config("FRONTEND_URL", default="http://localhost:3000")
+
+default_cors_origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+frontend_origin = FRONTEND_URL.rstrip("/")
+if frontend_origin and frontend_origin not in default_cors_origins:
+    default_cors_origins.append(frontend_origin)
+
+CORS_ALLOWED_ORIGINS = default_cors_origins
+
+
+SSLCOMMERZ_STORE_ID = config('SSLCOMMERZ_STORE_ID', default='')
+SSLCOMMERZ_STORE_PASSWORD = config('SSLCOMMERZ_STORE_PASSWORD', default='')
+SSLCOMMERZ_IS_SANDBOX = config('SSLCOMMERZ_IS_SANDBOX', default=True, cast=bool)
+
+# MISC
+LANGUAGE_CODE = 'en-us'
+TIME_ZONE = 'UTC'
+USE_I18N = True
+USE_TZ = True
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header',
+            'description': 'Enter your JWT token in the format: `JWT <your_token>`'
+        }
+    }
+}

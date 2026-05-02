@@ -24,7 +24,8 @@ class PetViewSet(ModelViewSet):
     serializer_class = PetSerializer
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = PetFilter
-    pagination_class = DefaultPagination
+    # pagination_class = DefaultPagination
+    pagination_class = None
     search_fields = ['name', 'description']
     ordering_fields = ['adoption_fee', 'updated_at']
     permission_classes = [IsAdminOrReadOnly]
